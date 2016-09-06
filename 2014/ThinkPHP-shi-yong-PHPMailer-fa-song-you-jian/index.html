@@ -1,0 +1,657 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="PHP,thinkphp,PHPMailer," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="这几天用tp作了个招聘的网站，想用到邮件找回密码和激活，所以想到了用PHPMailer先去下载PHPMailer,然后放入THINKPHP/libary/ORG中.在Common/Common/下新建一个function.php文件
+function send_mail($to = ‘’, $subject = ‘’, $body = ‘’, $name = ‘’, $attachment = n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ThinkPHP使用PHPMailer发送邮件">
+<meta property="og:url" content="http://syuchun.com/2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/index.html">
+<meta property="og:site_name" content="老孙笔记">
+<meta property="og:description" content="这几天用tp作了个招聘的网站，想用到邮件找回密码和激活，所以想到了用PHPMailer先去下载PHPMailer,然后放入THINKPHP/libary/ORG中.在Common/Common/下新建一个function.php文件
+function send_mail($to = ‘’, $subject = ‘’, $body = ‘’, $name = ‘’, $attachment = n">
+<meta property="og:updated_time" content="2016-05-06T08:00:53.664Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ThinkPHP使用PHPMailer发送邮件">
+<meta name="twitter:description" content="这几天用tp作了个招聘的网站，想用到邮件找回密码和激活，所以想到了用PHPMailer先去下载PHPMailer,然后放入THINKPHP/libary/ORG中.在Common/Common/下新建一个function.php文件
+function send_mail($to = ‘’, $subject = ‘’, $body = ‘’, $name = ‘’, $attachment = n">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 293001,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> ThinkPHP使用PHPMailer发送邮件 | 老孙笔记 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="http://s6.cnzz.com/stat.php?id=1253611686&web_id=1253611686" type="text/javascript"></script>
+  </div>
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">老孙笔记</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">专注IT领域，分享网络乐趣。</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'YztFL3H7sB-jVMce9fne','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                ThinkPHP使用PHPMailer发送邮件
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2014-03-10T16:02:00+08:00" content="2014-03-10">
+              2014-03-10
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这几天用tp作了个招聘的网站，想用到邮件找回密码和激活，所以想到了用PHPMailer<br>先去下载PHPMailer,然后放入THINKPHP/libary/ORG中.<br>在Common/Common/下新建一个function.php文件</p>
+<p><pre><br>function send_mail($to = ‘’, $subject = ‘’, $body = ‘’, $name = ‘’, $attachment = null)<br>{<br>    $from_email = C(‘MAIL_SMTP_USER’);<br>    $from_name = C(‘WEB_SITE’);<br>    $reply_email = ‘’;<br>    $reply_name = ‘’;<br>    import(‘ORG.PHPMailer.phpmailer’);//从PHPMailer目录导入phpmailer.class.php类文件<br>    $mail = new phpmailer(); //实例化PHPMailer<br>    $mail-&gt;CharSet    = ‘UTF-8’; //设定邮件编码，默认ISO-8859-1，如果发中文此项必须设置，否则乱码<br>    $mail-&gt;IsSMTP();  // 设定使用SMTP服务<br>    $mail-&gt;SMTPDebug  = 0;                     // 关闭SMTP调试功能<br>                                               // 1 = errors and messages<br>                                               // 2 = messages only<br>    $mail-&gt;SMTPAuth = true;                  // 启用 SMTP 验证功能<br>    $mail-&gt;Host       = C(‘MAIL_SMTP_HOST’);  // SMTP 服务器<br>    $mail-&gt;Port       = C(‘MAIL_SMTP_PORT’);  // SMTP服务器的端口号<br>    $mail-&gt;SMTPSecure = ‘ssl’;                // 使用安全协议<br>    $mail-&gt;Username   = C(‘MAIL_SMTP_USER’);  // SMTP服务器用户名<br>    $mail-&gt;Password   = C(‘MAIL_SMTP_PASS’);  // SMTP服务器密码<br>    $mail-&gt;SetFrom($from_email, $from_name);<br>    $replyEmail       = $reply_email?$reply_email:$from_email;<br>    $replyName        = $reply_name?$reply_name:$from_name;<br>    if($to == ‘’){<br>    $to = C(‘MAIL_SMTP_CE’);//邮件地址为空时，默认使用后台默认邮件测试地址<br>    }<br>    if($name == ‘’){<br>    $name = C(‘WEB_SITE’);//发送者名称为空时，默认使用网站名称<br>    }<br>    if($subject == ‘’){<br>    $subject = C(‘WEB_SITE_TITLE’);//邮件主题为空时，默认使用网站标题<br>    }<br>    if($body == ‘’){<br>    $body = C(‘WEB_SITE_DESCRIPTION’);//邮件内容为空时，默认使用网站描述<br>    }<br>    $mail-&gt;AddReplyTo($replyEmail, $replyName);<br>    $mail-&gt;Subject    = $subject;<br>    $mail-&gt;MsgHTML($body);//解析<br>    $mail-&gt;AddAddress($to, $name);<br>    if(is_array($attachment)){ // 添加附件<br>        foreach ($attachment as $file){<br>            is_file($file) &amp;&amp; $mail-&gt;AddAttachment($file);<br>        }<br>    }<br>    return $mail-&gt;Send() ? true : $mail-&gt;ErrorInfo;//返回错误信息<br>}<br></pre></p>
+<p>在配置文件里加入</p><br><pre><br>//邮件配置<br>‘MAIL_SMTP_HOST’   =&gt; ‘smtp.126.com’, //SMTP服务器<br>‘MAIL_SMTP_PORT’   =&gt; ‘465’, //SMTP服务器端口<br>‘MAIL_SMTP_USER’   =&gt; ‘xxx@126.com’, //SMTP服务器用户名<br>‘MAIL_SMTP_PASS’   =&gt; ‘<strong>**</strong>‘, //SMTP服务器密码<br></pre><br><p>使用的时候在控制器里</p><br><pre><br>send_mail(“xxx@126.com”,$subject = ‘这事一个测试邮件’, $body = ‘iSun’s Blog’);<br></pre><br><p>这样就大功告成了，测试可以发送邮件</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag">#PHP</a>
+          
+            <a href="/tags/thinkphp/" rel="tag">#thinkphp</a>
+          
+            <a href="/tags/PHPMailer/" rel="tag">#PHPMailer</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/" rel="next" title="解决Ueditor编辑器在thinkphp下单双引号转义问题">
+                <i class="fa fa-chevron-left"></i> 解决Ueditor编辑器在thinkphp下单双引号转义问题
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/MYSQL-zi-zeng-ID-qing-ling/" rel="prev" title="MYSQL 自增ID清零">
+                MYSQL 自增ID清零 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/"
+           data-title="ThinkPHP使用PHPMailer发送邮件" data-url="http://syuchun.com/2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://cn.gravatar.com/avatar/51477ce54268baabc59f724a1e16c63a?s=80&r=G&d=mm"
+               alt="Sun" />
+          <p class="site-author-name" itemprop="name">Sun</p>
+          <p class="site-description motion-element" itemprop="description">Wisay,微言微道,Typecho主题,清风博客,syuchun,Wordpress主题,个人博客,个人主页设计,个人网站,iSun,2016最新电影</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<div class="copyright" >
+  © 2010 - 
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sun</span>&nbsp;&nbsp;
+  <span>浙ICP备14005775号</span>
+</div>
+
+<div class="links">
+  友情链接:
+  <a class="them-link" target="_blank" href="http://syuchun.com">老孙笔记</a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"isun"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
