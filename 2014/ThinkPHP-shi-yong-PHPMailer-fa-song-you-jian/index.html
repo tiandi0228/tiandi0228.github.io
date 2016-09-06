@@ -1,9 +1,7 @@
 <!doctype html>
 
 
-
   
-
 
 <html class="theme-next mist use-motion">
 <head>
@@ -11,18 +9,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-
-
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
 
 
 
@@ -30,7 +18,6 @@
   
   
   <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -62,17 +49,10 @@
 
 
 
-
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
-
   <meta name="keywords" content="PHP,thinkphp,PHPMailer," />
-
-
-
-
 
 
 
@@ -80,25 +60,19 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
-
-
-
-
 <meta name="description" content="这几天用tp作了个招聘的网站，想用到邮件找回密码和激活，所以想到了用PHPMailer先去下载PHPMailer,然后放入THINKPHP/libary/ORG中.在Common/Common/下新建一个function.php文件
-function send_mail($to = ‘’, $subject = ‘’, $body = ‘’, $name = ‘’, $attachment = n">
+function send_mail($to = &amp;apos;&amp;apos;, $subject = &amp;apos;&amp;apos;, $body = &amp;apos;&amp;apos">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ThinkPHP使用PHPMailer发送邮件">
 <meta property="og:url" content="http://syuchun.com/2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/index.html">
 <meta property="og:site_name" content="老孙笔记">
 <meta property="og:description" content="这几天用tp作了个招聘的网站，想用到邮件找回密码和激活，所以想到了用PHPMailer先去下载PHPMailer,然后放入THINKPHP/libary/ORG中.在Common/Common/下新建一个function.php文件
-function send_mail($to = ‘’, $subject = ‘’, $body = ‘’, $name = ‘’, $attachment = n">
-<meta property="og:updated_time" content="2016-05-06T08:00:53.664Z">
+function send_mail($to = &amp;apos;&amp;apos;, $subject = &amp;apos;&amp;apos;, $body = &amp;apos;&amp;apos">
+<meta property="og:updated_time" content="2016-09-06T07:22:00.738Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ThinkPHP使用PHPMailer发送邮件">
 <meta name="twitter:description" content="这几天用tp作了个招聘的网站，想用到邮件找回密码和激活，所以想到了用PHPMailer先去下载PHPMailer,然后放入THINKPHP/libary/ORG中.在Common/Common/下新建一个function.php文件
-function send_mail($to = ‘’, $subject = ‘’, $body = ‘’, $name = ‘’, $attachment = n">
-
-
+function send_mail($to = &amp;apos;&amp;apos;, $subject = &amp;apos;&amp;apos;, $body = &amp;apos;&amp;apos">
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
@@ -336,8 +310,58 @@ function send_mail($to = ‘’, $subject = ‘’, $body = ‘’, $name = ‘�
 
       
         <p>这几天用tp作了个招聘的网站，想用到邮件找回密码和激活，所以想到了用PHPMailer<br>先去下载PHPMailer,然后放入THINKPHP/libary/ORG中.<br>在Common/Common/下新建一个function.php文件</p>
-<p><pre><br>function send_mail($to = ‘’, $subject = ‘’, $body = ‘’, $name = ‘’, $attachment = null)<br>{<br>    $from_email = C(‘MAIL_SMTP_USER’);<br>    $from_name = C(‘WEB_SITE’);<br>    $reply_email = ‘’;<br>    $reply_name = ‘’;<br>    import(‘ORG.PHPMailer.phpmailer’);//从PHPMailer目录导入phpmailer.class.php类文件<br>    $mail = new phpmailer(); //实例化PHPMailer<br>    $mail-&gt;CharSet    = ‘UTF-8’; //设定邮件编码，默认ISO-8859-1，如果发中文此项必须设置，否则乱码<br>    $mail-&gt;IsSMTP();  // 设定使用SMTP服务<br>    $mail-&gt;SMTPDebug  = 0;                     // 关闭SMTP调试功能<br>                                               // 1 = errors and messages<br>                                               // 2 = messages only<br>    $mail-&gt;SMTPAuth = true;                  // 启用 SMTP 验证功能<br>    $mail-&gt;Host       = C(‘MAIL_SMTP_HOST’);  // SMTP 服务器<br>    $mail-&gt;Port       = C(‘MAIL_SMTP_PORT’);  // SMTP服务器的端口号<br>    $mail-&gt;SMTPSecure = ‘ssl’;                // 使用安全协议<br>    $mail-&gt;Username   = C(‘MAIL_SMTP_USER’);  // SMTP服务器用户名<br>    $mail-&gt;Password   = C(‘MAIL_SMTP_PASS’);  // SMTP服务器密码<br>    $mail-&gt;SetFrom($from_email, $from_name);<br>    $replyEmail       = $reply_email?$reply_email:$from_email;<br>    $replyName        = $reply_name?$reply_name:$from_name;<br>    if($to == ‘’){<br>    $to = C(‘MAIL_SMTP_CE’);//邮件地址为空时，默认使用后台默认邮件测试地址<br>    }<br>    if($name == ‘’){<br>    $name = C(‘WEB_SITE’);//发送者名称为空时，默认使用网站名称<br>    }<br>    if($subject == ‘’){<br>    $subject = C(‘WEB_SITE_TITLE’);//邮件主题为空时，默认使用网站标题<br>    }<br>    if($body == ‘’){<br>    $body = C(‘WEB_SITE_DESCRIPTION’);//邮件内容为空时，默认使用网站描述<br>    }<br>    $mail-&gt;AddReplyTo($replyEmail, $replyName);<br>    $mail-&gt;Subject    = $subject;<br>    $mail-&gt;MsgHTML($body);//解析<br>    $mail-&gt;AddAddress($to, $name);<br>    if(is_array($attachment)){ // 添加附件<br>        foreach ($attachment as $file){<br>            is_file($file) &amp;&amp; $mail-&gt;AddAttachment($file);<br>        }<br>    }<br>    return $mail-&gt;Send() ? true : $mail-&gt;ErrorInfo;//返回错误信息<br>}<br></pre></p>
-<p>在配置文件里加入</p><br><pre><br>//邮件配置<br>‘MAIL_SMTP_HOST’   =&gt; ‘smtp.126.com’, //SMTP服务器<br>‘MAIL_SMTP_PORT’   =&gt; ‘465’, //SMTP服务器端口<br>‘MAIL_SMTP_USER’   =&gt; ‘xxx@126.com’, //SMTP服务器用户名<br>‘MAIL_SMTP_PASS’   =&gt; ‘<strong>**</strong>‘, //SMTP服务器密码<br></pre><br><p>使用的时候在控制器里</p><br><pre><br>send_mail(“xxx@126.com”,$subject = ‘这事一个测试邮件’, $body = ‘iSun’s Blog’);<br></pre><br><p>这样就大功告成了，测试可以发送邮件</p>
+<pre><code>function send_mail($to = &apos;&apos;, $subject = &apos;&apos;, $body = &apos;&apos;, $name = &apos;&apos;, $attachment = null)
+{
+    $from_email = C(&apos;MAIL_SMTP_USER&apos;);
+    $from_name = C(&apos;WEB_SITE&apos;);    
+    $reply_email = &apos;&apos;;    
+    $reply_name = &apos;&apos;;    
+    import(&apos;ORG.PHPMailer.phpmailer&apos;);//从PHPMailer目录导入phpmailer.class.php类文件
+    $mail = new phpmailer(); //实例化PHPMailer
+    $mail-&gt;CharSet    = &apos;UTF-8&apos;; //设定邮件编码，默认ISO-8859-1，如果发中文此项必须设置，否则乱码
+    $mail-&gt;IsSMTP();  // 设定使用SMTP服务
+    $mail-&gt;SMTPDebug  = 0;                     // 关闭SMTP调试功能
+                                           // 1 = errors and messages
+                                           // 2 = messages only
+    $mail-&gt;SMTPAuth = true;                  // 启用 SMTP 验证功能
+    $mail-&gt;Host       = C(&apos;MAIL_SMTP_HOST&apos;);  // SMTP 服务器
+    $mail-&gt;Port       = C(&apos;MAIL_SMTP_PORT&apos;);  // SMTP服务器的端口号
+    $mail-&gt;SMTPSecure = &apos;ssl&apos;;                // 使用安全协议
+    $mail-&gt;Username   = C(&apos;MAIL_SMTP_USER&apos;);  // SMTP服务器用户名
+    $mail-&gt;Password   = C(&apos;MAIL_SMTP_PASS&apos;);  // SMTP服务器密码               
+    $mail-&gt;SetFrom($from_email, $from_name);
+    $replyEmail       = $reply_email?$reply_email:$from_email;
+    $replyName        = $reply_name?$reply_name:$from_name;
+    if($to == &apos;&apos;){
+    $to = C(&apos;MAIL_SMTP_CE&apos;);//邮件地址为空时，默认使用后台默认邮件测试地址
+    }
+    if($name == &apos;&apos;){
+    $name = C(&apos;WEB_SITE&apos;);//发送者名称为空时，默认使用网站名称
+    }
+    if($subject == &apos;&apos;){
+    $subject = C(&apos;WEB_SITE_TITLE&apos;);//邮件主题为空时，默认使用网站标题
+    }
+    if($body == &apos;&apos;){
+    $body = C(&apos;WEB_SITE_DESCRIPTION&apos;);//邮件内容为空时，默认使用网站描述
+    }
+    $mail-&gt;AddReplyTo($replyEmail, $replyName);
+    $mail-&gt;Subject    = $subject;
+    $mail-&gt;MsgHTML($body);//解析
+    $mail-&gt;AddAddress($to, $name);
+    if(is_array($attachment)){ // 添加附件
+        foreach ($attachment as $file){
+            is_file($file) &amp;&amp; $mail-&gt;AddAttachment($file);
+        }
+    }
+    return $mail-&gt;Send() ? true : $mail-&gt;ErrorInfo;//返回错误信息
+}
+</code></pre><h3 id="在配置文件里加入"><a href="#在配置文件里加入" class="headerlink" title="在配置文件里加入"></a>在配置文件里加入</h3><pre><code>//邮件配置
+&apos;MAIL_SMTP_HOST&apos;   =&gt; &apos;smtp.126.com&apos;, //SMTP服务器
+&apos;MAIL_SMTP_PORT&apos;   =&gt; &apos;465&apos;, //SMTP服务器端口
+&apos;MAIL_SMTP_USER&apos;   =&gt; &apos;xxx@126.com&apos;, //SMTP服务器用户名
+&apos;MAIL_SMTP_PASS&apos;   =&gt; &apos;******&apos;, //SMTP服务器密码
+</code></pre><h3 id="使用的时候在控制器里"><a href="#使用的时候在控制器里" class="headerlink" title="使用的时候在控制器里"></a>使用的时候在控制器里</h3><pre><code>send_mail(&quot;xxx@126.com&quot;,$subject = &apos;这事一个测试邮件&apos;, $body = &apos;iSun&apos;s Blog&apos;);
+</code></pre><p>这样就大功告成了，测试可以发送邮件</p>
 
       
     </div>
@@ -500,7 +524,7 @@ function send_mail($to = ‘’, $subject = ‘’, $body = ‘’, $name = ‘�
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#在配置文件里加入"><span class="nav-number">1.</span> <span class="nav-text">在配置文件里加入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用的时候在控制器里"><span class="nav-number">2.</span> <span class="nav-text">使用的时候在控制器里</span></a></li></ol></div>
             
           </div>
         </section>

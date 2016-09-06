@@ -1,9 +1,7 @@
 <!doctype html>
 
 
-
   
-
 
 <html class="theme-next mist use-motion">
 <head>
@@ -11,18 +9,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-
-
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
 
 
 
@@ -30,7 +18,6 @@
   
   
   <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -62,17 +49,10 @@
 
 
 
-
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
-
   <meta name="keywords" content="PHP," />
-
-
-
-
 
 
 
@@ -80,22 +60,34 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
-
-
-
-
-<meta name="description" content="function timeFormat($timeInt,$format=’y.m.d’){    if(empty($timeInt)||!is_numeric($timeInt)||!$timeInt)    {        return ‘’;    }    $d=time()-$timeInt;    if($d&amp;lt;0)    {        return ‘’;    }els">
+<meta name="description" content="function timeFormat($timeInt,$format=&amp;apos;y.m.d&amp;apos;){
+    if(empty($timeInt)||!is_numeric($timeInt)||!$timeInt)
+    {
+        return &amp;apos;&amp;apos;;
+    }
+    $d=time()-$timeInt;
+    if($d&amp;lt;0)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PHP 时间格式几秒前，几分钟前">
-<meta property="og:url" content="http://syuchun.com/2016/phpshi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/index.html">
+<meta property="og:url" content="http://syuchun.com/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/index.html">
 <meta property="og:site_name" content="老孙笔记">
-<meta property="og:description" content="function timeFormat($timeInt,$format=’y.m.d’){    if(empty($timeInt)||!is_numeric($timeInt)||!$timeInt)    {        return ‘’;    }    $d=time()-$timeInt;    if($d&amp;lt;0)    {        return ‘’;    }els">
-<meta property="og:updated_time" content="2016-05-06T08:23:54.324Z">
+<meta property="og:description" content="function timeFormat($timeInt,$format=&amp;apos;y.m.d&amp;apos;){
+    if(empty($timeInt)||!is_numeric($timeInt)||!$timeInt)
+    {
+        return &amp;apos;&amp;apos;;
+    }
+    $d=time()-$timeInt;
+    if($d&amp;lt;0)">
+<meta property="og:updated_time" content="2016-09-06T07:25:42.469Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP 时间格式几秒前，几分钟前">
-<meta name="twitter:description" content="function timeFormat($timeInt,$format=’y.m.d’){    if(empty($timeInt)||!is_numeric($timeInt)||!$timeInt)    {        return ‘’;    }    $d=time()-$timeInt;    if($d&amp;lt;0)    {        return ‘’;    }els">
-
-
+<meta name="twitter:description" content="function timeFormat($timeInt,$format=&amp;apos;y.m.d&amp;apos;){
+    if(empty($timeInt)||!is_numeric($timeInt)||!$timeInt)
+    {
+        return &amp;apos;&amp;apos;;
+    }
+    $d=time()-$timeInt;
+    if($d&amp;lt;0)">
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
@@ -308,8 +300,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/phpshi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/phpshi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/" itemprop="commentsCount"></span>
+                <a href="/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -332,8 +324,39 @@
       
 
       
-        <p>function timeFormat($timeInt,$format=’y.m.d’)<br>{<br>    if(empty($timeInt)||!is_numeric($timeInt)||!$timeInt)<br>    {<br>        return ‘’;<br>    }<br>    $d=time()-$timeInt;<br>    if($d&lt;0)<br>    {<br>        return ‘’;<br>    }else{<br>        if($d&lt;60)<br>        {<br>            return $d.’秒前’;<br>        }else{<br>            if($d&lt;3600)<br>            {<br>                return floor($d/60).’分钟前’;<br>            }else{<br>                if($d&lt;86400)<br>                {<br>                    return floor($d/3600).’小时前’;<br>                }else{<br>                    if($d&lt;259200)<br>                    {//3天内<br>                        return floor($d/86400).’天前’;<br>                    }else{<br>                        return date($format,$timeInt);<br>                    }<br>                }<br>            }<br>        }<br>    }<br>}</p>
-
+        <pre><code>function timeFormat($timeInt,$format=&apos;y.m.d&apos;){
+    if(empty($timeInt)||!is_numeric($timeInt)||!$timeInt)
+    {
+        return &apos;&apos;;
+    }
+    $d=time()-$timeInt;
+    if($d&lt;0)
+    {
+        return &apos;&apos;;
+    }else{
+        if($d&lt;60)
+        {
+            return $d.&apos;秒前&apos;;
+        }else{
+            if($d&lt;3600)
+            {
+                return floor($d/60).&apos;分钟前&apos;;
+                    if($d&lt;86400)
+                {
+                    return floor($d/3600).&apos;小时前&apos;;
+                }else{
+                    if($d&lt;259200)
+                    {//3天内
+                        return floor($d/86400).&apos;天前&apos;;
+                    }else{
+                        return date($format,$timeInt);
+                    }
+                }
+            }
+        }
+    }
+}
+</code></pre>
       
     </div>
 
@@ -399,8 +422,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/phpshi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/"
-           data-title="PHP 时间格式几秒前，几分钟前" data-url="http://syuchun.com/2016/phpshi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/">
+      <div class="ds-thread" data-thread-key="2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/"
+           data-title="PHP 时间格式几秒前，几分钟前" data-url="http://syuchun.com/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/">
       </div>
     
   </div>

@@ -504,6 +504,9 @@ pre,
 pre,
 code {
   font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 code {
   padding: 2px 4px;
@@ -1548,7 +1551,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffe0c2;
+  background: #32ff03;
 }
 .links-of-blogroll {
   font-size: 13px;

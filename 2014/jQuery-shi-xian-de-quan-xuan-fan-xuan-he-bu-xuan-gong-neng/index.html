@@ -1,9 +1,7 @@
 <!doctype html>
 
 
-
   
-
 
 <html class="theme-next mist use-motion">
 <head>
@@ -11,18 +9,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-
-
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
 
 
 
@@ -30,7 +18,6 @@
   
   
   <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -62,17 +49,10 @@
 
 
 
-
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
-
   <meta name="keywords" content="jQuery,JavaScript," />
-
-
-
-
 
 
 
@@ -80,43 +60,28 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
-
-
-
-
 <meta name="description" content="jQuery实现的全选、反选和不选功能 示例：
-CSS
-
-&amp;lt;style&amp;gt;
-.top_title{text-align:center;}
+CSS.top_title{text-align:center;}
 .demo{width:520px; margin:40px auto 0 auto; min-height:250px;}
 ul li{line-height:30px; padding:4px 0; font-size:14px}
-.btn{ove">
+.btn{overflow: hidden;di">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery实现的全选、反选和不选功能">
 <meta property="og:url" content="http://syuchun.com/2014/jQuery-shi-xian-de-quan-xuan-fan-xuan-he-bu-xuan-gong-neng/index.html">
 <meta property="og:site_name" content="老孙笔记">
 <meta property="og:description" content="jQuery实现的全选、反选和不选功能 示例：
-CSS
-
-&amp;lt;style&amp;gt;
-.top_title{text-align:center;}
+CSS.top_title{text-align:center;}
 .demo{width:520px; margin:40px auto 0 auto; min-height:250px;}
 ul li{line-height:30px; padding:4px 0; font-size:14px}
-.btn{ove">
-<meta property="og:updated_time" content="2016-05-06T08:07:23.757Z">
+.btn{overflow: hidden;di">
+<meta property="og:updated_time" content="2016-09-06T07:14:35.621Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery实现的全选、反选和不选功能">
 <meta name="twitter:description" content="jQuery实现的全选、反选和不选功能 示例：
-CSS
-
-&amp;lt;style&amp;gt;
-.top_title{text-align:center;}
+CSS.top_title{text-align:center;}
 .demo{width:520px; margin:40px auto 0 auto; min-height:250px;}
 ul li{line-height:30px; padding:4px 0; font-size:14px}
-.btn{ove">
-
-
+.btn{overflow: hidden;di">
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
@@ -354,78 +319,65 @@ ul li{line-height:30px; padding:4px 0; font-size:14px}
 
       
         <p>jQuery实现的全选、反选和不选功能 示例：</p>
-<p></p><h2>CSS</h2><p></p>
-<pre>
-&lt;style&gt;
-.top_title{text-align:center;}
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><pre><code>.top_title{text-align:center;}
 .demo{width:520px; margin:40px auto 0 auto; min-height:250px;}
 ul li{line-height:30px; padding:4px 0; font-size:14px}
 .btn{overflow: hidden;display:inline-block;*display:inline;padding:4px 20px 4px;font-size:14px;line-height:18px;*line-height:20px;color:#fff;text-align:center;vertical-align:middle;cursor:pointer;background-color:#5bb75b;border:1px solid #cccccc;border-color:#e6e6e6 #e6e6e6 #bfbfbf;border-bottom-color:#b3b3b3;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px; margin-left:2px}
-&lt;/style&gt;
-</pre>
-<h2>jQuery</h2>
-<pre>
-&lt;script&gt;  
-$(function () {
+</code></pre><h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><pre><code>$(function () {
     //全选或全不选
-    $("#all").click(function(){   
+    $(&quot;#all&quot;).click(function(){   
         if(this.checked){   
-            $("#list :checkbox").attr("checked", true);  
+            $(&quot;#list :checkbox&quot;).attr(&quot;checked&quot;, true);  
         }else{   
-            $("#list :checkbox").attr("checked", false);
+            $(&quot;#list :checkbox&quot;).attr(&quot;checked&quot;, false);
         }   
      });
     //全选  
-    $("#selectAll").click(function () {
-         $("#list :checkbox,#all").attr("checked", true);  
+    $(&quot;#selectAll&quot;).click(function () {
+         $(&quot;#list :checkbox,#all&quot;).attr(&quot;checked&quot;, true);  
     });  
     //全不选
-    $("#unSelect").click(function () {  
-         $("#list :checkbox,#all").attr("checked", false);  
+    $(&quot;#unSelect&quot;).click(function () {  
+         $(&quot;#list :checkbox,#all&quot;).attr(&quot;checked&quot;, false);  
     });  
     //反选
-    $("#reverse").click(function () {
-         $("#list :checkbox").each(function () {  
-              $(this).attr("checked", !$(this).attr("checked"));  
+    $(&quot;#reverse&quot;).click(function () {
+         $(&quot;#list :checkbox&quot;).each(function () {  
+              $(this).attr(&quot;checked&quot;, !$(this).attr(&quot;checked&quot;));  
          });
          allchk();
     });
 
     //设置全选复选框
-    $("#list :checkbox").click(function(){
+    $(&quot;#list :checkbox&quot;).click(function(){
         allchk();
     });
 });
 function allchk(){
-    var chknum = $("#list :checkbox").size();//选项总个数
+    var chknum = $(&quot;#list :checkbox&quot;).size();//选项总个数
     var chk = 0;
-    $("#list :checkbox").each(function () {  
-        if($(this).attr("checked")==true){
+    $(&quot;#list :checkbox&quot;).each(function () {  
+        if($(this).attr(&quot;checked&quot;)==true){
             chk++;
         }
     });
     if(chknum==chk){//全选
-        $("#all").attr("checked",true);
+        $(&quot;#all&quot;).attr(&quot;checked&quot;,true);
     }else{//不全选
-        $("#all").attr("checked",false);
+        $(&quot;#all&quot;).attr(&quot;checked&quot;,false);
     }
 }
-&lt;/script&gt;
-</pre>
-<h2>Html</h2>
-<pre>
-&lt;div class="demo"&gt;
-    &lt;ul id="list"&gt;  
-        &lt;li&gt;&lt;label&gt;&lt;input type="checkbox" value="1"&gt; iSun's Blog&lt;/label&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;label&gt;&lt;input type="checkbox" value="1"&gt; iSun's Blog&lt;/label&gt;&lt;/li&gt;
+</code></pre><h3 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h3><pre><code>&lt;div class=&quot;demo&quot;&gt;
+    &lt;ul id=&quot;list&quot;&gt;
+        &lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;1&quot;&gt; iSun&apos;s Blog&lt;/label&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;1&quot;&gt; iSun&apos;s Blog&lt;/label&gt;&lt;/li&gt;
     &lt;/ul&gt;
-    &lt;input type="checkbox" id="all"&gt;
-    &lt;input type="button" value="全选" class="btn" id="selectAll"&gt;  
-    &lt;input type="button" value="全不选" class="btn" id="unSelect"&gt;
-    &lt;input type="button" value="反选" class="btn" id="reverse"&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;all&quot;&gt;
+    &lt;input type=&quot;button&quot; value=&quot;全选&quot; class=&quot;btn&quot; id=&quot;selectAll&quot;&gt;
+    &lt;input type=&quot;button&quot; value=&quot;全不选&quot; class=&quot;btn&quot; id=&quot;unSelect&quot;&gt;
+    &lt;input type=&quot;button&quot; value=&quot;反选&quot; class=&quot;btn&quot; id=&quot;reverse&quot;&gt;
 &lt;/div&gt;
-</pre>
-
+</code></pre>
       
     </div>
 
@@ -585,7 +537,7 @@ function allchk(){
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">jQuery</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">Html</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS"><span class="nav-number">1.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery"><span class="nav-number">2.</span> <span class="nav-text">jQuery</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Html"><span class="nav-number">3.</span> <span class="nav-text">Html</span></a></li></ol></div>
             
           </div>
         </section>

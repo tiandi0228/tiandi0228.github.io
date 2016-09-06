@@ -1,9 +1,7 @@
 <!doctype html>
 
 
-
   
-
 
 <html class="theme-next mist use-motion">
 <head>
@@ -11,18 +9,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-
-
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
 
 
 
@@ -30,7 +18,6 @@
   
   
   <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -62,26 +49,15 @@
 
 
 
-
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
 
   <meta name="keywords" content="Wisay,微言微道,Typecho主题,清风博客,syuchun,Wordpress主题,个人博客程序,个人主页设计,个人网站,iSun,2016最新电影" />
 
 
 
 
-
-
-
-
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
-
-
-
-
 
 
 <meta name="description" content="Wisay,微言微道,Typecho主题,清风博客,syuchun,Wordpress主题,个人博客,个人主页设计,个人网站,iSun,2016最新电影">
@@ -93,8 +69,6 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="老孙笔记">
 <meta name="twitter:description" content="Wisay,微言微道,Typecho主题,清风博客,syuchun,Wordpress主题,个人博客,个人主页设计,个人网站,iSun,2016最新电影">
-
-
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
@@ -269,7 +243,7 @@
               
                 
                 <a class="post-title-link" href="/2016/nginx-ssi/" itemprop="url">
-                  nginx ssi
+                  nginx开启ssi
                 </a>
               
             
@@ -338,11 +312,9 @@
       
         
           
-          进入nginx安装文件的目录
-cd /root/nginx-1.11.3/src/http/modules
-编辑如下文件
-vi ngx_http_ssi_filter_module.c
-注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代
+          进入nginx安装文件的目录cd /root/nginx-1.11.3/src/http/modules
+编辑如下文件vi ngx_http_ssi_filter_module.c
+注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：
           ...
 
           <div class="post-more-link text-center">
@@ -467,14 +439,10 @@ vi ngx_http_ssi_filter_module.c
       
         
           
-          安装Node.js
-sudo yum install nodejs
-查看Node.js版本号
-node -v
-安装npm
-sudo yum install npm
-查看npm版本号
-npm -v
+          安装Node.jssudo yum install nodejs
+查看Node.js版本号node -v
+安装npmsudo yum install npm
+查看npm版本号npm -v
 
           
 
@@ -600,11 +568,10 @@ npm -v
       
         
           
-          
-document.body.clientWidth - 网页可见区域宽
+          document.body.clientWidth - 网页可见区域宽
 document.body.clientHeight - 网页可见区域高
 document.body.offsetWidth - 网页可见区域宽，包括边线和滚动条的宽
-document.body.offsetHeight - 
+document.body.offsetHeight - 网
           ...
 
           <div class="post-more-link text-center">
@@ -659,7 +626,7 @@ document.body.offsetHeight -
             
               
                 
-                <a class="post-title-link" href="/2016/phpshi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/" itemprop="url">
+                <a class="post-title-link" href="/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/" itemprop="url">
                   PHP 时间格式几秒前，几分钟前
                 </a>
               
@@ -703,8 +670,8 @@ document.body.offsetHeight -
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/phpshi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/phpshi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/" itemprop="commentsCount"></span>
+                <a href="/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -729,11 +696,15 @@ document.body.offsetHeight -
       
         
           
-          function timeFormat($timeInt,$format=’y.m.d’){    if(empty($timeInt)||!is_numeric($timeInt)||!$timeInt)    {        return ‘’;    }    $d=time()-$time
+          function timeFormat($timeInt,$format=&apos;y.m.d&apos;){
+    if(empty($timeInt)||!is_numeric($timeInt)||!$timeInt)
+    {
+        return &apos;&apos;;
+
           ...
 
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/phpshi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/#more" rel="contents">
+            <a class="btn" href="/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -854,13 +825,10 @@ document.body.offsetHeight -
       
         
           
-          一、隐藏 Nginx 版本号编辑 nginx.conf 文件，增加一行 server_tokens off;
-二、隐藏 PHP 版本号编辑 php.ini 文件，在最后增加如下内容：
-
-;;;;;;;;;;;;;;;;;
+          一、隐藏 Nginx 版本号编辑 nginx.conf 文件，增加一行 server_tokens off;二、隐藏 PHP 版本号编辑 php.ini 文件，在最后增加如下内容：;;;;;;;;;;;;;;;;;
 ; Miscellaneous ;
 ;;;;;;;;;;;;;;;;;
-; D
+; Deci
           ...
 
           <div class="post-more-link text-center">
@@ -998,9 +966,7 @@ document.body.offsetHeight -
         
           
           今天做一个微信的文章显示列表，点击查看加载显示，是用PHP查询数据，然后通过AJAX向服务端发送请求，后台PHP程序得到请求参数，并作出相应，获取数据库相应的记录并以JSON的形式返回给前台页面，前台页面jQuery解析JSON数据，并将数据追加到列表页。
-HTML
-
-&lt;div id=”mor
+HTML&lt;div id=&quot;
           ...
 
           <div class="post-more-link text-center">
@@ -1126,12 +1092,9 @@ HTML
         
           
           jQuery实现的全选、反选和不选功能 示例：
-CSS
-
-&lt;style&gt;
-.top_title{text-align:center;}
+CSS.top_title{text-align:center;}
 .demo{width:520px; margin:40px auto 0 auto; min-height:250px;}
-ul li{line-he
+ul li{line-height:30px; paddi
           ...
 
           <div class="post-more-link text-center">
@@ -1256,7 +1219,8 @@ ul li{line-he
       
         
           
-          TRUNCATE TABLE jobs这个的缺点就是会把表里的数据都删除
+          TRUNCATE TABLE jobs
+这个的缺点就是会把表里的数据都删除
 
           
 
@@ -1383,7 +1347,7 @@ ul li{line-he
         
           
           这几天用tp作了个招聘的网站，想用到邮件找回密码和激活，所以想到了用PHPMailer先去下载PHPMailer,然后放入THINKPHP/libary/ORG中.在Common/Common/下新建一个function.php文件
-function send_mail($to = ‘’, $sub
+function send_mail($to = &apos;&a
           ...
 
           <div class="post-more-link text-center">

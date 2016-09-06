@@ -1,9 +1,7 @@
 <!doctype html>
 
 
-
   
-
 
 <html class="theme-next mist use-motion">
 <head>
@@ -11,18 +9,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-
-
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
 
 
 
@@ -30,7 +18,6 @@
   
   
   <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -62,17 +49,10 @@
 
 
 
-
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
-
   <meta name="keywords" content="NGINX,ssi," />
-
-
-
-
 
 
 
@@ -80,40 +60,22 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
-
-
-
-
-<meta name="description" content="进入nginx安装文件的目录
-cd /root/nginx-1.11.3/src/http/modules
-编辑如下文件
-vi ngx_http_ssi_filter_module.c
-注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：
-
-2065    // if (ngx_http_parse_unsafe_uri(r, ur">
+<meta name="description" content="进入nginx安装文件的目录cd /root/nginx-1.11.3/src/http/modules
+编辑如下文件vi ngx_http_ssi_filter_module.c
+注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：2065    // if (ngx_http_parse_unsafe_uri(r, uri, &amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nginx ssi">
+<meta property="og:title" content="nginx开启ssi">
 <meta property="og:url" content="http://syuchun.com/2016/nginx-ssi/index.html">
 <meta property="og:site_name" content="老孙笔记">
-<meta property="og:description" content="进入nginx安装文件的目录
-cd /root/nginx-1.11.3/src/http/modules
-编辑如下文件
-vi ngx_http_ssi_filter_module.c
-注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：
-
-2065    // if (ngx_http_parse_unsafe_uri(r, ur">
-<meta property="og:updated_time" content="2016-09-06T03:46:42.848Z">
+<meta property="og:description" content="进入nginx安装文件的目录cd /root/nginx-1.11.3/src/http/modules
+编辑如下文件vi ngx_http_ssi_filter_module.c
+注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：2065    // if (ngx_http_parse_unsafe_uri(r, uri, &amp;">
+<meta property="og:updated_time" content="2016-09-06T07:09:24.163Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="nginx ssi">
-<meta name="twitter:description" content="进入nginx安装文件的目录
-cd /root/nginx-1.11.3/src/http/modules
-编辑如下文件
-vi ngx_http_ssi_filter_module.c
-注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：
-
-2065    // if (ngx_http_parse_unsafe_uri(r, ur">
-
-
+<meta name="twitter:title" content="nginx开启ssi">
+<meta name="twitter:description" content="进入nginx安装文件的目录cd /root/nginx-1.11.3/src/http/modules
+编辑如下文件vi ngx_http_ssi_filter_module.c
+注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：2065    // if (ngx_http_parse_unsafe_uri(r, uri, &amp;">
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
@@ -129,7 +91,7 @@ vi ngx_http_ssi_filter_module.c
   };
 </script>
 
-  <title> nginx ssi | 老孙笔记 </title>
+  <title> nginx开启ssi | 老孙笔记 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -284,7 +246,7 @@ vi ngx_http_ssi_filter_module.c
             
             
               
-                nginx ssi
+                nginx开启ssi
               
             
           </h1>
@@ -350,37 +312,22 @@ vi ngx_http_ssi_filter_module.c
       
 
       
-        <p></p><h2>进入nginx安装文件的目录</h2><p></p>
-<pre>cd /root/nginx-1.11.3/src/http/modules</pre>
-<h2>编辑如下文件</h2>
-<pre>vi ngx_http_ssi_filter_module.c</pre>
-<h2>注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：</h2>
-<pre>
-2065    // if (ngx_http_parse_unsafe_uri(r, uri, &args, &flags) != NGX_OK) {
+        <h3 id="进入nginx安装文件的目录"><a href="#进入nginx安装文件的目录" class="headerlink" title="进入nginx安装文件的目录"></a>进入nginx安装文件的目录</h3><pre><code>cd /root/nginx-1.11.3/src/http/modules
+</code></pre><h3 id="编辑如下文件"><a href="#编辑如下文件" class="headerlink" title="编辑如下文件"></a>编辑如下文件</h3><pre><code>vi ngx_http_ssi_filter_module.c
+</code></pre><h3 id="注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码："><a href="#注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码：" class="headerlink" title="注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码："></a>注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：</h3><pre><code>2065    // if (ngx_http_parse_unsafe_uri(r, uri, &amp;args, &amp;flags) != NGX_OK) {
 2066    //    return NGX_HTTP_SSI_ERROR;
 2067    //}
-</pre>
-<p>保存以上文件</p>
-<pre>cd /root/nginx-1.11.3</pre>
-<pre>执行./configure --prefix=/usr/local/nginx --with-poll_module --with-http_stub_status_module</pre>
-<pre>执行 make （注意，此处只需要执行make ，不需要 执行make install）</pre>
-<h2>备份nginx 安装目录下的nginx 文件，执行如下脚本</h2>
-<pre>
-进入目录：cd /usr/local/nginx/sbin/
+</code></pre><h3 id="保存以上文件"><a href="#保存以上文件" class="headerlink" title="保存以上文件"></a>保存以上文件</h3><pre><code>cd /root/nginx-1.11.3
+执行./configure --prefix=/usr/local/nginx --with-poll_module --with-http_stub_status_module
+执行 make （注意，此处只需要执行make ，不需要 执行make install）
+</code></pre><h3 id="备份nginx-安装目录下的nginx-文件，执行如下脚本"><a href="#备份nginx-安装目录下的nginx-文件，执行如下脚本" class="headerlink" title="备份nginx 安装目录下的nginx 文件，执行如下脚本"></a>备份nginx 安装目录下的nginx 文件，执行如下脚本</h3><pre><code>进入目录：cd /usr/local/nginx/sbin/
 停止nginx ：./nginx -s stop
 执行： mv nginx /home/nginxold
-</pre>
-<h2>将刚才第5步编译好的nginx文件从（/root/nginx-1.11.3/objs）拷贝到/usr/local/nginx/sbin/ 目录下</h2>
-<pre>
-进入objs目录 cd /root/nginx-1.11.3/objs
+</code></pre><h3 id="将刚才第5步编译好的nginx文件从（-root-nginx-1-11-3-objs）拷贝到-usr-local-nginx-sbin-目录下"><a href="#将刚才第5步编译好的nginx文件从（-root-nginx-1-11-3-objs）拷贝到-usr-local-nginx-sbin-目录下" class="headerlink" title="将刚才第5步编译好的nginx文件从（/root/nginx-1.11.3/objs）拷贝到/usr/local/nginx/sbin/ 目录下"></a>将刚才第5步编译好的nginx文件从（/root/nginx-1.11.3/objs）拷贝到/usr/local/nginx/sbin/ 目录下</h3><pre><code>进入objs目录 cd /root/nginx-1.11.3/objs
 拷贝nginx文件：cp nginx /usr/local/nginx/sbin/nginx
-</pre>
-<h2>启动nginx</h2>
-<pre>
-进入cd /usr/local/nginx/sbin/ 目录
+</code></pre><h3 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h3><pre><code>进入cd /usr/local/nginx/sbin/ 目录
 启动：./nginx
-</pre>
-
+</code></pre>
       
     </div>
 
@@ -445,7 +392,7 @@ vi ngx_http_ssi_filter_module.c
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/nginx-ssi/"
-           data-title="nginx ssi" data-url="http://syuchun.com/2016/nginx-ssi/">
+           data-title="nginx开启ssi" data-url="http://syuchun.com/2016/nginx-ssi/">
       </div>
     
   </div>
@@ -536,7 +483,7 @@ vi ngx_http_ssi_filter_module.c
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">进入nginx安装文件的目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">编辑如下文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">备份nginx 安装目录下的nginx 文件，执行如下脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">将刚才第5步编译好的nginx文件从（/root/nginx-1.11.3/objs）拷贝到/usr/local/nginx/sbin/ 目录下</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">启动nginx</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#进入nginx安装文件的目录"><span class="nav-number">1.</span> <span class="nav-text">进入nginx安装文件的目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑如下文件"><span class="nav-number">2.</span> <span class="nav-text">编辑如下文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码："><span class="nav-number">3.</span> <span class="nav-text">注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保存以上文件"><span class="nav-number">4.</span> <span class="nav-text">保存以上文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#备份nginx-安装目录下的nginx-文件，执行如下脚本"><span class="nav-number">5.</span> <span class="nav-text">备份nginx 安装目录下的nginx 文件，执行如下脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将刚才第5步编译好的nginx文件从（-root-nginx-1-11-3-objs）拷贝到-usr-local-nginx-sbin-目录下"><span class="nav-number">6.</span> <span class="nav-text">将刚才第5步编译好的nginx文件从（/root/nginx-1.11.3/objs）拷贝到/usr/local/nginx/sbin/ 目录下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动nginx"><span class="nav-number">7.</span> <span class="nav-text">启动nginx</span></a></li></ol></div>
             
           </div>
         </section>

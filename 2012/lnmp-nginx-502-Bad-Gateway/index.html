@@ -1,9 +1,7 @@
 <!doctype html>
 
 
-
   
-
 
 <html class="theme-next mist use-motion">
 <head>
@@ -11,18 +9,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-
-
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
 
 
 
@@ -30,7 +18,6 @@
   
   
   <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -62,17 +49,10 @@
 
 
 
-
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
-
   <meta name="keywords" content="nginx,lnmp,502," />
-
-
-
-
 
 
 
@@ -80,28 +60,22 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
-
-
-
-
 <meta name="description" content="今天下午网站出现了502 Bad Gateway，我安装的是军哥的lnmp一键安装，去他的论坛的找了一下，也很好找，置顶的，但是按照上面的说法都试了一次，还是出现502错误，然后百度了很久，终于解决了问题，下面是我的问题：
-一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行&amp;lt;/h5
-fastcgi_pass&amp;nbsp; unix:/tmp/php">
+一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行fastcgi_pass unix:/tmp/php-cgi.sock;
+改为：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="lnmp nginx 502 Bad Gateway">
 <meta property="og:url" content="http://syuchun.com/2012/lnmp-nginx-502-Bad-Gateway/index.html">
 <meta property="og:site_name" content="老孙笔记">
 <meta property="og:description" content="今天下午网站出现了502 Bad Gateway，我安装的是军哥的lnmp一键安装，去他的论坛的找了一下，也很好找，置顶的，但是按照上面的说法都试了一次，还是出现502错误，然后百度了很久，终于解决了问题，下面是我的问题：
-一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行&amp;lt;/h5
-fastcgi_pass&amp;nbsp; unix:/tmp/php">
-<meta property="og:updated_time" content="2016-05-06T07:52:35.361Z">
+一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行fastcgi_pass unix:/tmp/php-cgi.sock;
+改为：">
+<meta property="og:updated_time" content="2016-09-06T07:18:21.317Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lnmp nginx 502 Bad Gateway">
 <meta name="twitter:description" content="今天下午网站出现了502 Bad Gateway，我安装的是军哥的lnmp一键安装，去他的论坛的找了一下，也很好找，置顶的，但是按照上面的说法都试了一次，还是出现502错误，然后百度了很久，终于解决了问题，下面是我的问题：
-一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行&amp;lt;/h5
-fastcgi_pass&amp;nbsp; unix:/tmp/php">
-
-
+一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行fastcgi_pass unix:/tmp/php-cgi.sock;
+改为：">
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
@@ -338,24 +312,17 @@ fastcgi_pass&amp;nbsp; unix:/tmp/php">
       
 
       
-        <p>今天下午网站出现了502 Bad Gateway，我安装的是军哥的lnmp一键安装，去他的论坛的找了一下，也很好找，置顶的，但是按照上面的说法都试了一次，还是出现502错误，然后百度了很久，终于解决了问题，下面是我的问题：<br></p>
-<p></p><h5>一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行&lt;/h5<p></p>
-<p><pre>fastcgi_pass&nbsp; unix:/tmp/php-cgi.sock;</pre></p>
-<p></p><h5>改为：</h5><p></p>
-<p><pre>fastcgi_pass&nbsp; 127.0.0.1:9000;</pre></p>
-<p></p><h5>二、打开/wp-content/local/php/etc/php-fpm.conf，找到一行</h5><p></p>
-<p><pre>&lt;value name=”listen_address”&gt;/tmp/php-cgi.sock&lt;/value&gt;</pre></p>
-<p></p><h5>改为</h5><p></p>
-<p><pre>&lt;value name=”listen_address”&gt;127.0.0.1:9000&lt;/value&gt;</pre></p>
-<p></p><h5>三、打开/wp-content/local/nginx/conf/vhost/你的域名文件</h5><p></p>
-<p><pre>fastcgi_pass&nbsp; unix:/tmp/php-cgi.sock;</pre></p>
-<p></p><h5>改为：</h5><p></p>
-<p><pre>fastcgi_pass&nbsp; 127.0.0.1:9000;</pre></p>
-<p></p><h5>nginx 重启：</h5><p></p>
-<p><pre>/wp-content/local/nginx/sbin/nginx -t</pre></p>
-<p></p><h5>php-fpm重启：</h5><p></p>
-<p><pre>/wp-content/local/php/sbin/php-fpm restart</pre><br>然后刷新了一下页面，502就消失了</p>
-</h5>
+        <p>今天下午网站出现了502 Bad Gateway，我安装的是军哥的lnmp一键安装，去他的论坛的找了一下，也很好找，置顶的，但是按照上面的说法都试了一次，还是出现502错误，然后百度了很久，终于解决了问题，下面是我的问题：</p>
+<h3 id="一、打开-wp-content-local-nginx-conf-nginx-conf，找到一行"><a href="#一、打开-wp-content-local-nginx-conf-nginx-conf，找到一行" class="headerlink" title="一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行"></a>一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行</h3><pre><code>fastcgi_pass unix:/tmp/php-cgi.sock;
+</code></pre><h3 id="改为："><a href="#改为：" class="headerlink" title="改为："></a>改为：</h3><pre><code>fastcgi_pass 127.0.0.1:9000;
+</code></pre><h3 id="二、打开-wp-content-local-php-etc-php-fpm-conf，找到一行"><a href="#二、打开-wp-content-local-php-etc-php-fpm-conf，找到一行" class="headerlink" title="二、打开/wp-content/local/php/etc/php-fpm.conf，找到一行"></a>二、打开/wp-content/local/php/etc/php-fpm.conf，找到一行</h3><pre><code>&amp;lt;value name=&quot;listen_address&quot;&amp;gt;/tmp/php-cgi.sock&amp;lt;/value&amp;gt;
+</code></pre><h3 id="改为"><a href="#改为" class="headerlink" title="改为"></a>改为</h3><pre><code>&amp;lt;value name=&quot;listen_address&quot;&amp;gt;127.0.0.1:9000&amp;lt;/value&amp;gt;
+</code></pre><h3 id="三、打开-wp-content-local-nginx-conf-vhost-你的域名文件"><a href="#三、打开-wp-content-local-nginx-conf-vhost-你的域名文件" class="headerlink" title="三、打开/wp-content/local/nginx/conf/vhost/你的域名文件"></a>三、打开/wp-content/local/nginx/conf/vhost/你的域名文件</h3><pre><code>fastcgi_pass unix:/tmp/php-cgi.sock;
+</code></pre><h3 id="改为：-1"><a href="#改为：-1" class="headerlink" title="改为："></a>改为：</h3><pre><code>fastcgi_pass 127.0.0.1:9000;
+</code></pre><h3 id="nginx-重启："><a href="#nginx-重启：" class="headerlink" title="nginx 重启："></a>nginx 重启：</h3><pre><code>/wp-content/local/nginx/sbin/nginx -t
+</code></pre><h3 id="php-fpm重启："><a href="#php-fpm重启：" class="headerlink" title="php-fpm重启："></a>php-fpm重启：</h3><pre><code>/wp-content/local/php/sbin/php-fpm restart
+</code></pre><p>然后刷新了一下页面，502就消失了</p>
+
       
     </div>
 
@@ -517,23 +484,7 @@ fastcgi_pass&amp;nbsp; unix:/tmp/php">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行</h5
-fastcgi_pass  unix:/tmp/php-cgi.sock;
-改为：
-fastcgi_pass  127.0.0.1:9000;
-二、打开/wp-content/local/php/etc/php-fpm.conf，找到一行
-<value name=”listen_address”>/tmp/php-cgi.sock</value>
-改为
-<value name=”listen_address”>127.0.0.1:9000</value>
-三、打开/wp-content/local/nginx/conf/vhost/你的域名文件
-fastcgi_pass  unix:/tmp/php-cgi.sock;
-改为：
-fastcgi_pass  127.0.0.1:9000;
-nginx 重启：
-/wp-content/local/nginx/sbin/nginx -t
-php-fpm重启：
-/wp-content/local/php/sbin/php-fpm restart然后刷新了一下页面，502就消失了
-</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">改为：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">二、打开/wp-content/local/php/etc/php-fpm.conf，找到一行</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">改为</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">三、打开/wp-content/local/nginx/conf/vhost/你的域名文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">改为：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">nginx 重启：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">8.</span> <span class="nav-text">php-fpm重启：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、打开-wp-content-local-nginx-conf-nginx-conf，找到一行"><span class="nav-number">1.</span> <span class="nav-text">一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改为："><span class="nav-number">2.</span> <span class="nav-text">改为：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、打开-wp-content-local-php-etc-php-fpm-conf，找到一行"><span class="nav-number">3.</span> <span class="nav-text">二、打开/wp-content/local/php/etc/php-fpm.conf，找到一行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改为"><span class="nav-number">4.</span> <span class="nav-text">改为</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、打开-wp-content-local-nginx-conf-vhost-你的域名文件"><span class="nav-number">5.</span> <span class="nav-text">三、打开/wp-content/local/nginx/conf/vhost/你的域名文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改为：-1"><span class="nav-number">6.</span> <span class="nav-text">改为：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx-重启："><span class="nav-number">7.</span> <span class="nav-text">nginx 重启：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#php-fpm重启："><span class="nav-number">8.</span> <span class="nav-text">php-fpm重启：</span></a></li></ol></div>
             
           </div>
         </section>

@@ -1,9 +1,7 @@
 <!doctype html>
 
 
-
   
-
 
 <html class="theme-next mist use-motion">
 <head>
@@ -11,18 +9,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-
-
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
 
 
 
@@ -30,7 +18,6 @@
   
   
   <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -62,17 +49,10 @@
 
 
 
-
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
-
   <meta name="keywords" content="PHP,jQuery," />
-
-
-
-
 
 
 
@@ -80,31 +60,19 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
-
-
-
-
 <meta name="description" content="今天做一个微信的文章显示列表，点击查看加载显示，是用PHP查询数据，然后通过AJAX向服务端发送请求，后台PHP程序得到请求参数，并作出相应，获取数据库相应的记录并以JSON的形式返回给前台页面，前台页面jQuery解析JSON数据，并将数据追加到列表页。
-HTML
-
-&amp;lt;div id=”more” style=”margin:10px;”&amp;gt;    &amp;lt;div class=”sing">
+HTML&amp;lt;div id=&amp;quot;more&amp;quot; style=&amp;quot;margin:10px;&amp;quot;&amp;gt;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery+PHP点击查看更多">
 <meta property="og:url" content="http://syuchun.com/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/index.html">
 <meta property="og:site_name" content="老孙笔记">
 <meta property="og:description" content="今天做一个微信的文章显示列表，点击查看加载显示，是用PHP查询数据，然后通过AJAX向服务端发送请求，后台PHP程序得到请求参数，并作出相应，获取数据库相应的记录并以JSON的形式返回给前台页面，前台页面jQuery解析JSON数据，并将数据追加到列表页。
-HTML
-
-&amp;lt;div id=”more” style=”margin:10px;”&amp;gt;    &amp;lt;div class=”sing">
-<meta property="og:updated_time" content="2016-05-06T08:28:35.515Z">
+HTML&amp;lt;div id=&amp;quot;more&amp;quot; style=&amp;quot;margin:10px;&amp;quot;&amp;gt;">
+<meta property="og:updated_time" content="2016-09-06T07:05:44.224Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery+PHP点击查看更多">
 <meta name="twitter:description" content="今天做一个微信的文章显示列表，点击查看加载显示，是用PHP查询数据，然后通过AJAX向服务端发送请求，后台PHP程序得到请求参数，并作出相应，获取数据库相应的记录并以JSON的形式返回给前台页面，前台页面jQuery解析JSON数据，并将数据追加到列表页。
-HTML
-
-&amp;lt;div id=”more” style=”margin:10px;”&amp;gt;    &amp;lt;div class=”sing">
-
-
+HTML&amp;lt;div id=&amp;quot;more&amp;quot; style=&amp;quot;margin:10px;&amp;quot;&amp;gt;">
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
@@ -354,29 +322,60 @@ HTML
 
       
         <p>今天做一个微信的文章显示列表，点击查看加载显示，是用PHP查询数据，然后通过AJAX向服务端发送请求，后台PHP程序得到请求参数，并作出相应，获取数据库相应的记录并以JSON的形式返回给前台页面，前台页面jQuery解析JSON数据，并将数据追加到列表页。</p>
-<h2>HTML</h2>
+<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><pre><code>&lt;div id=&quot;more&quot; style=&quot;margin:10px;&quot;&gt;
+      &lt;div class=&quot;single_item&quot;&gt;
+        &lt;div class=&quot;link&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><pre><code>body{margin: 0px;background:#eee;}
+a:link,a:visited{text-decoration:none; color:#000000;}
+.link{background:#fff;border-radius:5px;margin-bottom:10px;padding:35px 10px;font:bold 30px &quot;SimSun&quot;;}
+.more{background:#fff;border-radius:5px;padding:10px;text-align:center;font-size:30px;}
+</code></pre><h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><pre><code>$(function(){
+    //var gid=$(&apos;#gid&apos;).val();
+    //$(&apos;#more&apos;).more({&apos;address&apos;: &quot;data.php?id=&quot;+gid+&quot;&quot;})
+    $(&apos;#more&apos;).more({&apos;address&apos;: &quot;data.php&quot;})
+});
+</code></pre><h3 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h3><pre><code>function arrayRecursive(&amp;$array, $function, $apply_to_keys_also = false){
+    static $recursive_counter = 0;
+    if (++$recursive_counter &gt; 1000) {
+        die(&apos;possible deep recursion attack&apos;);
+    }
+    foreach ($array as $key =&gt; $value) {
+        if (is_array($value)) {
+            arrayRecursive($array[$key], $function, $apply_to_keys_also);
+        } else {
+            $array[$key] = $function($value);
+        }
 
-<p>&lt;div id=”more” style=”margin:10px;”&gt;<br>    &lt;div class=”single_item”&gt;<br>        &lt;div class=”link”&gt;&lt;/div&gt;<br>    &lt;/div&gt;<br>&lt;/div&gt;</p>
-<h2>CSS</h2>
-
-<p>body{margin: 0px;background:#eee;}<br>a:link,a:visited{text-decoration:none; color:#000000;}<br>.link{background:#fff;border-radius:5px;margin-bottom:10px;padding:35px 10px;font:bold 30px “SimSun”;}<br>.more{background:#fff;border-radius:5px;padding:10px;text-align:center;font-size:30px;}</p>
-<h2>jQuery</h2>
-
-<p>$(function(){<br>    //var gid=$(‘#gid’).val();<br>    //$(‘#more’).more({‘address’: “data.php?id=”+gid+””})<br>        $(‘#more’).more({‘address’: “data.php”})<br>});</p>
-<h2>PHP</h2>
-
-<p>function arrayRecursive(&amp;$array, $function, $apply_to_keys_also = false)<br>{<br>    static $recursive_counter = 0;<br>    if (++$recursive_counter &gt; 1000) {<br>        die(‘possible deep recursion attack’);<br>    }<br>    foreach ($array as $key =&gt; $value) {<br>        if (is_array($value)) {<br>            arrayRecursive($array[$key], $function, $apply_to_keys_also);<br>        } else {<br>            $array[$key] = $function($value);<br>        }</p>
-<pre><code>    if ($apply_to_keys_also &amp;&amp; is_string($key)) {
-        $new_key = $function($key);
-        if ($new_key != $key) {
-            $array[$new_key] = $array[$key];
-            unset($array[$key]);
+        if ($apply_to_keys_also &amp;&amp; is_string($key)) {
+            $new_key = $function($key);
+            if ($new_key != $key) {
+                $array[$new_key] = $array[$key];
+                unset($array[$key]);
+            }
         }
     }
+    $recursive_counter--;
 }
-$recursive_counter--;
-</code></pre><p>}<br>$last = $_POST[‘last’];//开始记录数<br>$amount = $_POST[‘amount’];//单次显示记录数<br>$id = isset($_GET[‘id’]) ? $_GET[‘id’] : 9;<br>$query=mysql_query(“select * from p8_spider_item where rid = $id order by id asc limit $last,$amount”);<br>while ($row=mysql_fetch_array($query))<br>{<br>    $array[] = array(<br>        ‘link’=&gt;”&lt;a href=’content.php?rid=”.$row[‘rid’].”&amp;id=”.$row[‘id’].”‘&gt;”.$row[‘title’].”&lt;/a&gt;”,<br>      );<br>}<br>function JSON($array) {<br>    arrayRecursive($array, ‘urlencode’, true);<br>    $json = json_encode($array);<br>    return urldecode($json);<br>}<br>echo JSON($array);</p>
-<p>下载<a href="http://oss.syuchun.com/wisay/2014/08/jquery.more_.js" target="_blank" rel="external">jquery.more</a></p>
+
+$last = $_POST[&apos;last&apos;];//开始记录数
+$amount = $_POST[&apos;amount&apos;];//单次显示记录数
+$id = isset($_GET[&apos;id&apos;]) ? $_GET[&apos;id&apos;] : 9;
+$query=mysql_query(&quot;select * from p8_spider_item where rid = $id order by id asc limit $last,$amount&quot;);
+while ($row=mysql_fetch_array($query)){
+    $array[] = array(
+        &apos;link&apos;=&gt;&quot;&lt;a href=&apos;content.php?rid=&quot;.$row[&apos;rid&apos;].&quot;&amp;id=&quot;.$row[&apos;id&apos;].&quot;&apos;&gt;&quot;.$row[&apos;title&apos;].&quot;&lt;/a&gt;&quot;,
+    );
+}
+
+function JSON($array) {
+    arrayRecursive($array, &apos;urlencode&apos;, true);
+    $json = json_encode($array);
+    return urldecode($json);
+}
+echo JSON($array);
+</code></pre><p>下载<a href="http://oss.syuchun.com/wisay/2014/08/jquery.more_.js" target="_blank" rel="external">jquery.more</a></p>
 
       
     </div>
@@ -537,7 +536,7 @@ $recursive_counter--;
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">HTML</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">jQuery</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">PHP</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML"><span class="nav-number">1.</span> <span class="nav-text">HTML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS"><span class="nav-number">2.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery"><span class="nav-number">3.</span> <span class="nav-text">jQuery</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP"><span class="nav-number">4.</span> <span class="nav-text">PHP</span></a></li></ol></div>
             
           </div>
         </section>
