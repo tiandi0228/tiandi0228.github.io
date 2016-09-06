@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://syuchun.com/tags/index.html</loc>
+    <lastmod>2016-09-06T09:15:51.901Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://syuchun.com/2012/linux-vps-xia-ssh-chang-yong-ming-ling/</loc>
     <lastmod>2016-09-06T07:27:08.195Z</lastmod>
   </url>
@@ -69,11 +74,6 @@
   <url>
     <loc>http://syuchun.com/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/</loc>
     <lastmod>2016-09-06T07:05:44.224Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://syuchun.com/tags/index.html</loc>
-    <lastmod>2016-05-06T05:07:57.886Z</lastmod>
   </url>
   
   <url>
