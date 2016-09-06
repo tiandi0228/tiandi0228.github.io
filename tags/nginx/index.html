@@ -65,7 +65,7 @@
 <meta name="description" content="专注IT领域，分享网络乐趣。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="老孙笔记">
-<meta property="og:url" content="http://syuchun.com/tags/nginx/index.html">
+<meta property="og:url" content="http://syuchun.com/tags/NGINX/index.html">
 <meta property="og:site_name" content="老孙笔记">
 <meta property="og:description" content="专注IT领域，分享网络乐趣。">
 <meta name="twitter:card" content="summary">
@@ -81,12 +81,12 @@
     motion: true,
     duoshuo: {
       userId: 293001,
-      author: '博主'
+      author: '楼主'
     }
   };
 </script>
 
-  <title> 标签: nginx | 老孙笔记 </title>
+  <title> 标签: NGINX | 老孙笔记 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -233,7 +233,7 @@
   <div id="posts" class="posts-collapse">
     <div class="collection-title">
       <h2 >
-        nginx
+        NGINX
         <small>标签</small>
       </h2>
     </div>
@@ -246,37 +246,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2015/hide-php-nignx-version-number/" itemprop="url">
+            <a class="post-title-link" href="/2016/nginx-ssi/" itemprop="url">
               
-                <span itemprop="name">隐藏 Nignx 、PHP 版本号</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2015-07-22T10:37:00+08:00"
-              content="2015-07-22" >
-          07-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2012/lnmp-nginx-502-Bad-Gateway/" itemprop="url">
-              
-                <span itemprop="name">lnmp nginx 502 Bad Gateway</span>
+                <span itemprop="name">nginx开启ssi</span>
               
             </a>
         
@@ -284,9 +256,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2012-09-25T20:42:00+08:00"
-              content="2012-09-25" >
-          09-25
+              datetime="2016-09-06T11:07:41+08:00"
+              content="2016-09-06" >
+          09-06
         </time>
       </div>
 
@@ -378,6 +350,24 @@
         
 
         
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://example.com/" title="Title" target="_blank">Title</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
       </section>
@@ -625,6 +615,42 @@
                 str += "</ul>";
                 if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
                 if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+
+  
+
+  
+  
+</body>
+</html>
+><i class="fa fa-search fa-5x" /></div>' }
                 $resultContent.innerHTML = str;
             });
             proceedsearch();
