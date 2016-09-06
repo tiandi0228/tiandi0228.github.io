@@ -338,13 +338,12 @@
       
         
           
-          进入nginx安装文件的目录cd /root/nginx-1.11.3/src/http/modules
-### 编辑如下文件
-
+          进入nginx安装文件的目录
+cd /root/nginx-1.11.3/src/http/modules
+编辑如下文件
 vi ngx_http_ssi_filter_module.c
-
-
-          
+注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代
+          ...
 
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/nginx-ssi/#more" rel="contents">
