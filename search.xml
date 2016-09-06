@@ -8,9 +8,9 @@
       <url>http://syuchun.com/2016/nginx-ssi/</url>
       <content type="html"><![CDATA[<h3 id="进入nginx安装文件的目录"><a href="#进入nginx安装文件的目录" class="headerlink" title="进入nginx安装文件的目录"></a>进入nginx安装文件的目录</h3><pre><code>cd /root/nginx-1.11.3/src/http/modules
 </code></pre><h3 id="编辑如下文件"><a href="#编辑如下文件" class="headerlink" title="编辑如下文件"></a>编辑如下文件</h3><pre><code>vi ngx_http_ssi_filter_module.c
-</code></pre><h3 id="注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码："><a href="#注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码：" class="headerlink" title="注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码："></a>注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：</h3><pre><code>2065    // if (ngx_http_parse_unsafe_uri(r, uri, &amp;args, &amp;flags) != NGX_OK) {
-2066    //    return NGX_HTTP_SSI_ERROR;
-2067    //}
+</code></pre><h3 id="注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码："><a href="#注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码：" class="headerlink" title="注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码："></a>注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：</h3><pre><code>2065 // if (ngx_http_parse_unsafe_uri(r, uri, &amp;args, &amp;flags) != NGX_OK) {
+2066 //    return NGX_HTTP_SSI_ERROR;
+2067 // }
 </code></pre><h3 id="保存以上文件"><a href="#保存以上文件" class="headerlink" title="保存以上文件"></a>保存以上文件</h3><pre><code>cd /root/nginx-1.11.3
 执行./configure --prefix=/usr/local/nginx --with-poll_module --with-http_stub_status_module
 执行 make （注意，此处只需要执行make ，不需要 执行make install）
