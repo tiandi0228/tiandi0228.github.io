@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://syuchun.com/2016/atom-cha-jian-he-zhu-ti/</loc>
+    <lastmod>2016-09-07T03:45:09.027Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://syuchun.com/2016/nginx-ssi/</loc>
     <lastmod>2016-09-06T09:44:38.537Z</lastmod>
   </url>
@@ -64,11 +69,6 @@
   <url>
     <loc>http://syuchun.com/2015/hide-php-nignx-version-number/</loc>
     <lastmod>2016-09-06T07:10:10.458Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://syuchun.com/2016/CentOS-an-zhuang-nodejs-npm/</loc>
-    <lastmod>2016-09-06T07:06:45.010Z</lastmod>
   </url>
   
   <url>

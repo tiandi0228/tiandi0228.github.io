@@ -4,7 +4,7 @@
   <subtitle><![CDATA[专注IT领域，分享网络乐趣。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://syuchun.com/"/>
-  <updated>2016-09-06T09:44:38.537Z</updated>
+  <updated>2016-09-07T03:45:09.027Z</updated>
   <id>http://syuchun.com/</id>
   
   <author>
@@ -13,6 +13,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[atom插件和主题]]></title>
+    <link href="http://syuchun.com/2016/atom-cha-jian-he-zhu-ti/"/>
+    <id>http://syuchun.com/2016/atom-cha-jian-he-zhu-ti/</id>
+    <published>2016-09-07T03:05:17.000Z</published>
+    <updated>2016-09-07T03:45:09.027Z</updated>
+    <content type="html"><![CDATA[<h3 id="Atom插件推荐"><a href="#Atom插件推荐" class="headerlink" title="Atom插件推荐"></a>Atom插件推荐</h3><pre><code>Activate Power Mode        Atom装逼插件
+jQuery Snippets            jQuery提示插件
+atom-ternjs                强大的JS提示插件
+autoclose-html             闭合html标签
+color-picker               颜色拾取器 快捷键cmd + shift + c/ctrl + alt + c
+emmet                      必备的前端插件
+file-icons                 Atom文件夹图标
+language-vue               Vue高亮
+minimap                    迷你地图
+vue-autocompile            Auto compiles vue in atom
+vue-format                 Vue格式化
+vue-snippets               Vue提示
+</code></pre><h3 id="Atom主题推荐"><a href="#Atom主题推荐" class="headerlink" title="Atom主题推荐"></a>Atom主题推荐</h3><pre><code>atom-material-ui
+</code></pre><h3 id="使用字体"><a href="#使用字体" class="headerlink" title="使用字体"></a>使用字体</h3><pre><code>Source Code Pro
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="Atom插件推荐"><a href="#Atom插件推荐" class="headerlink" title="Atom插件推荐"></a>Atom插件推荐</h3><pre><code>Activate Power Mode        Atom装逼插件
+jQ]]>
+    </summary>
+    
+      <category term="atom" scheme="http://syuchun.com/tags/atom/"/>
+    
+      <category term="Atom" scheme="http://syuchun.com/categories/Atom/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[nginx开启ssi]]></title>
@@ -45,32 +77,6 @@
       <category term="ssi" scheme="http://syuchun.com/tags/ssi/"/>
     
       <category term="NGINX" scheme="http://syuchun.com/categories/NGINX/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[CentOS安装Node.js和npm]]></title>
-    <link href="http://syuchun.com/2016/CentOS-an-zhuang-nodejs-npm/"/>
-    <id>http://syuchun.com/2016/CentOS-an-zhuang-nodejs-npm/</id>
-    <published>2016-05-06T06:50:34.000Z</published>
-    <updated>2016-09-06T07:06:45.010Z</updated>
-    <content type="html"><![CDATA[<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><pre><code>sudo yum install nodejs
-</code></pre><h3 id="查看Node-js版本号"><a href="#查看Node-js版本号" class="headerlink" title="查看Node.js版本号"></a>查看Node.js版本号</h3><pre><code>node -v
-</code></pre><h3 id="安装npm"><a href="#安装npm" class="headerlink" title="安装npm"></a>安装npm</h3><pre><code>sudo yum install npm
-</code></pre><h3 id="查看npm版本号"><a href="#查看npm版本号" class="headerlink" title="查看npm版本号"></a>查看npm版本号</h3><pre><code>npm -v
-</code></pre>]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><pre><code>sudo yum install nodejs
-</code></p]]>
-    </summary>
-    
-      <category term="CentOS" scheme="http://syuchun.com/tags/CentOS/"/>
-    
-      <category term="nodejs" scheme="http://syuchun.com/tags/nodejs/"/>
-    
-      <category term="npm" scheme="http://syuchun.com/tags/npm/"/>
-    
-      <category term="Linux" scheme="http://syuchun.com/categories/Linux/"/>
     
   </entry>
   
@@ -549,9 +555,9 @@ public function escapeString($str) {
 <h3 id="一、打开-wp-conte]]>
     </summary>
     
-      <category term="nginx" scheme="http://syuchun.com/tags/nginx/"/>
-    
       <category term="lnmp" scheme="http://syuchun.com/tags/lnmp/"/>
+    
+      <category term="nginx" scheme="http://syuchun.com/tags/nginx/"/>
     
       <category term="502" scheme="http://syuchun.com/tags/502/"/>
     

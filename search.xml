@@ -4,6 +4,26 @@
   
     
     <entry>
+      <title><![CDATA[atom插件和主题]]></title>
+      <url>http://syuchun.com/2016/atom-cha-jian-he-zhu-ti/</url>
+      <content type="html"><![CDATA[<h3 id="Atom插件推荐"><a href="#Atom插件推荐" class="headerlink" title="Atom插件推荐"></a>Atom插件推荐</h3><pre><code>Activate Power Mode        Atom装逼插件
+jQuery Snippets            jQuery提示插件
+atom-ternjs                强大的JS提示插件
+autoclose-html             闭合html标签
+color-picker               颜色拾取器 快捷键cmd + shift + c/ctrl + alt + c
+emmet                      必备的前端插件
+file-icons                 Atom文件夹图标
+language-vue               Vue高亮
+minimap                    迷你地图
+vue-autocompile            Auto compiles vue in atom
+vue-format                 Vue格式化
+vue-snippets               Vue提示
+</code></pre><h3 id="Atom主题推荐"><a href="#Atom主题推荐" class="headerlink" title="Atom主题推荐"></a>Atom主题推荐</h3><pre><code>atom-material-ui
+</code></pre><h3 id="使用字体"><a href="#使用字体" class="headerlink" title="使用字体"></a>使用字体</h3><pre><code>Source Code Pro
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[nginx开启ssi]]></title>
       <url>http://syuchun.com/2016/nginx-ssi/</url>
       <content type="html"><![CDATA[<h3 id="进入nginx安装文件的目录"><a href="#进入nginx安装文件的目录" class="headerlink" title="进入nginx安装文件的目录"></a>进入nginx安装文件的目录</h3><pre><code>cd /root/nginx-1.11.3/src/http/modules
@@ -21,16 +41,6 @@
 拷贝nginx文件：cp nginx /usr/local/nginx/sbin/nginx
 </code></pre><h3 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h3><pre><code>进入cd /usr/local/nginx/sbin/ 目录
 启动：./nginx
-</code></pre>]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[CentOS安装Node.js和npm]]></title>
-      <url>http://syuchun.com/2016/CentOS-an-zhuang-nodejs-npm/</url>
-      <content type="html"><![CDATA[<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><pre><code>sudo yum install nodejs
-</code></pre><h3 id="查看Node-js版本号"><a href="#查看Node-js版本号" class="headerlink" title="查看Node.js版本号"></a>查看Node.js版本号</h3><pre><code>node -v
-</code></pre><h3 id="安装npm"><a href="#安装npm" class="headerlink" title="安装npm"></a>安装npm</h3><pre><code>sudo yum install npm
-</code></pre><h3 id="查看npm版本号"><a href="#查看npm版本号" class="headerlink" title="查看npm版本号"></a>查看npm版本号</h3><pre><code>npm -v
 </code></pre>]]></content>
     </entry>
     
