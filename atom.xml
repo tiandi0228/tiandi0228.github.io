@@ -453,28 +453,6 @@ function allchk(){
   </entry>
   
   <entry>
-    <title><![CDATA[THINKPHP多表联合查询]]></title>
-    <link href="http://syuchun.com/2013/THINKPHP-duo-biao-lian-he-cha-xun/"/>
-    <id>http://syuchun.com/2013/THINKPHP-duo-biao-lian-he-cha-xun/</id>
-    <published>2013-09-05T07:35:00.000Z</published>
-    <updated>2016-09-06T07:19:43.035Z</updated>
-    <content type="html"><![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS sortId,vs_pro.catid,b.`name`,vs_pro.id,vs_pro.proname,vs_pro.price,vs_pro.protime&apos;)-&gt;join(&apos;inner join vs_sort b on vs_pro.catid=b.id&apos;)-&gt;where($where)-&gt;limit($p-&gt;firstRow . &apos;,&apos; . $p-&gt;listRows)-&gt;order(&apos;vs_pro.orderid asc&apos;)-&gt;select();
-</code></pre>]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS so]]>
-    </summary>
-    
-      <category term="PHP" scheme="http://syuchun.com/tags/PHP/"/>
-    
-      <category term="thinkphp" scheme="http://syuchun.com/tags/thinkphp/"/>
-    
-      <category term="多表查询" scheme="http://syuchun.com/tags/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/"/>
-    
-      <category term="PHP" scheme="http://syuchun.com/categories/PHP/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[解决Ueditor编辑器在thinkphp下单双引号转义问题]]></title>
     <link href="http://syuchun.com/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/"/>
     <id>http://syuchun.com/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/</id>
@@ -507,6 +485,28 @@ public function escapeString($str) {
       <category term="PHP" scheme="http://syuchun.com/tags/PHP/"/>
     
       <category term="thinkphp" scheme="http://syuchun.com/tags/thinkphp/"/>
+    
+      <category term="PHP" scheme="http://syuchun.com/categories/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[THINKPHP多表联合查询]]></title>
+    <link href="http://syuchun.com/2013/THINKPHP-duo-biao-lian-he-cha-xun/"/>
+    <id>http://syuchun.com/2013/THINKPHP-duo-biao-lian-he-cha-xun/</id>
+    <published>2013-09-05T07:35:00.000Z</published>
+    <updated>2016-09-06T07:19:43.035Z</updated>
+    <content type="html"><![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS sortId,vs_pro.catid,b.`name`,vs_pro.id,vs_pro.proname,vs_pro.price,vs_pro.protime&apos;)-&gt;join(&apos;inner join vs_sort b on vs_pro.catid=b.id&apos;)-&gt;where($where)-&gt;limit($p-&gt;firstRow . &apos;,&apos; . $p-&gt;listRows)-&gt;order(&apos;vs_pro.orderid asc&apos;)-&gt;select();
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS so]]>
+    </summary>
+    
+      <category term="PHP" scheme="http://syuchun.com/tags/PHP/"/>
+    
+      <category term="thinkphp" scheme="http://syuchun.com/tags/thinkphp/"/>
+    
+      <category term="多表查询" scheme="http://syuchun.com/tags/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/"/>
     
       <category term="PHP" scheme="http://syuchun.com/categories/PHP/"/>
     
@@ -555,9 +555,9 @@ public function escapeString($str) {
 <h3 id="一、打开-wp-conte]]>
     </summary>
     
-      <category term="lnmp" scheme="http://syuchun.com/tags/lnmp/"/>
-    
       <category term="nginx" scheme="http://syuchun.com/tags/nginx/"/>
+    
+      <category term="lnmp" scheme="http://syuchun.com/tags/lnmp/"/>
     
       <category term="502" scheme="http://syuchun.com/tags/502/"/>
     
