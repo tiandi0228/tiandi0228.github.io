@@ -4,7 +4,7 @@
   <subtitle><![CDATA[专注IT领域，分享网络乐趣。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://syuchun.com/"/>
-  <updated>2016-09-07T03:45:09.027Z</updated>
+  <updated>2016-09-07T03:45:10.000Z</updated>
   <id>http://syuchun.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://syuchun.com/2016/atom-cha-jian-he-zhu-ti/"/>
     <id>http://syuchun.com/2016/atom-cha-jian-he-zhu-ti/</id>
     <published>2016-09-07T03:05:17.000Z</published>
-    <updated>2016-09-07T03:45:09.027Z</updated>
+    <updated>2016-09-07T03:45:10.000Z</updated>
     <content type="html"><![CDATA[<h3 id="Atom插件推荐"><a href="#Atom插件推荐" class="headerlink" title="Atom插件推荐"></a>Atom插件推荐</h3><pre><code>Activate Power Mode        Atom装逼插件
 jQuery Snippets            jQuery提示插件
 atom-ternjs                强大的JS提示插件
@@ -51,7 +51,7 @@ jQ]]>
     <link href="http://syuchun.com/2016/nginx-ssi/"/>
     <id>http://syuchun.com/2016/nginx-ssi/</id>
     <published>2016-09-06T03:07:41.000Z</published>
-    <updated>2016-09-06T09:44:38.537Z</updated>
+    <updated>2016-09-06T09:44:40.000Z</updated>
     <content type="html"><![CDATA[<h3 id="进入nginx安装文件的目录"><a href="#进入nginx安装文件的目录" class="headerlink" title="进入nginx安装文件的目录"></a>进入nginx安装文件的目录</h3><pre><code>cd /root/nginx-1.11.3/src/http/modules
 </code></pre><h3 id="编辑如下文件"><a href="#编辑如下文件" class="headerlink" title="编辑如下文件"></a>编辑如下文件</h3><pre><code>vi ngx_http_ssi_filter_module.c
 </code></pre><h3 id="注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码："><a href="#注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码：" class="headerlink" title="注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码："></a>注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：</h3><pre><code>2065 // if (ngx_http_parse_unsafe_uri(r, uri, &amp;args, &amp;flags) != NGX_OK) {
@@ -85,7 +85,7 @@ jQ]]>
     <link href="http://syuchun.com/2016/js-huo-qu-wang-ye-kuan-gao-fang-fa-ji-he/"/>
     <id>http://syuchun.com/2016/js-huo-qu-wang-ye-kuan-gao-fang-fa-ji-he/</id>
     <published>2016-05-06T03:01:34.000Z</published>
-    <updated>2016-09-06T07:15:00.722Z</updated>
+    <updated>2016-09-06T07:15:02.000Z</updated>
     <content type="html"><![CDATA[<pre><code>document.body.clientWidth - 网页可见区域宽
 document.body.clientHeight - 网页可见区域高
 document.body.offsetWidth - 网页可见区域宽，包括边线和滚动条的宽
@@ -123,7 +123,7 @@ document.]]>
     <link href="http://syuchun.com/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/"/>
     <id>http://syuchun.com/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/</id>
     <published>2016-01-14T08:27:00.000Z</published>
-    <updated>2016-09-06T07:25:42.469Z</updated>
+    <updated>2016-09-06T07:25:44.000Z</updated>
     <content type="html"><![CDATA[<pre><code>function timeFormat($timeInt,$format=&apos;y.m.d&apos;){
     if(empty($timeInt)||!is_numeric($timeInt)||!$timeInt)
     {
@@ -175,7 +175,7 @@ document.]]>
     <link href="http://syuchun.com/2015/hide-php-nignx-version-number/"/>
     <id>http://syuchun.com/2015/hide-php-nignx-version-number/</id>
     <published>2015-07-22T02:37:00.000Z</published>
-    <updated>2016-09-06T07:10:10.458Z</updated>
+    <updated>2016-09-06T07:10:12.000Z</updated>
     <content type="html"><![CDATA[<h3 id="一、隐藏-Nginx-版本号"><a href="#一、隐藏-Nginx-版本号" class="headerlink" title="一、隐藏 Nginx 版本号"></a>一、隐藏 Nginx 版本号</h3><h4 id="编辑-nginx-conf-文件，增加一行-server-tokens-off"><a href="#编辑-nginx-conf-文件，增加一行-server-tokens-off" class="headerlink" title="编辑 nginx.conf 文件，增加一行 server_tokens off;"></a>编辑 nginx.conf 文件，增加一行 server_tokens off;</h4><h3 id="二、隐藏-PHP-版本号"><a href="#二、隐藏-PHP-版本号" class="headerlink" title="二、隐藏 PHP 版本号"></a>二、隐藏 PHP 版本号</h3><h4 id="编辑-php-ini-文件，在最后增加如下内容："><a href="#编辑-php-ini-文件，在最后增加如下内容：" class="headerlink" title="编辑 php.ini 文件，在最后增加如下内容："></a>编辑 php.ini 文件，在最后增加如下内容：</h4><pre><code>;;;;;;;;;;;;;;;;;
 ; Miscellaneous ;
 ;;;;;;;;;;;;;;;;;
@@ -205,7 +205,7 @@ expose_php = Off
     <link href="http://syuchun.com/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/"/>
     <id>http://syuchun.com/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/</id>
     <published>2014-08-21T08:55:00.000Z</published>
-    <updated>2016-09-06T07:05:44.224Z</updated>
+    <updated>2016-09-06T07:05:46.000Z</updated>
     <content type="html"><![CDATA[<p>今天做一个微信的文章显示列表，点击查看加载显示，是用PHP查询数据，然后通过AJAX向服务端发送请求，后台PHP程序得到请求参数，并作出相应，获取数据库相应的记录并以JSON的形式返回给前台页面，前台页面jQuery解析JSON数据，并将数据追加到列表页。</p>
 <h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><pre><code>&lt;div id=&quot;more&quot; style=&quot;margin:10px;&quot;&gt;
       &lt;div class=&quot;single_item&quot;&gt;
@@ -282,7 +282,7 @@ echo JSON($array);
     <link href="http://syuchun.com/2014/jQuery-shi-xian-de-quan-xuan-fan-xuan-he-bu-xuan-gong-neng/"/>
     <id>http://syuchun.com/2014/jQuery-shi-xian-de-quan-xuan-fan-xuan-he-bu-xuan-gong-neng/</id>
     <published>2014-08-05T06:54:00.000Z</published>
-    <updated>2016-09-06T07:14:35.621Z</updated>
+    <updated>2016-09-06T07:14:36.000Z</updated>
     <content type="html"><![CDATA[<p>jQuery实现的全选、反选和不选功能 示例：</p>
 <h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><pre><code>.top_title{text-align:center;}
 .demo{width:520px; margin:40px auto 0 auto; min-height:250px;}
@@ -361,7 +361,7 @@ function allchk(){
     <link href="http://syuchun.com/2014/MYSQL-zi-zeng-ID-qing-ling/"/>
     <id>http://syuchun.com/2014/MYSQL-zi-zeng-ID-qing-ling/</id>
     <published>2014-03-12T03:50:00.000Z</published>
-    <updated>2016-09-06T07:18:29.125Z</updated>
+    <updated>2016-09-06T07:18:30.000Z</updated>
     <content type="html"><![CDATA[<pre><code>TRUNCATE TABLE jobs
 </code></pre><p>这个的缺点就是会把表里的数据都删除</p>
 ]]></content>
@@ -382,7 +382,7 @@ function allchk(){
     <link href="http://syuchun.com/2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/"/>
     <id>http://syuchun.com/2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/</id>
     <published>2014-03-10T08:02:00.000Z</published>
-    <updated>2016-09-06T07:22:00.738Z</updated>
+    <updated>2016-09-06T07:22:02.000Z</updated>
     <content type="html"><![CDATA[<p>这几天用tp作了个招聘的网站，想用到邮件找回密码和激活，所以想到了用PHPMailer<br>先去下载PHPMailer,然后放入THINKPHP/libary/ORG中.<br>在Common/Common/下新建一个function.php文件</p>
 <pre><code>function send_mail($to = &apos;&apos;, $subject = &apos;&apos;, $body = &apos;&apos;, $name = &apos;&apos;, $attachment = null)
 {
@@ -453,33 +453,11 @@ function allchk(){
   </entry>
   
   <entry>
-    <title><![CDATA[THINKPHP多表联合查询]]></title>
-    <link href="http://syuchun.com/2013/THINKPHP-duo-biao-lian-he-cha-xun/"/>
-    <id>http://syuchun.com/2013/THINKPHP-duo-biao-lian-he-cha-xun/</id>
-    <published>2013-09-05T07:35:00.000Z</published>
-    <updated>2016-09-06T07:19:43.035Z</updated>
-    <content type="html"><![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS sortId,vs_pro.catid,b.`name`,vs_pro.id,vs_pro.proname,vs_pro.price,vs_pro.protime&apos;)-&gt;join(&apos;inner join vs_sort b on vs_pro.catid=b.id&apos;)-&gt;where($where)-&gt;limit($p-&gt;firstRow . &apos;,&apos; . $p-&gt;listRows)-&gt;order(&apos;vs_pro.orderid asc&apos;)-&gt;select();
-</code></pre>]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS so]]>
-    </summary>
-    
-      <category term="PHP" scheme="http://syuchun.com/tags/PHP/"/>
-    
-      <category term="thinkphp" scheme="http://syuchun.com/tags/thinkphp/"/>
-    
-      <category term="多表查询" scheme="http://syuchun.com/tags/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/"/>
-    
-      <category term="PHP" scheme="http://syuchun.com/categories/PHP/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[解决Ueditor编辑器在thinkphp下单双引号转义问题]]></title>
     <link href="http://syuchun.com/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/"/>
     <id>http://syuchun.com/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/</id>
     <published>2013-09-05T07:35:00.000Z</published>
-    <updated>2016-09-06T07:10:44.987Z</updated>
+    <updated>2016-09-06T07:10:46.000Z</updated>
     <content type="html"><![CDATA[<p>在ThinkPHP中提交表单插入数据的时候，单引号和双引号是会被自动转义的，就是会自动的加上反斜线，<br>但是我不想给单引号和双引号加上反斜线，<br>如：hds”gh”j’g’h<br>会被自动转义为：hds\”gh\”j\’g\’h<br>请注意需要的是取消这个转义的功能，而不是使用stripslashes() 函数删除这些反斜杠，即不需要官方的这个自动转义的功能。<br>所以在网上搜索到解决方法：<br>1，在thinkphp目录下，依次打开 ThinkPHP\Lib\Driver\Db 目录，并在dbmysql.class.php 这个文件中把escapeString 函数的函数修改成：</p>
 <pre><code>/**
 * SQL指令安全过滤
@@ -513,11 +491,33 @@ public function escapeString($str) {
   </entry>
   
   <entry>
+    <title><![CDATA[THINKPHP多表联合查询]]></title>
+    <link href="http://syuchun.com/2013/THINKPHP-duo-biao-lian-he-cha-xun/"/>
+    <id>http://syuchun.com/2013/THINKPHP-duo-biao-lian-he-cha-xun/</id>
+    <published>2013-09-05T07:35:00.000Z</published>
+    <updated>2016-09-06T07:19:44.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS sortId,vs_pro.catid,b.`name`,vs_pro.id,vs_pro.proname,vs_pro.price,vs_pro.protime&apos;)-&gt;join(&apos;inner join vs_sort b on vs_pro.catid=b.id&apos;)-&gt;where($where)-&gt;limit($p-&gt;firstRow . &apos;,&apos; . $p-&gt;listRows)-&gt;order(&apos;vs_pro.orderid asc&apos;)-&gt;select();
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS so]]>
+    </summary>
+    
+      <category term="PHP" scheme="http://syuchun.com/tags/PHP/"/>
+    
+      <category term="thinkphp" scheme="http://syuchun.com/tags/thinkphp/"/>
+    
+      <category term="多表查询" scheme="http://syuchun.com/tags/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/"/>
+    
+      <category term="PHP" scheme="http://syuchun.com/categories/PHP/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[php大小写字母转换]]></title>
     <link href="http://syuchun.com/2013/php-da-xiao-xie-zi-mu-zhuan-huan/"/>
     <id>http://syuchun.com/2013/php-da-xiao-xie-zi-mu-zhuan-huan/</id>
     <published>2013-01-15T17:06:00.000Z</published>
-    <updated>2016-09-06T07:19:02.801Z</updated>
+    <updated>2016-09-06T07:19:04.000Z</updated>
     <content type="html"><![CDATA[<h3 id="一、将字符串转换成小写"><a href="#一、将字符串转换成小写" class="headerlink" title="一、将字符串转换成小写"></a>一、将字符串转换成小写</h3><pre><code>strtolower()该函数将传入的字符串参数所有的字符都转换成小写,并以小写形式返回这个字符串
 </code></pre><h3 id="二、将字符转成大写"><a href="#二、将字符转成大写" class="headerlink" title="二、将字符转成大写"></a>二、将字符转成大写</h3><pre><code>strtoupper()该函数的作用同strtolower()函数相反,是将传入的字符参数的字符全部转换成大写,并以大写的形式返回这个字符串.用法同strtolowe()一 样.
 </code></pre><h3 id="三、将字符串首字符转换成大写"><a href="#三、将字符串首字符转换成大写" class="headerlink" title="三、将字符串首字符转换成大写"></a>三、将字符串首字符转换成大写</h3><pre><code>ucfirst()该函数的作用是将字符串的第一个字符改成大写,该函数返回首字符大写的字符串.用法同strtolowe()一样.
@@ -538,7 +538,7 @@ public function escapeString($str) {
     <link href="http://syuchun.com/2012/lnmp-nginx-502-Bad-Gateway/"/>
     <id>http://syuchun.com/2012/lnmp-nginx-502-Bad-Gateway/</id>
     <published>2012-09-25T12:42:00.000Z</published>
-    <updated>2016-09-06T07:18:21.317Z</updated>
+    <updated>2016-09-06T07:18:22.000Z</updated>
     <content type="html"><![CDATA[<p>今天下午网站出现了502 Bad Gateway，我安装的是军哥的lnmp一键安装，去他的论坛的找了一下，也很好找，置顶的，但是按照上面的说法都试了一次，还是出现502错误，然后百度了很久，终于解决了问题，下面是我的问题：</p>
 <h3 id="一、打开-wp-content-local-nginx-conf-nginx-conf，找到一行"><a href="#一、打开-wp-content-local-nginx-conf-nginx-conf，找到一行" class="headerlink" title="一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行"></a>一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行</h3><pre><code>fastcgi_pass unix:/tmp/php-cgi.sock;
 </code></pre><h3 id="改为："><a href="#改为：" class="headerlink" title="改为："></a>改为：</h3><pre><code>fastcgi_pass 127.0.0.1:9000;
@@ -570,7 +570,7 @@ public function escapeString($str) {
     <link href="http://syuchun.com/2012/linux-vps-xia-ssh-chang-yong-ming-ling/"/>
     <id>http://syuchun.com/2012/linux-vps-xia-ssh-chang-yong-ming-ling/</id>
     <published>2012-09-11T05:16:00.000Z</published>
-    <updated>2016-09-06T07:27:08.195Z</updated>
+    <updated>2016-09-06T07:27:10.000Z</updated>
     <content type="html"><![CDATA[<h3 id="记录一些平时要用到的Linux-VPS的命令："><a href="#记录一些平时要用到的Linux-VPS的命令：" class="headerlink" title="记录一些平时要用到的Linux VPS的命令："></a>记录一些平时要用到的Linux VPS的命令：</h3><pre><code>rm -rf list #######删除list目录#######
 zip –r list .zip ./* #######压缩zip文件#######
 unzip list .zip #######解压zip文件#######
