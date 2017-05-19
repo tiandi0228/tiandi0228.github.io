@@ -78,7 +78,7 @@
 HTML&amp;lt;div id=&amp;quot;more&amp;quot; style=&amp;quot;margin:10px;&amp;quot;&amp;gt;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery+PHP点击查看更多">
-<meta property="og:url" content="http://syuchun.com/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/index.html">
+<meta property="og:url" content="http://syc.im/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/index.html">
 <meta property="og:site_name" content="老孙笔记">
 <meta property="og:description" content="今天做一个微信的文章显示列表，点击查看加载显示，是用PHP查询数据，然后通过AJAX向服务端发送请求，后台PHP程序得到请求参数，并作出相应，获取数据库相应的记录并以JSON的形式返回给前台页面，前台页面jQuery解析JSON数据，并将数据追加到列表页。
 HTML&amp;lt;div id=&amp;quot;more&amp;quot; style=&amp;quot;margin:10px;&amp;quot;&amp;gt;">
@@ -113,12 +113,6 @@ HTML&amp;lt;div id=&amp;quot;more&amp;quot; style=&amp;quot;margin:10px;&amp;quo
 
 
 
-
-
-
-  <div style="display: none;">
-    <script src="http://s6.cnzz.com/stat.php?id=1253611686&web_id=1253611686" type="text/javascript"></script>
-  </div>
 
 
 
@@ -204,7 +198,7 @@ HTML&amp;lt;div id=&amp;quot;more&amp;quot; style=&amp;quot;margin:10px;&amp;quo
       
         <li class="menu-item menu-item-search">
           
-            <a href="#" class="st-search-show-outputs">
+            <a href="#" class="popup-trigger">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -219,19 +213,12 @@ HTML&amp;lt;div id=&amp;quot;more&amp;quot; style=&amp;quot;margin:10px;&amp;quo
   
     <div class="site-search">
       
-  <form class="site-search-form">
-  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-</form>
-
-<script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-  _st('install', 'YztFL3H7sB-jVMce9fne','2.0.0');
-</script>
-
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
 
 
     </div>
@@ -420,6 +407,22 @@ echo JSON($array);
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="https://syc.im/images/wechat-reward.png" alt="Sun WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -467,7 +470,7 @@ echo JSON($array);
         <div class="ds-share flat" data-thread-key="2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/"
      data-title="jQuery+PHP点击查看更多"
      data-content=""
-     data-url="http://syuchun.com/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/">
+     data-url="http://syc.im/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -495,7 +498,7 @@ echo JSON($array);
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/"
-           data-title="jQuery+PHP点击查看更多" data-url="http://syuchun.com/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/">
+           data-title="jQuery+PHP点击查看更多" data-url="http://syc.im/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/">
       </div>
     
   </div>
@@ -532,7 +535,7 @@ echo JSON($array);
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="http://cn.gravatar.com/avatar/51477ce54268baabc59f724a1e16c63a?s=80&r=G&d=mm"
+               src="https://syc.im/images/avatar.png"
                alt="Sun" />
           <p class="site-author-name" itemprop="name">Sun</p>
           <p class="site-description motion-element" itemprop="description">专注IT领域，分享网络乐趣。</p>
@@ -540,7 +543,7 @@ echo JSON($array);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -557,7 +560,7 @@ echo JSON($array);
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -576,6 +579,22 @@ echo JSON($array);
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/tiandi0228" target="_blank" title="github">
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wisay" target="_blank" title="weibo">
+                  
+                  weibo
+                </a>
+              </span>
+            
+          
         </div>
 
         
@@ -586,12 +605,12 @@ echo JSON($array);
           <div class="links-of-blogroll motion-element links-of-blogroll-inline">
             <div class="links-of-blogroll-title">
               <i class="fa  fa-fw fa-globe"></i>
-              友情链接
+              Links
             </div>
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://syuchun.com/" title="老孙笔记" target="_blank">老孙笔记</a>
+                  <a href="https://syc.im/" title="老孙笔记" target="_blank">老孙笔记</a>
                 </li>
               
             </ul>
@@ -637,7 +656,7 @@ echo JSON($array);
 <div class="copyright" >
   © 2010 - 
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -652,11 +671,7 @@ echo JSON($array);
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv"><i class="fa fa-user"></i> 访问人数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
-  
 
-  
-    <span class="site-pv"><i class="fa fa-eye"></i> 总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
   
   
 </div>

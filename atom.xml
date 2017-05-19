@@ -3,9 +3,9 @@
   <title><![CDATA[老孙笔记]]></title>
   <subtitle><![CDATA[专注IT领域，分享网络乐趣。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://syuchun.com/"/>
-  <updated>2016-09-07T03:45:10.000Z</updated>
-  <id>http://syuchun.com/</id>
+  <link href="http://syc.im/"/>
+  <updated>2017-02-15T08:49:06.000Z</updated>
+  <id>http://syc.im/</id>
   
   <author>
     <name><![CDATA[Sun]]></name>
@@ -15,9 +15,102 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[js面试题]]></title>
+    <link href="http://syc.im/2017/js-mian-shi-ti/"/>
+    <id>http://syc.im/2017/js-mian-shi-ti/</id>
+    <published>2017-02-15T08:43:21.000Z</published>
+    <updated>2017-02-15T08:49:06.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="如何创建一个-1-2-3-4-5-6…-99-的数组、不用循环和递归"><a href="#如何创建一个-1-2-3-4-5-6…-99-的数组、不用循环和递归" class="headerlink" title="如何创建一个[1,2,3,4,5,6… 99] 的数组、不用循环和递归"></a>如何创建一个[1,2,3,4,5,6… 99] 的数组、不用循环和递归</h4><pre><code>Array.from(Array(100).keys())
+或
+[...Array(100).keys()]
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="如何创建一个-1-2-3-4-5-6…-99-的数组、不用循环和递归"><a href="#如何创建一个-1-2-3-4-5-6…-99-的数组、不用循环和递归" class="headerlink" title="如何创建一个[1,2,3,4,5,6… 99] ]]>
+    </summary>
+    
+      <category term="JavaScript" scheme="http://syc.im/tags/JavaScript/"/>
+    
+      <category term="JavaScript" scheme="http://syc.im/categories/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[vue-route刷新页面出现404]]></title>
+    <link href="http://syc.im/2016/vue-router-refresh-page-404/"/>
+    <id>http://syc.im/2016/vue-router-refresh-page-404/</id>
+    <published>2016-12-20T14:09:26.000Z</published>
+    <updated>2017-02-15T08:58:16.000Z</updated>
+    <content type="html"><![CDATA[<p>把做好的Vue一个小网站build到服务器上刷新了一下页面出现404错误，然后通过百度找了问题。</p>
+<h3 id="Nginx-配置"><a href="#Nginx-配置" class="headerlink" title="Nginx 配置"></a>Nginx 配置</h3><pre><code>location / {
+    try_files $uri $uri/ @router;
+    index index.html;
+}
+
+location @router {
+    rewrite ^.*$ /index.html last;
+}
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>把做好的Vue一个小网站build到服务器上刷新了一下页面出现404错误，然后通过百度找了问题。</p>
+<h3 id="Nginx-配置"><a href="#Nginx-配置" class="headerlink" title="Nginx 配置"></a>Nginx ]]>
+    </summary>
+    
+      <category term="Linux" scheme="http://syc.im/tags/Linux/"/>
+    
+      <category term="Nginx" scheme="http://syc.im/tags/Nginx/"/>
+    
+      <category term="Linux" scheme="http://syc.im/categories/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[开启https]]></title>
+    <link href="http://syc.im/2016/kai-qi-https/"/>
+    <id>http://syc.im/2016/kai-qi-https/</id>
+    <published>2016-10-14T03:24:33.000Z</published>
+    <updated>2016-10-14T03:52:50.000Z</updated>
+    <content type="html"><![CDATA[<p>前几天购买了一个新域名（syc.im），然后在阿里云做解析的时候看到一个“18元一年云解析DNS热销版送CA证书”活动，就顺手购买了，折腾了几天终于把https服务开启来了^ v ^。</p>
+<h4 id="下面是开启https服务"><a href="#下面是开启https服务" class="headerlink" title="下面是开启https服务"></a>下面是开启https服务</h4><pre><code>server {
+    listen       443;
+    listen       80;
+    server_name  syc.im;
+
+    if ($server_port = 80) {
+        return 497;
+    }
+
+    #ssl
+    ssl on;
+    ssl_certificate  /etc/nginx/conf.d/sslkey/213920636370985.pem;
+    ssl_certificate_key  /etc/nginx/conf.d/sslkey/213920636370985.key;
+    ssl_session_timeout 5m;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers AESGCM:ALL:!DH:!EXPORT:!RC4:+HIGH:!MEDIUM:!LOW:!aNULL:!eNULL;
+    ssl_prefer_server_ciphers on;
+
+    error_page 497 https://$host$request_uri;
+
+}
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>前几天购买了一个新域名（syc.im），然后在阿里云做解析的时候看到一个“18元一年云解析DNS热销版送CA证书”活动，就顺手购买了，折腾了几天终于把https服务开启来了^ v ^。</p>
+<h4 id="下面是开启https服务"><a href="#下面是开启htt]]>
+    </summary>
+    
+      <category term="Linux" scheme="http://syc.im/tags/Linux/"/>
+    
+      <category term="nginx" scheme="http://syc.im/tags/nginx/"/>
+    
+      <category term="https" scheme="http://syc.im/tags/https/"/>
+    
+      <category term="Linux" scheme="http://syc.im/categories/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[atom插件和主题]]></title>
-    <link href="http://syuchun.com/2016/atom-cha-jian-he-zhu-ti/"/>
-    <id>http://syuchun.com/2016/atom-cha-jian-he-zhu-ti/</id>
+    <link href="http://syc.im/2016/atom-cha-jian-he-zhu-ti/"/>
+    <id>http://syc.im/2016/atom-cha-jian-he-zhu-ti/</id>
     <published>2016-09-07T03:05:17.000Z</published>
     <updated>2016-09-07T03:45:10.000Z</updated>
     <content type="html"><![CDATA[<h3 id="Atom插件推荐"><a href="#Atom插件推荐" class="headerlink" title="Atom插件推荐"></a>Atom插件推荐</h3><pre><code>Activate Power Mode        Atom装逼插件
@@ -40,16 +133,16 @@ vue-snippets               Vue提示
 jQ]]>
     </summary>
     
-      <category term="atom" scheme="http://syuchun.com/tags/atom/"/>
+      <category term="atom" scheme="http://syc.im/tags/atom/"/>
     
-      <category term="Atom" scheme="http://syuchun.com/categories/Atom/"/>
+      <category term="Atom" scheme="http://syc.im/categories/Atom/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[nginx开启ssi]]></title>
-    <link href="http://syuchun.com/2016/nginx-ssi/"/>
-    <id>http://syuchun.com/2016/nginx-ssi/</id>
+    <link href="http://syc.im/2016/nginx-ssi/"/>
+    <id>http://syc.im/2016/nginx-ssi/</id>
     <published>2016-09-06T03:07:41.000Z</published>
     <updated>2016-09-06T09:44:40.000Z</updated>
     <content type="html"><![CDATA[<h3 id="进入nginx安装文件的目录"><a href="#进入nginx安装文件的目录" class="headerlink" title="进入nginx安装文件的目录"></a>进入nginx安装文件的目录</h3><pre><code>cd /root/nginx-1.11.3/src/http/modules
@@ -72,18 +165,18 @@ jQ]]>
     <![CDATA[<h3 id="进入nginx安装文件的目录"><a href="#进入nginx安装文件的目录" class="headerlink" title="进入nginx安装文件的目录"></a>进入nginx安装文件的目录</h3><pre><code>cd /root/nginx]]>
     </summary>
     
-      <category term="NGINX" scheme="http://syuchun.com/tags/NGINX/"/>
+      <category term="NGINX" scheme="http://syc.im/tags/NGINX/"/>
     
-      <category term="ssi" scheme="http://syuchun.com/tags/ssi/"/>
+      <category term="ssi" scheme="http://syc.im/tags/ssi/"/>
     
-      <category term="NGINX" scheme="http://syuchun.com/categories/NGINX/"/>
+      <category term="NGINX" scheme="http://syc.im/categories/NGINX/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[JS获取网页宽高等方法的集合]]></title>
-    <link href="http://syuchun.com/2016/js-huo-qu-wang-ye-kuan-gao-fang-fa-ji-he/"/>
-    <id>http://syuchun.com/2016/js-huo-qu-wang-ye-kuan-gao-fang-fa-ji-he/</id>
+    <link href="http://syc.im/2016/js-huo-qu-wang-ye-kuan-gao-fang-fa-ji-he/"/>
+    <id>http://syc.im/2016/js-huo-qu-wang-ye-kuan-gao-fang-fa-ji-he/</id>
     <published>2016-05-06T03:01:34.000Z</published>
     <updated>2016-09-06T07:15:02.000Z</updated>
     <content type="html"><![CDATA[<pre><code>document.body.clientWidth - 网页可见区域宽
@@ -112,16 +205,16 @@ document.body.offsetWidth - 网页可见区域宽，包括边线和滚动条的�
 document.]]>
     </summary>
     
-      <category term="JavaScript" scheme="http://syuchun.com/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://syc.im/tags/JavaScript/"/>
     
-      <category term="JavaScript" scheme="http://syuchun.com/categories/JavaScript/"/>
+      <category term="JavaScript" scheme="http://syc.im/categories/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[PHP 时间格式几秒前，几分钟前]]></title>
-    <link href="http://syuchun.com/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/"/>
-    <id>http://syuchun.com/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/</id>
+    <link href="http://syc.im/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/"/>
+    <id>http://syc.im/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/</id>
     <published>2016-01-14T08:27:00.000Z</published>
     <updated>2016-09-06T07:25:44.000Z</updated>
     <content type="html"><![CDATA[<pre><code>function timeFormat($timeInt,$format=&apos;y.m.d&apos;){
@@ -164,16 +257,16 @@ document.]]>
         ]]>
     </summary>
     
-      <category term="PHP" scheme="http://syuchun.com/tags/PHP/"/>
+      <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
     
-      <category term="PHP" scheme="http://syuchun.com/categories/PHP/"/>
+      <category term="PHP" scheme="http://syc.im/categories/PHP/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[隐藏 Nignx 、PHP 版本号]]></title>
-    <link href="http://syuchun.com/2015/hide-php-nignx-version-number/"/>
-    <id>http://syuchun.com/2015/hide-php-nignx-version-number/</id>
+    <link href="http://syc.im/2015/hide-php-nignx-version-number/"/>
+    <id>http://syc.im/2015/hide-php-nignx-version-number/</id>
     <published>2015-07-22T02:37:00.000Z</published>
     <updated>2016-09-06T07:10:12.000Z</updated>
     <content type="html"><![CDATA[<h3 id="一、隐藏-Nginx-版本号"><a href="#一、隐藏-Nginx-版本号" class="headerlink" title="一、隐藏 Nginx 版本号"></a>一、隐藏 Nginx 版本号</h3><h4 id="编辑-nginx-conf-文件，增加一行-server-tokens-off"><a href="#编辑-nginx-conf-文件，增加一行-server-tokens-off" class="headerlink" title="编辑 nginx.conf 文件，增加一行 server_tokens off;"></a>编辑 nginx.conf 文件，增加一行 server_tokens off;</h4><h3 id="二、隐藏-PHP-版本号"><a href="#二、隐藏-PHP-版本号" class="headerlink" title="二、隐藏 PHP 版本号"></a>二、隐藏 PHP 版本号</h3><h4 id="编辑-php-ini-文件，在最后增加如下内容："><a href="#编辑-php-ini-文件，在最后增加如下内容：" class="headerlink" title="编辑 php.ini 文件，在最后增加如下内容："></a>编辑 php.ini 文件，在最后增加如下内容：</h4><pre><code>;;;;;;;;;;;;;;;;;
@@ -190,20 +283,20 @@ expose_php = Off
     <![CDATA[<h3 id="一、隐藏-Nginx-版本号"><a href="#一、隐藏-Nginx-版本号" class="headerlink" title="一、隐藏 Nginx 版本号"></a>一、隐藏 Nginx 版本号</h3><h4 id="编辑-nginx-conf-文件，]]>
     </summary>
     
-      <category term="PHP" scheme="http://syuchun.com/tags/PHP/"/>
+      <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
     
-      <category term="Linux" scheme="http://syuchun.com/tags/Linux/"/>
+      <category term="Linux" scheme="http://syc.im/tags/Linux/"/>
     
-      <category term="nginx" scheme="http://syuchun.com/tags/nginx/"/>
+      <category term="nginx" scheme="http://syc.im/tags/nginx/"/>
     
-      <category term="Linux" scheme="http://syuchun.com/categories/Linux/"/>
+      <category term="Linux" scheme="http://syc.im/categories/Linux/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[jQuery+PHP点击查看更多]]></title>
-    <link href="http://syuchun.com/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/"/>
-    <id>http://syuchun.com/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/</id>
+    <link href="http://syc.im/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/"/>
+    <id>http://syc.im/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/</id>
     <published>2014-08-21T08:55:00.000Z</published>
     <updated>2016-09-06T07:05:46.000Z</updated>
     <content type="html"><![CDATA[<p>今天做一个微信的文章显示列表，点击查看加载显示，是用PHP查询数据，然后通过AJAX向服务端发送请求，后台PHP程序得到请求参数，并作出相应，获取数据库相应的记录并以JSON的形式返回给前台页面，前台页面jQuery解析JSON数据，并将数据追加到列表页。</p>
@@ -267,20 +360,20 @@ echo JSON($array);
 <h3 ]]>
     </summary>
     
-      <category term="PHP" scheme="http://syuchun.com/tags/PHP/"/>
+      <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
     
-      <category term="jQuery" scheme="http://syuchun.com/tags/jQuery/"/>
+      <category term="jQuery" scheme="http://syc.im/tags/jQuery/"/>
     
-      <category term="PHP" scheme="http://syuchun.com/categories/PHP/"/>
+      <category term="PHP" scheme="http://syc.im/categories/PHP/"/>
     
-      <category term="JavaScript" scheme="http://syuchun.com/categories/PHP/JavaScript/"/>
+      <category term="JavaScript" scheme="http://syc.im/categories/PHP/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[jQuery实现的全选、反选和不选功能]]></title>
-    <link href="http://syuchun.com/2014/jQuery-shi-xian-de-quan-xuan-fan-xuan-he-bu-xuan-gong-neng/"/>
-    <id>http://syuchun.com/2014/jQuery-shi-xian-de-quan-xuan-fan-xuan-he-bu-xuan-gong-neng/</id>
+    <link href="http://syc.im/2014/jQuery-shi-xian-de-quan-xuan-fan-xuan-he-bu-xuan-gong-neng/"/>
+    <id>http://syc.im/2014/jQuery-shi-xian-de-quan-xuan-fan-xuan-he-bu-xuan-gong-neng/</id>
     <published>2014-08-05T06:54:00.000Z</published>
     <updated>2016-09-06T07:14:36.000Z</updated>
     <content type="html"><![CDATA[<p>jQuery实现的全选、反选和不选功能 示例：</p>
@@ -348,18 +441,18 @@ function allchk(){
 <h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><pre><code>.top_title{text-align:cente]]>
     </summary>
     
-      <category term="jQuery" scheme="http://syuchun.com/tags/jQuery/"/>
+      <category term="jQuery" scheme="http://syc.im/tags/jQuery/"/>
     
-      <category term="JavaScript" scheme="http://syuchun.com/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://syc.im/tags/JavaScript/"/>
     
-      <category term="JavaScript" scheme="http://syuchun.com/categories/JavaScript/"/>
+      <category term="JavaScript" scheme="http://syc.im/categories/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[MYSQL 自增ID清零]]></title>
-    <link href="http://syuchun.com/2014/MYSQL-zi-zeng-ID-qing-ling/"/>
-    <id>http://syuchun.com/2014/MYSQL-zi-zeng-ID-qing-ling/</id>
+    <link href="http://syc.im/2014/MYSQL-zi-zeng-ID-qing-ling/"/>
+    <id>http://syc.im/2014/MYSQL-zi-zeng-ID-qing-ling/</id>
     <published>2014-03-12T03:50:00.000Z</published>
     <updated>2016-09-06T07:18:30.000Z</updated>
     <content type="html"><![CDATA[<pre><code>TRUNCATE TABLE jobs
@@ -371,16 +464,16 @@ function allchk(){
 ]]>
     </summary>
     
-      <category term="MYSQL" scheme="http://syuchun.com/tags/MYSQL/"/>
+      <category term="MYSQL" scheme="http://syc.im/tags/MYSQL/"/>
     
-      <category term="MYSQL" scheme="http://syuchun.com/categories/MYSQL/"/>
+      <category term="MYSQL" scheme="http://syc.im/categories/MYSQL/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[ThinkPHP使用PHPMailer发送邮件]]></title>
-    <link href="http://syuchun.com/2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/"/>
-    <id>http://syuchun.com/2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/</id>
+    <link href="http://syc.im/2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/"/>
+    <id>http://syc.im/2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/</id>
     <published>2014-03-10T08:02:00.000Z</published>
     <updated>2016-09-06T07:22:02.000Z</updated>
     <content type="html"><![CDATA[<p>这几天用tp作了个招聘的网站，想用到邮件找回密码和激活，所以想到了用PHPMailer<br>先去下载PHPMailer,然后放入THINKPHP/libary/ORG中.<br>在Common/Common/下新建一个function.php文件</p>
@@ -442,20 +535,42 @@ function allchk(){
 <pre><co]]>
     </summary>
     
-      <category term="PHP" scheme="http://syuchun.com/tags/PHP/"/>
+      <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
     
-      <category term="thinkphp" scheme="http://syuchun.com/tags/thinkphp/"/>
+      <category term="thinkphp" scheme="http://syc.im/tags/thinkphp/"/>
     
-      <category term="PHPMailer" scheme="http://syuchun.com/tags/PHPMailer/"/>
+      <category term="PHPMailer" scheme="http://syc.im/tags/PHPMailer/"/>
     
-      <category term="PHP" scheme="http://syuchun.com/categories/PHP/"/>
+      <category term="PHP" scheme="http://syc.im/categories/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[THINKPHP多表联合查询]]></title>
+    <link href="http://syc.im/2013/THINKPHP-duo-biao-lian-he-cha-xun/"/>
+    <id>http://syc.im/2013/THINKPHP-duo-biao-lian-he-cha-xun/</id>
+    <published>2013-09-05T07:35:00.000Z</published>
+    <updated>2016-09-06T07:19:44.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS sortId,vs_pro.catid,b.`name`,vs_pro.id,vs_pro.proname,vs_pro.price,vs_pro.protime&apos;)-&gt;join(&apos;inner join vs_sort b on vs_pro.catid=b.id&apos;)-&gt;where($where)-&gt;limit($p-&gt;firstRow . &apos;,&apos; . $p-&gt;listRows)-&gt;order(&apos;vs_pro.orderid asc&apos;)-&gt;select();
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS so]]>
+    </summary>
+    
+      <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
+    
+      <category term="thinkphp" scheme="http://syc.im/tags/thinkphp/"/>
+    
+      <category term="多表查询" scheme="http://syc.im/tags/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/"/>
+    
+      <category term="PHP" scheme="http://syc.im/categories/PHP/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[解决Ueditor编辑器在thinkphp下单双引号转义问题]]></title>
-    <link href="http://syuchun.com/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/"/>
-    <id>http://syuchun.com/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/</id>
+    <link href="http://syc.im/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/"/>
+    <id>http://syc.im/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/</id>
     <published>2013-09-05T07:35:00.000Z</published>
     <updated>2016-09-06T07:10:46.000Z</updated>
     <content type="html"><![CDATA[<p>在ThinkPHP中提交表单插入数据的时候，单引号和双引号是会被自动转义的，就是会自动的加上反斜线，<br>但是我不想给单引号和双引号加上反斜线，<br>如：hds”gh”j’g’h<br>会被自动转义为：hds\”gh\”j\’g\’h<br>请注意需要的是取消这个转义的功能，而不是使用stripslashes() 函数删除这些反斜杠，即不需要官方的这个自动转义的功能。<br>所以在网上搜索到解决方法：<br>1，在thinkphp目录下，依次打开 ThinkPHP\Lib\Driver\Db 目录，并在dbmysql.class.php 这个文件中把escapeString 函数的函数修改成：</p>
@@ -482,40 +597,18 @@ public function escapeString($str) {
     <![CDATA[<p>在ThinkPHP中提交表单插入数据的时候，单引号和双引号是会被自动转义的，就是会自动的加上反斜线，<br>但是我不想给单引号和双引号加上反斜线，<br>如：hds”gh”j’g’h<br>会被自动转义为：hds\”gh\”j\’g\’h<br>请注意需要的是取消这个转义的]]>
     </summary>
     
-      <category term="PHP" scheme="http://syuchun.com/tags/PHP/"/>
+      <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
     
-      <category term="thinkphp" scheme="http://syuchun.com/tags/thinkphp/"/>
+      <category term="thinkphp" scheme="http://syc.im/tags/thinkphp/"/>
     
-      <category term="PHP" scheme="http://syuchun.com/categories/PHP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[THINKPHP多表联合查询]]></title>
-    <link href="http://syuchun.com/2013/THINKPHP-duo-biao-lian-he-cha-xun/"/>
-    <id>http://syuchun.com/2013/THINKPHP-duo-biao-lian-he-cha-xun/</id>
-    <published>2013-09-05T07:35:00.000Z</published>
-    <updated>2016-09-06T07:19:44.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS sortId,vs_pro.catid,b.`name`,vs_pro.id,vs_pro.proname,vs_pro.price,vs_pro.protime&apos;)-&gt;join(&apos;inner join vs_sort b on vs_pro.catid=b.id&apos;)-&gt;where($where)-&gt;limit($p-&gt;firstRow . &apos;,&apos; . $p-&gt;listRows)-&gt;order(&apos;vs_pro.orderid asc&apos;)-&gt;select();
-</code></pre>]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS so]]>
-    </summary>
-    
-      <category term="PHP" scheme="http://syuchun.com/tags/PHP/"/>
-    
-      <category term="thinkphp" scheme="http://syuchun.com/tags/thinkphp/"/>
-    
-      <category term="多表查询" scheme="http://syuchun.com/tags/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/"/>
-    
-      <category term="PHP" scheme="http://syuchun.com/categories/PHP/"/>
+      <category term="PHP" scheme="http://syc.im/categories/PHP/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[php大小写字母转换]]></title>
-    <link href="http://syuchun.com/2013/php-da-xiao-xie-zi-mu-zhuan-huan/"/>
-    <id>http://syuchun.com/2013/php-da-xiao-xie-zi-mu-zhuan-huan/</id>
+    <link href="http://syc.im/2013/php-da-xiao-xie-zi-mu-zhuan-huan/"/>
+    <id>http://syc.im/2013/php-da-xiao-xie-zi-mu-zhuan-huan/</id>
     <published>2013-01-15T17:06:00.000Z</published>
     <updated>2016-09-06T07:19:04.000Z</updated>
     <content type="html"><![CDATA[<h3 id="一、将字符串转换成小写"><a href="#一、将字符串转换成小写" class="headerlink" title="一、将字符串转换成小写"></a>一、将字符串转换成小写</h3><pre><code>strtolower()该函数将传入的字符串参数所有的字符都转换成小写,并以小写形式返回这个字符串
@@ -527,16 +620,16 @@ public function escapeString($str) {
     <![CDATA[<h3 id="一、将字符串转换成小写"><a href="#一、将字符串转换成小写" class="headerlink" title="一、将字符串转换成小写"></a>一、将字符串转换成小写</h3><pre><code>strtolower()该函数将传入的字符串参数所有]]>
     </summary>
     
-      <category term="PHP" scheme="http://syuchun.com/tags/PHP/"/>
+      <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
     
-      <category term="PHP" scheme="http://syuchun.com/categories/PHP/"/>
+      <category term="PHP" scheme="http://syc.im/categories/PHP/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[lnmp nginx 502 Bad Gateway]]></title>
-    <link href="http://syuchun.com/2012/lnmp-nginx-502-Bad-Gateway/"/>
-    <id>http://syuchun.com/2012/lnmp-nginx-502-Bad-Gateway/</id>
+    <link href="http://syc.im/2012/lnmp-nginx-502-Bad-Gateway/"/>
+    <id>http://syc.im/2012/lnmp-nginx-502-Bad-Gateway/</id>
     <published>2012-09-25T12:42:00.000Z</published>
     <updated>2016-09-06T07:18:22.000Z</updated>
     <content type="html"><![CDATA[<p>今天下午网站出现了502 Bad Gateway，我安装的是军哥的lnmp一键安装，去他的论坛的找了一下，也很好找，置顶的，但是按照上面的说法都试了一次，还是出现502错误，然后百度了很久，终于解决了问题，下面是我的问题：</p>
@@ -555,20 +648,20 @@ public function escapeString($str) {
 <h3 id="一、打开-wp-conte]]>
     </summary>
     
-      <category term="nginx" scheme="http://syuchun.com/tags/nginx/"/>
+      <category term="nginx" scheme="http://syc.im/tags/nginx/"/>
     
-      <category term="lnmp" scheme="http://syuchun.com/tags/lnmp/"/>
+      <category term="lnmp" scheme="http://syc.im/tags/lnmp/"/>
     
-      <category term="502" scheme="http://syuchun.com/tags/502/"/>
+      <category term="502" scheme="http://syc.im/tags/502/"/>
     
-      <category term="Linux" scheme="http://syuchun.com/categories/Linux/"/>
+      <category term="Linux" scheme="http://syc.im/categories/Linux/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Linux VPS下SSH常用命令]]></title>
-    <link href="http://syuchun.com/2012/linux-vps-xia-ssh-chang-yong-ming-ling/"/>
-    <id>http://syuchun.com/2012/linux-vps-xia-ssh-chang-yong-ming-ling/</id>
+    <link href="http://syc.im/2012/linux-vps-xia-ssh-chang-yong-ming-ling/"/>
+    <id>http://syc.im/2012/linux-vps-xia-ssh-chang-yong-ming-ling/</id>
     <published>2012-09-11T05:16:00.000Z</published>
     <updated>2016-09-06T07:27:10.000Z</updated>
     <content type="html"><![CDATA[<h3 id="记录一些平时要用到的Linux-VPS的命令："><a href="#记录一些平时要用到的Linux-VPS的命令：" class="headerlink" title="记录一些平时要用到的Linux VPS的命令："></a>记录一些平时要用到的Linux VPS的命令：</h3><pre><code>rm -rf list #######删除list目录#######
@@ -589,13 +682,13 @@ service mysql stop  #######停止mysql#######
     <![CDATA[<h3 id="记录一些平时要用到的Linux-VPS的命令："><a href="#记录一些平时要用到的Linux-VPS的命令：" class="headerlink" title="记录一些平时要用到的Linux VPS的命令："></a>记录一些平时要用到的Linux V]]>
     </summary>
     
-      <category term="Linux" scheme="http://syuchun.com/tags/Linux/"/>
+      <category term="Linux" scheme="http://syc.im/tags/Linux/"/>
     
-      <category term="VPS" scheme="http://syuchun.com/tags/VPS/"/>
+      <category term="VPS" scheme="http://syc.im/tags/VPS/"/>
     
-      <category term="SSH" scheme="http://syuchun.com/tags/SSH/"/>
+      <category term="SSH" scheme="http://syc.im/tags/SSH/"/>
     
-      <category term="Linux" scheme="http://syuchun.com/categories/Linux/"/>
+      <category term="Linux" scheme="http://syc.im/categories/Linux/"/>
     
   </entry>
   

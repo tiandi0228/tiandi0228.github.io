@@ -64,7 +64,7 @@
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
-  <meta name="keywords" content="Wisay,微言微道,Typecho主题,清风博客,syuchun,Wordpress主题,个人博客程序,个人主页设计,个人网站,iSun,2016最新电影" />
+  <meta name="keywords" content="Wisay,微言微道,清风博客,syuchun,个人博客程序,个人主页设计,个人网站,iSun" />
 
 
 
@@ -77,7 +77,7 @@
 <meta name="description" content="专注IT领域，分享网络乐趣。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="老孙笔记">
-<meta property="og:url" content="http://syuchun.com/tags/PHPMailer/index.html">
+<meta property="og:url" content="http://syc.im/tags/PHPMailer/index.html">
 <meta property="og:site_name" content="老孙笔记">
 <meta property="og:description" content="专注IT领域，分享网络乐趣。">
 <meta name="twitter:card" content="summary">
@@ -109,12 +109,6 @@
 
 
 
-
-
-
-  <div style="display: none;">
-    <script src="http://s6.cnzz.com/stat.php?id=1253611686&web_id=1253611686" type="text/javascript"></script>
-  </div>
 
 
 
@@ -200,7 +194,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="#" class="st-search-show-outputs">
+            <a href="#" class="popup-trigger">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -215,19 +209,12 @@
   
     <div class="site-search">
       
-  <form class="site-search-form">
-  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-</form>
-
-<script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-  _st('install', 'YztFL3H7sB-jVMce9fne','2.0.0');
-</script>
-
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
 
 
     </div>
@@ -312,7 +299,7 @@
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="http://cn.gravatar.com/avatar/51477ce54268baabc59f724a1e16c63a?s=80&r=G&d=mm"
+               src="https://syc.im/images/avatar.png"
                alt="Sun" />
           <p class="site-author-name" itemprop="name">Sun</p>
           <p class="site-description motion-element" itemprop="description">专注IT领域，分享网络乐趣。</p>
@@ -320,7 +307,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -337,7 +324,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -356,6 +343,22 @@
 
         <div class="links-of-author motion-element">
           
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/tiandi0228" target="_blank" title="github">
+                  
+                  github
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/wisay" target="_blank" title="weibo">
+                  
+                  weibo
+                </a>
+              </span>
+            
+          
         </div>
 
         
@@ -366,12 +369,12 @@
           <div class="links-of-blogroll motion-element links-of-blogroll-inline">
             <div class="links-of-blogroll-title">
               <i class="fa  fa-fw fa-globe"></i>
-              友情链接
+              Links
             </div>
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://syuchun.com/" title="老孙笔记" target="_blank">老孙笔记</a>
+                  <a href="https://syc.im/" title="老孙笔记" target="_blank">老孙笔记</a>
                 </li>
               
             </ul>
@@ -406,7 +409,7 @@
 <div class="copyright" >
   © 2010 - 
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -421,11 +424,7 @@
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv"><i class="fa fa-user"></i> 访问人数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次</span>
-  
 
-  
-    <span class="site-pv"><i class="fa fa-eye"></i> 总访问量<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次</span>
   
   
 </div>

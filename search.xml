@@ -4,8 +4,60 @@
   
     
     <entry>
+      <title><![CDATA[js面试题]]></title>
+      <url>http://syc.im/2017/js-mian-shi-ti/</url>
+      <content type="html"><![CDATA[<h4 id="如何创建一个-1-2-3-4-5-6…-99-的数组、不用循环和递归"><a href="#如何创建一个-1-2-3-4-5-6…-99-的数组、不用循环和递归" class="headerlink" title="如何创建一个[1,2,3,4,5,6… 99] 的数组、不用循环和递归"></a>如何创建一个[1,2,3,4,5,6… 99] 的数组、不用循环和递归</h4><pre><code>Array.from(Array(100).keys())
+或
+[...Array(100).keys()]
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[vue-route刷新页面出现404]]></title>
+      <url>http://syc.im/2016/vue-router-refresh-page-404/</url>
+      <content type="html"><![CDATA[<p>把做好的Vue一个小网站build到服务器上刷新了一下页面出现404错误，然后通过百度找了问题。</p>
+<h3 id="Nginx-配置"><a href="#Nginx-配置" class="headerlink" title="Nginx 配置"></a>Nginx 配置</h3><pre><code>location / {
+    try_files $uri $uri/ @router;
+    index index.html;
+}
+
+location @router {
+    rewrite ^.*$ /index.html last;
+}
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[开启https]]></title>
+      <url>http://syc.im/2016/kai-qi-https/</url>
+      <content type="html"><![CDATA[<p>前几天购买了一个新域名（syc.im），然后在阿里云做解析的时候看到一个“18元一年云解析DNS热销版送CA证书”活动，就顺手购买了，折腾了几天终于把https服务开启来了^ v ^。</p>
+<h4 id="下面是开启https服务"><a href="#下面是开启https服务" class="headerlink" title="下面是开启https服务"></a>下面是开启https服务</h4><pre><code>server {
+    listen       443;
+    listen       80;
+    server_name  syc.im;
+
+    if ($server_port = 80) {
+        return 497;
+    }
+
+    #ssl
+    ssl on;
+    ssl_certificate  /etc/nginx/conf.d/sslkey/213920636370985.pem;
+    ssl_certificate_key  /etc/nginx/conf.d/sslkey/213920636370985.key;
+    ssl_session_timeout 5m;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers AESGCM:ALL:!DH:!EXPORT:!RC4:+HIGH:!MEDIUM:!LOW:!aNULL:!eNULL;
+    ssl_prefer_server_ciphers on;
+
+    error_page 497 https://$host$request_uri;
+
+}
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[atom插件和主题]]></title>
-      <url>http://syuchun.com/2016/atom-cha-jian-he-zhu-ti/</url>
+      <url>http://syc.im/2016/atom-cha-jian-he-zhu-ti/</url>
       <content type="html"><![CDATA[<h3 id="Atom插件推荐"><a href="#Atom插件推荐" class="headerlink" title="Atom插件推荐"></a>Atom插件推荐</h3><pre><code>Activate Power Mode        Atom装逼插件
 jQuery Snippets            jQuery提示插件
 atom-ternjs                强大的JS提示插件
@@ -25,7 +77,7 @@ vue-snippets               Vue提示
     
     <entry>
       <title><![CDATA[nginx开启ssi]]></title>
-      <url>http://syuchun.com/2016/nginx-ssi/</url>
+      <url>http://syc.im/2016/nginx-ssi/</url>
       <content type="html"><![CDATA[<h3 id="进入nginx安装文件的目录"><a href="#进入nginx安装文件的目录" class="headerlink" title="进入nginx安装文件的目录"></a>进入nginx安装文件的目录</h3><pre><code>cd /root/nginx-1.11.3/src/http/modules
 </code></pre><h3 id="编辑如下文件"><a href="#编辑如下文件" class="headerlink" title="编辑如下文件"></a>编辑如下文件</h3><pre><code>vi ngx_http_ssi_filter_module.c
 </code></pre><h3 id="注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码："><a href="#注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码：" class="headerlink" title="注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码："></a>注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：</h3><pre><code>2065 // if (ngx_http_parse_unsafe_uri(r, uri, &amp;args, &amp;flags) != NGX_OK) {
@@ -46,7 +98,7 @@ vue-snippets               Vue提示
     
     <entry>
       <title><![CDATA[JS获取网页宽高等方法的集合]]></title>
-      <url>http://syuchun.com/2016/js-huo-qu-wang-ye-kuan-gao-fang-fa-ji-he/</url>
+      <url>http://syc.im/2016/js-huo-qu-wang-ye-kuan-gao-fang-fa-ji-he/</url>
       <content type="html"><![CDATA[<pre><code>document.body.clientWidth - 网页可见区域宽
 document.body.clientHeight - 网页可见区域高
 document.body.offsetWidth - 网页可见区域宽，包括边线和滚动条的宽
@@ -70,7 +122,7 @@ window.screen.deviceXDPI - 屏幕像素/英寸【IE支持，其它不支持】
     
     <entry>
       <title><![CDATA[PHP 时间格式几秒前，几分钟前]]></title>
-      <url>http://syuchun.com/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/</url>
+      <url>http://syc.im/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/</url>
       <content type="html"><![CDATA[<pre><code>function timeFormat($timeInt,$format=&apos;y.m.d&apos;){
     if(empty($timeInt)||!is_numeric($timeInt)||!$timeInt)
     {
@@ -108,7 +160,7 @@ window.screen.deviceXDPI - 屏幕像素/英寸【IE支持，其它不支持】
     
     <entry>
       <title><![CDATA[隐藏 Nignx 、PHP 版本号]]></title>
-      <url>http://syuchun.com/2015/hide-php-nignx-version-number/</url>
+      <url>http://syc.im/2015/hide-php-nignx-version-number/</url>
       <content type="html"><![CDATA[<h3 id="一、隐藏-Nginx-版本号"><a href="#一、隐藏-Nginx-版本号" class="headerlink" title="一、隐藏 Nginx 版本号"></a>一、隐藏 Nginx 版本号</h3><h4 id="编辑-nginx-conf-文件，增加一行-server-tokens-off"><a href="#编辑-nginx-conf-文件，增加一行-server-tokens-off" class="headerlink" title="编辑 nginx.conf 文件，增加一行 server_tokens off;"></a>编辑 nginx.conf 文件，增加一行 server_tokens off;</h4><h3 id="二、隐藏-PHP-版本号"><a href="#二、隐藏-PHP-版本号" class="headerlink" title="二、隐藏 PHP 版本号"></a>二、隐藏 PHP 版本号</h3><h4 id="编辑-php-ini-文件，在最后增加如下内容："><a href="#编辑-php-ini-文件，在最后增加如下内容：" class="headerlink" title="编辑 php.ini 文件，在最后增加如下内容："></a>编辑 php.ini 文件，在最后增加如下内容：</h4><pre><code>;;;;;;;;;;;;;;;;;
 ; Miscellaneous ;
 ;;;;;;;;;;;;;;;;;
@@ -123,7 +175,7 @@ expose_php = Off
     
     <entry>
       <title><![CDATA[jQuery+PHP点击查看更多]]></title>
-      <url>http://syuchun.com/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/</url>
+      <url>http://syc.im/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/</url>
       <content type="html"><![CDATA[<p>今天做一个微信的文章显示列表，点击查看加载显示，是用PHP查询数据，然后通过AJAX向服务端发送请求，后台PHP程序得到请求参数，并作出相应，获取数据库相应的记录并以JSON的形式返回给前台页面，前台页面jQuery解析JSON数据，并将数据追加到列表页。</p>
 <h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><pre><code>&lt;div id=&quot;more&quot; style=&quot;margin:10px;&quot;&gt;
       &lt;div class=&quot;single_item&quot;&gt;
@@ -184,7 +236,7 @@ echo JSON($array);
     
     <entry>
       <title><![CDATA[jQuery实现的全选、反选和不选功能]]></title>
-      <url>http://syuchun.com/2014/jQuery-shi-xian-de-quan-xuan-fan-xuan-he-bu-xuan-gong-neng/</url>
+      <url>http://syc.im/2014/jQuery-shi-xian-de-quan-xuan-fan-xuan-he-bu-xuan-gong-neng/</url>
       <content type="html"><![CDATA[<p>jQuery实现的全选、反选和不选功能 示例：</p>
 <h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><pre><code>.top_title{text-align:center;}
 .demo{width:520px; margin:40px auto 0 auto; min-height:250px;}
@@ -249,7 +301,7 @@ function allchk(){
     
     <entry>
       <title><![CDATA[MYSQL 自增ID清零]]></title>
-      <url>http://syuchun.com/2014/MYSQL-zi-zeng-ID-qing-ling/</url>
+      <url>http://syc.im/2014/MYSQL-zi-zeng-ID-qing-ling/</url>
       <content type="html"><![CDATA[<pre><code>TRUNCATE TABLE jobs
 </code></pre><p>这个的缺点就是会把表里的数据都删除</p>
 ]]></content>
@@ -257,7 +309,7 @@ function allchk(){
     
     <entry>
       <title><![CDATA[ThinkPHP使用PHPMailer发送邮件]]></title>
-      <url>http://syuchun.com/2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/</url>
+      <url>http://syc.im/2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/</url>
       <content type="html"><![CDATA[<p>这几天用tp作了个招聘的网站，想用到邮件找回密码和激活，所以想到了用PHPMailer<br>先去下载PHPMailer,然后放入THINKPHP/libary/ORG中.<br>在Common/Common/下新建一个function.php文件</p>
 <pre><code>function send_mail($to = &apos;&apos;, $subject = &apos;&apos;, $body = &apos;&apos;, $name = &apos;&apos;, $attachment = null)
 {
@@ -315,8 +367,15 @@ function allchk(){
     </entry>
     
     <entry>
+      <title><![CDATA[THINKPHP多表联合查询]]></title>
+      <url>http://syc.im/2013/THINKPHP-duo-biao-lian-he-cha-xun/</url>
+      <content type="html"><![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS sortId,vs_pro.catid,b.`name`,vs_pro.id,vs_pro.proname,vs_pro.price,vs_pro.protime&apos;)-&gt;join(&apos;inner join vs_sort b on vs_pro.catid=b.id&apos;)-&gt;where($where)-&gt;limit($p-&gt;firstRow . &apos;,&apos; . $p-&gt;listRows)-&gt;order(&apos;vs_pro.orderid asc&apos;)-&gt;select();
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[解决Ueditor编辑器在thinkphp下单双引号转义问题]]></title>
-      <url>http://syuchun.com/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/</url>
+      <url>http://syc.im/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/</url>
       <content type="html"><![CDATA[<p>在ThinkPHP中提交表单插入数据的时候，单引号和双引号是会被自动转义的，就是会自动的加上反斜线，<br>但是我不想给单引号和双引号加上反斜线，<br>如：hds”gh”j’g’h<br>会被自动转义为：hds\”gh\”j\’g\’h<br>请注意需要的是取消这个转义的功能，而不是使用stripslashes() 函数删除这些反斜杠，即不需要官方的这个自动转义的功能。<br>所以在网上搜索到解决方法：<br>1，在thinkphp目录下，依次打开 ThinkPHP\Lib\Driver\Db 目录，并在dbmysql.class.php 这个文件中把escapeString 函数的函数修改成：</p>
 <pre><code>/**
 * SQL指令安全过滤
@@ -340,15 +399,8 @@ public function escapeString($str) {
     </entry>
     
     <entry>
-      <title><![CDATA[THINKPHP多表联合查询]]></title>
-      <url>http://syuchun.com/2013/THINKPHP-duo-biao-lian-he-cha-xun/</url>
-      <content type="html"><![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS sortId,vs_pro.catid,b.`name`,vs_pro.id,vs_pro.proname,vs_pro.price,vs_pro.protime&apos;)-&gt;join(&apos;inner join vs_sort b on vs_pro.catid=b.id&apos;)-&gt;where($where)-&gt;limit($p-&gt;firstRow . &apos;,&apos; . $p-&gt;listRows)-&gt;order(&apos;vs_pro.orderid asc&apos;)-&gt;select();
-</code></pre>]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[php大小写字母转换]]></title>
-      <url>http://syuchun.com/2013/php-da-xiao-xie-zi-mu-zhuan-huan/</url>
+      <url>http://syc.im/2013/php-da-xiao-xie-zi-mu-zhuan-huan/</url>
       <content type="html"><![CDATA[<h3 id="一、将字符串转换成小写"><a href="#一、将字符串转换成小写" class="headerlink" title="一、将字符串转换成小写"></a>一、将字符串转换成小写</h3><pre><code>strtolower()该函数将传入的字符串参数所有的字符都转换成小写,并以小写形式返回这个字符串
 </code></pre><h3 id="二、将字符转成大写"><a href="#二、将字符转成大写" class="headerlink" title="二、将字符转成大写"></a>二、将字符转成大写</h3><pre><code>strtoupper()该函数的作用同strtolower()函数相反,是将传入的字符参数的字符全部转换成大写,并以大写的形式返回这个字符串.用法同strtolowe()一 样.
 </code></pre><h3 id="三、将字符串首字符转换成大写"><a href="#三、将字符串首字符转换成大写" class="headerlink" title="三、将字符串首字符转换成大写"></a>三、将字符串首字符转换成大写</h3><pre><code>ucfirst()该函数的作用是将字符串的第一个字符改成大写,该函数返回首字符大写的字符串.用法同strtolowe()一样.
@@ -358,7 +410,7 @@ public function escapeString($str) {
     
     <entry>
       <title><![CDATA[lnmp nginx 502 Bad Gateway]]></title>
-      <url>http://syuchun.com/2012/lnmp-nginx-502-Bad-Gateway/</url>
+      <url>http://syc.im/2012/lnmp-nginx-502-Bad-Gateway/</url>
       <content type="html"><![CDATA[<p>今天下午网站出现了502 Bad Gateway，我安装的是军哥的lnmp一键安装，去他的论坛的找了一下，也很好找，置顶的，但是按照上面的说法都试了一次，还是出现502错误，然后百度了很久，终于解决了问题，下面是我的问题：</p>
 <h3 id="一、打开-wp-content-local-nginx-conf-nginx-conf，找到一行"><a href="#一、打开-wp-content-local-nginx-conf-nginx-conf，找到一行" class="headerlink" title="一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行"></a>一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行</h3><pre><code>fastcgi_pass unix:/tmp/php-cgi.sock;
 </code></pre><h3 id="改为："><a href="#改为：" class="headerlink" title="改为："></a>改为：</h3><pre><code>fastcgi_pass 127.0.0.1:9000;
@@ -374,7 +426,7 @@ public function escapeString($str) {
     
     <entry>
       <title><![CDATA[Linux VPS下SSH常用命令]]></title>
-      <url>http://syuchun.com/2012/linux-vps-xia-ssh-chang-yong-ming-ling/</url>
+      <url>http://syc.im/2012/linux-vps-xia-ssh-chang-yong-ming-ling/</url>
       <content type="html"><![CDATA[<h3 id="记录一些平时要用到的Linux-VPS的命令："><a href="#记录一些平时要用到的Linux-VPS的命令：" class="headerlink" title="记录一些平时要用到的Linux VPS的命令："></a>记录一些平时要用到的Linux VPS的命令：</h3><pre><code>rm -rf list #######删除list目录#######
 zip –r list .zip ./* #######压缩zip文件#######
 unzip list .zip #######解压zip文件#######
