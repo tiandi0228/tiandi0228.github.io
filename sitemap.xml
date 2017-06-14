@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://syc.im/2017/git-ming-ling/</loc>
+    <lastmod>2017-06-14T13:32:28.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://syc.im/2016/vue-router-refresh-page-404/</loc>
     <lastmod>2017-02-15T08:58:16.000Z</lastmod>
   </url>

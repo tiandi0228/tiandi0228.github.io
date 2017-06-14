@@ -4,7 +4,7 @@
   <subtitle><![CDATA[专注IT领域，分享网络乐趣。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://syc.im/"/>
-  <updated>2017-02-15T08:49:06.000Z</updated>
+  <updated>2017-06-14T13:32:28.000Z</updated>
   <id>http://syc.im/</id>
   
   <author>
@@ -13,6 +13,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[git命令]]></title>
+    <link href="http://syc.im/2017/git-ming-ling/"/>
+    <id>http://syc.im/2017/git-ming-ling/</id>
+    <published>2017-06-14T13:22:45.000Z</published>
+    <updated>2017-06-14T13:32:28.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="git基本命令"><a href="#git基本命令" class="headerlink" title="git基本命令"></a>git基本命令</h4><pre><code>git clone git url // 下载代码
+git status //查看状态
+git add file // 添加文件
+git pull // 下拉
+git push // 提交
+git branch // 查看分支
+git branch -b 分支名字 // 新建分支并进入分支
+git checkout 分支名字 // 切换分支
+git push origin 分支名字 // 创建远程分支
+git merge 分支名字 // 合并分支
+git stash // 暂存当前修改过的文件
+git stash pop // 下拉暂存文件
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="git基本命令"><a href="#git基本命令" class="headerlink" title="git基本命令"></a>git基本命令</h4><pre><code>git clone git url // 下载代码
+git status //查看状]]>
+    </summary>
+    
+      <category term="git" scheme="http://syc.im/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[js面试题]]></title>
@@ -441,9 +469,9 @@ function allchk(){
 <h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><pre><code>.top_title{text-align:cente]]>
     </summary>
     
-      <category term="JavaScript" scheme="http://syc.im/tags/JavaScript/"/>
-    
       <category term="jQuery" scheme="http://syc.im/tags/jQuery/"/>
+    
+      <category term="JavaScript" scheme="http://syc.im/tags/JavaScript/"/>
     
       <category term="JavaScript" scheme="http://syc.im/categories/JavaScript/"/>
     
@@ -546,28 +574,6 @@ function allchk(){
   </entry>
   
   <entry>
-    <title><![CDATA[THINKPHP多表联合查询]]></title>
-    <link href="http://syc.im/2013/THINKPHP-duo-biao-lian-he-cha-xun/"/>
-    <id>http://syc.im/2013/THINKPHP-duo-biao-lian-he-cha-xun/</id>
-    <published>2013-09-05T07:35:00.000Z</published>
-    <updated>2016-09-06T07:19:44.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS sortId,vs_pro.catid,b.`name`,vs_pro.id,vs_pro.proname,vs_pro.price,vs_pro.protime&apos;)-&gt;join(&apos;inner join vs_sort b on vs_pro.catid=b.id&apos;)-&gt;where($where)-&gt;limit($p-&gt;firstRow . &apos;,&apos; . $p-&gt;listRows)-&gt;order(&apos;vs_pro.orderid asc&apos;)-&gt;select();
-</code></pre>]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS so]]>
-    </summary>
-    
-      <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
-    
-      <category term="thinkphp" scheme="http://syc.im/tags/thinkphp/"/>
-    
-      <category term="多表查询" scheme="http://syc.im/tags/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/"/>
-    
-      <category term="PHP" scheme="http://syc.im/categories/PHP/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[解决Ueditor编辑器在thinkphp下单双引号转义问题]]></title>
     <link href="http://syc.im/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/"/>
     <id>http://syc.im/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/</id>
@@ -600,6 +606,28 @@ public function escapeString($str) {
       <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
     
       <category term="thinkphp" scheme="http://syc.im/tags/thinkphp/"/>
+    
+      <category term="PHP" scheme="http://syc.im/categories/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[THINKPHP多表联合查询]]></title>
+    <link href="http://syc.im/2013/THINKPHP-duo-biao-lian-he-cha-xun/"/>
+    <id>http://syc.im/2013/THINKPHP-duo-biao-lian-he-cha-xun/</id>
+    <published>2013-09-05T07:35:00.000Z</published>
+    <updated>2016-09-06T07:19:44.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS sortId,vs_pro.catid,b.`name`,vs_pro.id,vs_pro.proname,vs_pro.price,vs_pro.protime&apos;)-&gt;join(&apos;inner join vs_sort b on vs_pro.catid=b.id&apos;)-&gt;where($where)-&gt;limit($p-&gt;firstRow . &apos;,&apos; . $p-&gt;listRows)-&gt;order(&apos;vs_pro.orderid asc&apos;)-&gt;select();
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS so]]>
+    </summary>
+    
+      <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
+    
+      <category term="thinkphp" scheme="http://syc.im/tags/thinkphp/"/>
+    
+      <category term="多表查询" scheme="http://syc.im/tags/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/"/>
     
       <category term="PHP" scheme="http://syc.im/categories/PHP/"/>
     
