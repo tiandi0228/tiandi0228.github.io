@@ -1,722 +1,518 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[老孙笔记]]></title>
-  <subtitle><![CDATA[专注IT领域，分享网络乐趣。]]></subtitle>
+  <title>老孙笔记</title>
+  
+  <subtitle>专注IT领域，分享网络乐趣。</subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://syc.im/"/>
+  
+  <link href="//syc.im/"/>
   <updated>2017-06-14T13:32:28.000Z</updated>
-  <id>http://syc.im/</id>
+  <id>//syc.im/</id>
   
   <author>
-    <name><![CDATA[Sun]]></name>
+    <name>Sun</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[git命令]]></title>
-    <link href="http://syc.im/2017/git-ming-ling/"/>
-    <id>http://syc.im/2017/git-ming-ling/</id>
+    <title>git命令</title>
+    <link href="//syc.im/2017/git-ming-ling/"/>
+    <id>//syc.im/2017/git-ming-ling/</id>
     <published>2017-06-14T13:22:45.000Z</published>
     <updated>2017-06-14T13:32:28.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="git基本命令"><a href="#git基本命令" class="headerlink" title="git基本命令"></a>git基本命令</h4><pre><code>git clone git url // 下载代码
-git status //查看状态
-git add file // 添加文件
-git pull // 下拉
-git push // 提交
-git branch // 查看分支
-git branch -b 分支名字 // 新建分支并进入分支
-git checkout 分支名字 // 切换分支
-git push origin 分支名字 // 创建远程分支
-git merge 分支名字 // 合并分支
-git stash // 暂存当前修改过的文件
-git stash pop // 下拉暂存文件
-</code></pre>]]></content>
+    
+    <content type="html"><![CDATA[<h4 id="git基本命令"><a href="#git基本命令" class="headerlink" title="git基本命令"></a>git基本命令</h4><pre><code>git clone git url // 下载代码git status //查看状态git add file // 添加文件git pull // 下拉git push // 提交git branch // 查看分支git branch -b 分支名字 // 新建分支并进入分支git checkout 分支名字 // 切换分支git push origin 分支名字 // 创建远程分支git merge 分支名字 // 合并分支git stash // 暂存当前修改过的文件git stash pop // 下拉暂存文件</code></pre>]]></content>
+    
     <summary type="html">
-    <![CDATA[<h4 id="git基本命令"><a href="#git基本命令" class="headerlink" title="git基本命令"></a>git基本命令</h4><pre><code>git clone git url // 下载代码
-git status //查看状]]>
+    
+      
+      
+        &lt;h4 id=&quot;git基本命令&quot;&gt;&lt;a href=&quot;#git基本命令&quot; class=&quot;headerlink&quot; title=&quot;git基本命令&quot;&gt;&lt;/a&gt;git基本命令&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;git clone git url // 下载代码
+git status //查看状
+      
+    
     </summary>
     
-      <category term="git" scheme="http://syc.im/tags/git/"/>
+    
+      <category term="git" scheme="//syc.im/tags/git/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[js面试题]]></title>
-    <link href="http://syc.im/2017/js-mian-shi-ti/"/>
-    <id>http://syc.im/2017/js-mian-shi-ti/</id>
+    <title>js面试题</title>
+    <link href="//syc.im/2017/js-mian-shi-ti/"/>
+    <id>//syc.im/2017/js-mian-shi-ti/</id>
     <published>2017-02-15T08:43:21.000Z</published>
     <updated>2017-02-15T08:49:06.000Z</updated>
-    <content type="html"><![CDATA[<h4 id="如何创建一个-1-2-3-4-5-6…-99-的数组、不用循环和递归"><a href="#如何创建一个-1-2-3-4-5-6…-99-的数组、不用循环和递归" class="headerlink" title="如何创建一个[1,2,3,4,5,6… 99] 的数组、不用循环和递归"></a>如何创建一个[1,2,3,4,5,6… 99] 的数组、不用循环和递归</h4><pre><code>Array.from(Array(100).keys())
-或
-[...Array(100).keys()]
-</code></pre>]]></content>
+    
+    <content type="html"><![CDATA[<h4 id="如何创建一个-1-2-3-4-5-6…-99-的数组、不用循环和递归"><a href="#如何创建一个-1-2-3-4-5-6…-99-的数组、不用循环和递归" class="headerlink" title="如何创建一个[1,2,3,4,5,6… 99] 的数组、不用循环和递归"></a>如何创建一个[1,2,3,4,5,6… 99] 的数组、不用循环和递归</h4><pre><code>Array.from(Array(100).keys())或[...Array(100).keys()]</code></pre>]]></content>
+    
     <summary type="html">
-    <![CDATA[<h4 id="如何创建一个-1-2-3-4-5-6…-99-的数组、不用循环和递归"><a href="#如何创建一个-1-2-3-4-5-6…-99-的数组、不用循环和递归" class="headerlink" title="如何创建一个[1,2,3,4,5,6… 99] ]]>
+    
+      
+      
+        &lt;h4 id=&quot;如何创建一个-1-2-3-4-5-6…-99-的数组、不用循环和递归&quot;&gt;&lt;a href=&quot;#如何创建一个-1-2-3-4-5-6…-99-的数组、不用循环和递归&quot; class=&quot;headerlink&quot; title=&quot;如何创建一个[1,2,3,4,5,6… 99] 
+      
+    
     </summary>
     
-      <category term="JavaScript" scheme="http://syc.im/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="//syc.im/categories/JavaScript/"/>
     
-      <category term="JavaScript" scheme="http://syc.im/categories/JavaScript/"/>
+    
+      <category term="JavaScript" scheme="//syc.im/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[vue-route刷新页面出现404]]></title>
-    <link href="http://syc.im/2016/vue-router-refresh-page-404/"/>
-    <id>http://syc.im/2016/vue-router-refresh-page-404/</id>
+    <title>vue-route刷新页面出现404</title>
+    <link href="//syc.im/2016/vue-router-refresh-page-404/"/>
+    <id>//syc.im/2016/vue-router-refresh-page-404/</id>
     <published>2016-12-20T14:09:26.000Z</published>
     <updated>2017-02-15T08:58:16.000Z</updated>
-    <content type="html"><![CDATA[<p>把做好的Vue一个小网站build到服务器上刷新了一下页面出现404错误，然后通过百度找了问题。</p>
-<h3 id="Nginx-配置"><a href="#Nginx-配置" class="headerlink" title="Nginx 配置"></a>Nginx 配置</h3><pre><code>location / {
-    try_files $uri $uri/ @router;
-    index index.html;
-}
-
-location @router {
-    rewrite ^.*$ /index.html last;
-}
-</code></pre>]]></content>
+    
+    <content type="html"><![CDATA[<p>把做好的Vue一个小网站build到服务器上刷新了一下页面出现404错误，然后通过百度找了问题。</p><h3 id="Nginx-配置"><a href="#Nginx-配置" class="headerlink" title="Nginx 配置"></a>Nginx 配置</h3><pre><code>location / {    try_files $uri $uri/ @router;    index index.html;}location @router {    rewrite ^.*$ /index.html last;}</code></pre>]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>把做好的Vue一个小网站build到服务器上刷新了一下页面出现404错误，然后通过百度找了问题。</p>
-<h3 id="Nginx-配置"><a href="#Nginx-配置" class="headerlink" title="Nginx 配置"></a>Nginx ]]>
+    
+      
+      
+        &lt;p&gt;把做好的Vue一个小网站build到服务器上刷新了一下页面出现404错误，然后通过百度找了问题。&lt;/p&gt;
+&lt;h3 id=&quot;Nginx-配置&quot;&gt;&lt;a href=&quot;#Nginx-配置&quot; class=&quot;headerlink&quot; title=&quot;Nginx 配置&quot;&gt;&lt;/a&gt;Nginx 
+      
+    
     </summary>
     
-      <category term="Linux" scheme="http://syc.im/tags/Linux/"/>
+      <category term="Linux" scheme="//syc.im/categories/Linux/"/>
     
-      <category term="Nginx" scheme="http://syc.im/tags/Nginx/"/>
     
-      <category term="Linux" scheme="http://syc.im/categories/Linux/"/>
+      <category term="Linux" scheme="//syc.im/tags/Linux/"/>
+    
+      <category term="Nginx" scheme="//syc.im/tags/Nginx/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[开启https]]></title>
-    <link href="http://syc.im/2016/kai-qi-https/"/>
-    <id>http://syc.im/2016/kai-qi-https/</id>
+    <title>开启https</title>
+    <link href="//syc.im/2016/kai-qi-https/"/>
+    <id>//syc.im/2016/kai-qi-https/</id>
     <published>2016-10-14T03:24:33.000Z</published>
     <updated>2016-10-14T03:52:50.000Z</updated>
-    <content type="html"><![CDATA[<p>前几天购买了一个新域名（syc.im），然后在阿里云做解析的时候看到一个“18元一年云解析DNS热销版送CA证书”活动，就顺手购买了，折腾了几天终于把https服务开启来了^ v ^。</p>
-<h4 id="下面是开启https服务"><a href="#下面是开启https服务" class="headerlink" title="下面是开启https服务"></a>下面是开启https服务</h4><pre><code>server {
-    listen       443;
-    listen       80;
-    server_name  syc.im;
-
-    if ($server_port = 80) {
-        return 497;
-    }
-
-    #ssl
-    ssl on;
-    ssl_certificate  /etc/nginx/conf.d/sslkey/213920636370985.pem;
-    ssl_certificate_key  /etc/nginx/conf.d/sslkey/213920636370985.key;
-    ssl_session_timeout 5m;
-    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-    ssl_ciphers AESGCM:ALL:!DH:!EXPORT:!RC4:+HIGH:!MEDIUM:!LOW:!aNULL:!eNULL;
-    ssl_prefer_server_ciphers on;
-
-    error_page 497 https://$host$request_uri;
-
-}
-</code></pre>]]></content>
+    
+    <content type="html"><![CDATA[<p>前几天购买了一个新域名（syc.im），然后在阿里云做解析的时候看到一个“18元一年云解析DNS热销版送CA证书”活动，就顺手购买了，折腾了几天终于把https服务开启来了^ v ^。</p><h4 id="下面是开启https服务"><a href="#下面是开启https服务" class="headerlink" title="下面是开启https服务"></a>下面是开启https服务</h4><pre><code>server {    listen       443;    listen       80;    server_name  syc.im;    if ($server_port = 80) {        return 497;    }    #ssl    ssl on;    ssl_certificate  /etc/nginx/conf.d/sslkey/213920636370985.pem;    ssl_certificate_key  /etc/nginx/conf.d/sslkey/213920636370985.key;    ssl_session_timeout 5m;    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;    ssl_ciphers AESGCM:ALL:!DH:!EXPORT:!RC4:+HIGH:!MEDIUM:!LOW:!aNULL:!eNULL;    ssl_prefer_server_ciphers on;    error_page 497 https://$host$request_uri;}</code></pre>]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>前几天购买了一个新域名（syc.im），然后在阿里云做解析的时候看到一个“18元一年云解析DNS热销版送CA证书”活动，就顺手购买了，折腾了几天终于把https服务开启来了^ v ^。</p>
-<h4 id="下面是开启https服务"><a href="#下面是开启htt]]>
+    
+      
+      
+        &lt;p&gt;前几天购买了一个新域名（syc.im），然后在阿里云做解析的时候看到一个“18元一年云解析DNS热销版送CA证书”活动，就顺手购买了，折腾了几天终于把https服务开启来了^ v ^。&lt;/p&gt;
+&lt;h4 id=&quot;下面是开启https服务&quot;&gt;&lt;a href=&quot;#下面是开启htt
+      
+    
     </summary>
     
-      <category term="Linux" scheme="http://syc.im/tags/Linux/"/>
+      <category term="Linux" scheme="//syc.im/categories/Linux/"/>
     
-      <category term="nginx" scheme="http://syc.im/tags/nginx/"/>
     
-      <category term="https" scheme="http://syc.im/tags/https/"/>
+      <category term="Linux" scheme="//syc.im/tags/Linux/"/>
     
-      <category term="Linux" scheme="http://syc.im/categories/Linux/"/>
+      <category term="nginx" scheme="//syc.im/tags/nginx/"/>
+    
+      <category term="https" scheme="//syc.im/tags/https/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[atom插件和主题]]></title>
-    <link href="http://syc.im/2016/atom-cha-jian-he-zhu-ti/"/>
-    <id>http://syc.im/2016/atom-cha-jian-he-zhu-ti/</id>
+    <title>atom插件和主题</title>
+    <link href="//syc.im/2016/atom-cha-jian-he-zhu-ti/"/>
+    <id>//syc.im/2016/atom-cha-jian-he-zhu-ti/</id>
     <published>2016-09-07T03:05:17.000Z</published>
     <updated>2016-09-07T03:45:10.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="Atom插件推荐"><a href="#Atom插件推荐" class="headerlink" title="Atom插件推荐"></a>Atom插件推荐</h3><pre><code>Activate Power Mode        Atom装逼插件
-jQuery Snippets            jQuery提示插件
-atom-ternjs                强大的JS提示插件
-autoclose-html             闭合html标签
-color-picker               颜色拾取器 快捷键cmd + shift + c/ctrl + alt + c
-emmet                      必备的前端插件
-file-icons                 Atom文件夹图标
-language-vue               Vue高亮
-minimap                    迷你地图
-vue-autocompile            Auto compiles vue in atom
-vue-format                 Vue格式化
-vue-snippets               Vue提示
-</code></pre><h3 id="Atom主题推荐"><a href="#Atom主题推荐" class="headerlink" title="Atom主题推荐"></a>Atom主题推荐</h3><pre><code>atom-material-ui
-</code></pre><h3 id="使用字体"><a href="#使用字体" class="headerlink" title="使用字体"></a>使用字体</h3><pre><code>Source Code Pro
-</code></pre>]]></content>
+    
+    <content type="html"><![CDATA[<h3 id="Atom插件推荐"><a href="#Atom插件推荐" class="headerlink" title="Atom插件推荐"></a>Atom插件推荐</h3><pre><code>Activate Power Mode        Atom装逼插件jQuery Snippets            jQuery提示插件atom-ternjs                强大的JS提示插件autoclose-html             闭合html标签color-picker               颜色拾取器 快捷键cmd + shift + c/ctrl + alt + cemmet                      必备的前端插件file-icons                 Atom文件夹图标language-vue               Vue高亮minimap                    迷你地图vue-autocompile            Auto compiles vue in atomvue-format                 Vue格式化vue-snippets               Vue提示</code></pre><h3 id="Atom主题推荐"><a href="#Atom主题推荐" class="headerlink" title="Atom主题推荐"></a>Atom主题推荐</h3><pre><code>atom-material-ui</code></pre><h3 id="使用字体"><a href="#使用字体" class="headerlink" title="使用字体"></a>使用字体</h3><pre><code>Source Code Pro</code></pre>]]></content>
+    
     <summary type="html">
-    <![CDATA[<h3 id="Atom插件推荐"><a href="#Atom插件推荐" class="headerlink" title="Atom插件推荐"></a>Atom插件推荐</h3><pre><code>Activate Power Mode        Atom装逼插件
-jQ]]>
+    
+      
+      
+        &lt;h3 id=&quot;Atom插件推荐&quot;&gt;&lt;a href=&quot;#Atom插件推荐&quot; class=&quot;headerlink&quot; title=&quot;Atom插件推荐&quot;&gt;&lt;/a&gt;Atom插件推荐&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;Activate Power Mode        Atom装逼插件
+jQ
+      
+    
     </summary>
     
-      <category term="atom" scheme="http://syc.im/tags/atom/"/>
+      <category term="Atom" scheme="//syc.im/categories/Atom/"/>
     
-      <category term="Atom" scheme="http://syc.im/categories/Atom/"/>
+    
+      <category term="atom" scheme="//syc.im/tags/atom/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[nginx开启ssi]]></title>
-    <link href="http://syc.im/2016/nginx-ssi/"/>
-    <id>http://syc.im/2016/nginx-ssi/</id>
+    <title>nginx开启ssi</title>
+    <link href="//syc.im/2016/nginx-ssi/"/>
+    <id>//syc.im/2016/nginx-ssi/</id>
     <published>2016-09-06T03:07:41.000Z</published>
     <updated>2016-09-06T09:44:40.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="进入nginx安装文件的目录"><a href="#进入nginx安装文件的目录" class="headerlink" title="进入nginx安装文件的目录"></a>进入nginx安装文件的目录</h3><pre><code>cd /root/nginx-1.11.3/src/http/modules
-</code></pre><h3 id="编辑如下文件"><a href="#编辑如下文件" class="headerlink" title="编辑如下文件"></a>编辑如下文件</h3><pre><code>vi ngx_http_ssi_filter_module.c
-</code></pre><h3 id="注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码："><a href="#注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码：" class="headerlink" title="注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码："></a>注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：</h3><pre><code>2065 // if (ngx_http_parse_unsafe_uri(r, uri, &amp;args, &amp;flags) != NGX_OK) {
-2066 //    return NGX_HTTP_SSI_ERROR;
-2067 // }
-</code></pre><h3 id="保存以上文件"><a href="#保存以上文件" class="headerlink" title="保存以上文件"></a>保存以上文件</h3><pre><code>cd /root/nginx-1.11.3
-执行./configure --prefix=/usr/local/nginx --with-poll_module --with-http_stub_status_module
-执行 make （注意，此处只需要执行make ，不需要 执行make install）
-</code></pre><h3 id="备份nginx-安装目录下的nginx-文件，执行如下脚本"><a href="#备份nginx-安装目录下的nginx-文件，执行如下脚本" class="headerlink" title="备份nginx 安装目录下的nginx 文件，执行如下脚本"></a>备份nginx 安装目录下的nginx 文件，执行如下脚本</h3><pre><code>进入目录：cd /usr/local/nginx/sbin/
-停止nginx ：./nginx -s stop
-执行： mv nginx /home/nginxold
-</code></pre><h3 id="将刚才第5步编译好的nginx文件从（-root-nginx-1-11-3-objs）拷贝到-usr-local-nginx-sbin-目录下"><a href="#将刚才第5步编译好的nginx文件从（-root-nginx-1-11-3-objs）拷贝到-usr-local-nginx-sbin-目录下" class="headerlink" title="将刚才第5步编译好的nginx文件从（/root/nginx-1.11.3/objs）拷贝到/usr/local/nginx/sbin/ 目录下"></a>将刚才第5步编译好的nginx文件从（/root/nginx-1.11.3/objs）拷贝到/usr/local/nginx/sbin/ 目录下</h3><pre><code>进入objs目录 cd /root/nginx-1.11.3/objs
-拷贝nginx文件：cp nginx /usr/local/nginx/sbin/nginx
-</code></pre><h3 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h3><pre><code>进入cd /usr/local/nginx/sbin/ 目录
-启动：./nginx
-</code></pre>]]></content>
+    
+    <content type="html"><![CDATA[<h3 id="进入nginx安装文件的目录"><a href="#进入nginx安装文件的目录" class="headerlink" title="进入nginx安装文件的目录"></a>进入nginx安装文件的目录</h3><pre><code>cd /root/nginx-1.11.3/src/http/modules</code></pre><h3 id="编辑如下文件"><a href="#编辑如下文件" class="headerlink" title="编辑如下文件"></a>编辑如下文件</h3><pre><code>vi ngx_http_ssi_filter_module.c</code></pre><h3 id="注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码："><a href="#注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码：" class="headerlink" title="注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码："></a>注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：</h3><pre><code>2065 // if (ngx_http_parse_unsafe_uri(r, uri, &amp;args, &amp;flags) != NGX_OK) {2066 //    return NGX_HTTP_SSI_ERROR;2067 // }</code></pre><h3 id="保存以上文件"><a href="#保存以上文件" class="headerlink" title="保存以上文件"></a>保存以上文件</h3><pre><code>cd /root/nginx-1.11.3执行./configure --prefix=/usr/local/nginx --with-poll_module --with-http_stub_status_module执行 make （注意，此处只需要执行make ，不需要 执行make install）</code></pre><h3 id="备份nginx-安装目录下的nginx-文件，执行如下脚本"><a href="#备份nginx-安装目录下的nginx-文件，执行如下脚本" class="headerlink" title="备份nginx 安装目录下的nginx 文件，执行如下脚本"></a>备份nginx 安装目录下的nginx 文件，执行如下脚本</h3><pre><code>进入目录：cd /usr/local/nginx/sbin/停止nginx ：./nginx -s stop执行： mv nginx /home/nginxold</code></pre><h3 id="将刚才第5步编译好的nginx文件从（-root-nginx-1-11-3-objs）拷贝到-usr-local-nginx-sbin-目录下"><a href="#将刚才第5步编译好的nginx文件从（-root-nginx-1-11-3-objs）拷贝到-usr-local-nginx-sbin-目录下" class="headerlink" title="将刚才第5步编译好的nginx文件从（/root/nginx-1.11.3/objs）拷贝到/usr/local/nginx/sbin/ 目录下"></a>将刚才第5步编译好的nginx文件从（/root/nginx-1.11.3/objs）拷贝到/usr/local/nginx/sbin/ 目录下</h3><pre><code>进入objs目录 cd /root/nginx-1.11.3/objs拷贝nginx文件：cp nginx /usr/local/nginx/sbin/nginx</code></pre><h3 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h3><pre><code>进入cd /usr/local/nginx/sbin/ 目录启动：./nginx</code></pre>]]></content>
+    
     <summary type="html">
-    <![CDATA[<h3 id="进入nginx安装文件的目录"><a href="#进入nginx安装文件的目录" class="headerlink" title="进入nginx安装文件的目录"></a>进入nginx安装文件的目录</h3><pre><code>cd /root/nginx]]>
+    
+      
+      
+        &lt;h3 id=&quot;进入nginx安装文件的目录&quot;&gt;&lt;a href=&quot;#进入nginx安装文件的目录&quot; class=&quot;headerlink&quot; title=&quot;进入nginx安装文件的目录&quot;&gt;&lt;/a&gt;进入nginx安装文件的目录&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;cd /root/nginx
+      
+    
     </summary>
     
-      <category term="NGINX" scheme="http://syc.im/tags/NGINX/"/>
+      <category term="NGINX" scheme="//syc.im/categories/NGINX/"/>
     
-      <category term="ssi" scheme="http://syc.im/tags/ssi/"/>
     
-      <category term="NGINX" scheme="http://syc.im/categories/NGINX/"/>
+      <category term="NGINX" scheme="//syc.im/tags/NGINX/"/>
+    
+      <category term="ssi" scheme="//syc.im/tags/ssi/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[JS获取网页宽高等方法的集合]]></title>
-    <link href="http://syc.im/2016/js-huo-qu-wang-ye-kuan-gao-fang-fa-ji-he/"/>
-    <id>http://syc.im/2016/js-huo-qu-wang-ye-kuan-gao-fang-fa-ji-he/</id>
+    <title>JS获取网页宽高等方法的集合</title>
+    <link href="//syc.im/2016/js-huo-qu-wang-ye-kuan-gao-fang-fa-ji-he/"/>
+    <id>//syc.im/2016/js-huo-qu-wang-ye-kuan-gao-fang-fa-ji-he/</id>
     <published>2016-05-06T03:01:34.000Z</published>
     <updated>2016-09-06T07:15:02.000Z</updated>
-    <content type="html"><![CDATA[<pre><code>document.body.clientWidth - 网页可见区域宽
-document.body.clientHeight - 网页可见区域高
-document.body.offsetWidth - 网页可见区域宽，包括边线和滚动条的宽
-document.body.offsetHeight - 网页可见区域高，包括边线和滚动条的高[FF,chrom下是整个页面高，IE opera 下正常]
-document.body.scrollWidth - 网页总宽
-document.body.scrollHeight - 网页总高
-document.body.scrollTop - 有滚动条的时候，向下拖动滚动条，上方不显示的那部分高度
-document.body.scrollLeft - 同上
-window.innerHeight - 浏览器窗口的内部高度
-window.innerWidth - 浏览器窗口的内部宽度
-window.screenTop - 网页正文部分上[网页文档的最上方距离屏幕最上方的距离，但FF不支持，Chrom,IE,Opera表现都不同，慎用]
-window.screenLeft - 网页正文部分左[网页文档的最左方距离屏幕最左方的距离，但FF不支持，Chrom,IE,Opera表现都不同，慎用]
-window.screen.height - 屏幕分辨率的高度
-window.screen.width - 屏幕分辨率的宽度
-window.screen.availHeight - 可用工作区高度[整个屏幕但不包括下方任务栏]
-window.screen.availWidth - 可用工作区宽度[整个屏幕的宽度]
-window.screen.clorDepth - 屏幕色彩，常用的16,32位等
-window.screen.deviceXDPI - 屏幕像素/英寸【IE支持，其它不支持】
-</code></pre>]]></content>
+    
+    <content type="html"><![CDATA[<pre><code>document.body.clientWidth - 网页可见区域宽document.body.clientHeight - 网页可见区域高document.body.offsetWidth - 网页可见区域宽，包括边线和滚动条的宽document.body.offsetHeight - 网页可见区域高，包括边线和滚动条的高[FF,chrom下是整个页面高，IE opera 下正常]document.body.scrollWidth - 网页总宽document.body.scrollHeight - 网页总高document.body.scrollTop - 有滚动条的时候，向下拖动滚动条，上方不显示的那部分高度document.body.scrollLeft - 同上window.innerHeight - 浏览器窗口的内部高度window.innerWidth - 浏览器窗口的内部宽度window.screenTop - 网页正文部分上[网页文档的最上方距离屏幕最上方的距离，但FF不支持，Chrom,IE,Opera表现都不同，慎用]window.screenLeft - 网页正文部分左[网页文档的最左方距离屏幕最左方的距离，但FF不支持，Chrom,IE,Opera表现都不同，慎用]window.screen.height - 屏幕分辨率的高度window.screen.width - 屏幕分辨率的宽度window.screen.availHeight - 可用工作区高度[整个屏幕但不包括下方任务栏]window.screen.availWidth - 可用工作区宽度[整个屏幕的宽度]window.screen.clorDepth - 屏幕色彩，常用的16,32位等window.screen.deviceXDPI - 屏幕像素/英寸【IE支持，其它不支持】</code></pre>]]></content>
+    
     <summary type="html">
-    <![CDATA[<pre><code>document.body.clientWidth - 网页可见区域宽
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;document.body.clientWidth - 网页可见区域宽
 document.body.clientHeight - 网页可见区域高
 document.body.offsetWidth - 网页可见区域宽，包括边线和滚动条的宽
-document.]]>
+document.
+      
+    
     </summary>
     
-      <category term="JavaScript" scheme="http://syc.im/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="//syc.im/categories/JavaScript/"/>
     
-      <category term="JavaScript" scheme="http://syc.im/categories/JavaScript/"/>
+    
+      <category term="JavaScript" scheme="//syc.im/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[PHP 时间格式几秒前，几分钟前]]></title>
-    <link href="http://syc.im/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/"/>
-    <id>http://syc.im/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/</id>
+    <title>PHP 时间格式几秒前，几分钟前</title>
+    <link href="//syc.im/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/"/>
+    <id>//syc.im/2016/php-shi-jian-ge-shi-ji-miao-qian-ji-fen-zhong-qian/</id>
     <published>2016-01-14T08:27:00.000Z</published>
     <updated>2016-09-06T07:25:44.000Z</updated>
-    <content type="html"><![CDATA[<pre><code>function timeFormat($timeInt,$format=&apos;y.m.d&apos;){
-    if(empty($timeInt)||!is_numeric($timeInt)||!$timeInt)
-    {
-        return &apos;&apos;;
-    }
-    $d=time()-$timeInt;
-    if($d&lt;0)
-    {
-        return &apos;&apos;;
-    }else{
-        if($d&lt;60)
-        {
-            return $d.&apos;秒前&apos;;
-        }else{
-            if($d&lt;3600)
-            {
-                return floor($d/60).&apos;分钟前&apos;;
-                    if($d&lt;86400)
-                {
-                    return floor($d/3600).&apos;小时前&apos;;
-                }else{
-                    if($d&lt;259200)
-                    {//3天内
-                        return floor($d/86400).&apos;天前&apos;;
-                    }else{
-                        return date($format,$timeInt);
-                    }
-                }
-            }
-        }
-    }
-}
-</code></pre>]]></content>
+    
+    <content type="html"><![CDATA[<pre><code>function timeFormat($timeInt,$format=&apos;y.m.d&apos;){    if(empty($timeInt)||!is_numeric($timeInt)||!$timeInt)    {        return &apos;&apos;;    }    $d=time()-$timeInt;    if($d&lt;0)    {        return &apos;&apos;;    }else{        if($d&lt;60)        {            return $d.&apos;秒前&apos;;        }else{            if($d&lt;3600)            {                return floor($d/60).&apos;分钟前&apos;;                    if($d&lt;86400)                {                    return floor($d/3600).&apos;小时前&apos;;                }else{                    if($d&lt;259200)                    {//3天内                        return floor($d/86400).&apos;天前&apos;;                    }else{                        return date($format,$timeInt);                    }                }            }        }    }}</code></pre>]]></content>
+    
     <summary type="html">
-    <![CDATA[<pre><code>function timeFormat($timeInt,$format=&apos;y.m.d&apos;){
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;function timeFormat($timeInt,$format=&amp;apos;y.m.d&amp;apos;){
     if(empty($timeInt)||!is_numeric($timeInt)||!$timeInt)
     {
-        ]]>
+        
+      
+    
     </summary>
     
-      <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
+      <category term="PHP" scheme="//syc.im/categories/PHP/"/>
     
-      <category term="PHP" scheme="http://syc.im/categories/PHP/"/>
+    
+      <category term="PHP" scheme="//syc.im/tags/PHP/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[隐藏 Nignx 、PHP 版本号]]></title>
-    <link href="http://syc.im/2015/hide-php-nignx-version-number/"/>
-    <id>http://syc.im/2015/hide-php-nignx-version-number/</id>
+    <title>隐藏 Nignx 、PHP 版本号</title>
+    <link href="//syc.im/2015/hide-php-nignx-version-number/"/>
+    <id>//syc.im/2015/hide-php-nignx-version-number/</id>
     <published>2015-07-22T02:37:00.000Z</published>
     <updated>2016-09-06T07:10:12.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="一、隐藏-Nginx-版本号"><a href="#一、隐藏-Nginx-版本号" class="headerlink" title="一、隐藏 Nginx 版本号"></a>一、隐藏 Nginx 版本号</h3><h4 id="编辑-nginx-conf-文件，增加一行-server-tokens-off"><a href="#编辑-nginx-conf-文件，增加一行-server-tokens-off" class="headerlink" title="编辑 nginx.conf 文件，增加一行 server_tokens off;"></a>编辑 nginx.conf 文件，增加一行 server_tokens off;</h4><h3 id="二、隐藏-PHP-版本号"><a href="#二、隐藏-PHP-版本号" class="headerlink" title="二、隐藏 PHP 版本号"></a>二、隐藏 PHP 版本号</h3><h4 id="编辑-php-ini-文件，在最后增加如下内容："><a href="#编辑-php-ini-文件，在最后增加如下内容：" class="headerlink" title="编辑 php.ini 文件，在最后增加如下内容："></a>编辑 php.ini 文件，在最后增加如下内容：</h4><pre><code>;;;;;;;;;;;;;;;;;
-; Miscellaneous ;
-;;;;;;;;;;;;;;;;;
-; Decides whether PHP may expose the fact that it is installed on the server
-; (e.g. by adding its signature to the Web server header).  It is no security
-; threat in any way, but it makes it possible to determine whether you use PHP
-; on your server or not.
-; http://www.php.net/manual/en/ini.core.php#ini.expose-php
-expose_php = Off
-</code></pre>]]></content>
+    
+    <content type="html"><![CDATA[<h3 id="一、隐藏-Nginx-版本号"><a href="#一、隐藏-Nginx-版本号" class="headerlink" title="一、隐藏 Nginx 版本号"></a>一、隐藏 Nginx 版本号</h3><h4 id="编辑-nginx-conf-文件，增加一行-server-tokens-off"><a href="#编辑-nginx-conf-文件，增加一行-server-tokens-off" class="headerlink" title="编辑 nginx.conf 文件，增加一行 server_tokens off;"></a>编辑 nginx.conf 文件，增加一行 server_tokens off;</h4><h3 id="二、隐藏-PHP-版本号"><a href="#二、隐藏-PHP-版本号" class="headerlink" title="二、隐藏 PHP 版本号"></a>二、隐藏 PHP 版本号</h3><h4 id="编辑-php-ini-文件，在最后增加如下内容："><a href="#编辑-php-ini-文件，在最后增加如下内容：" class="headerlink" title="编辑 php.ini 文件，在最后增加如下内容："></a>编辑 php.ini 文件，在最后增加如下内容：</h4><pre><code>;;;;;;;;;;;;;;;;;; Miscellaneous ;;;;;;;;;;;;;;;;;;; Decides whether PHP may expose the fact that it is installed on the server; (e.g. by adding its signature to the Web server header).  It is no security; threat in any way, but it makes it possible to determine whether you use PHP; on your server or not.; http://www.php.net/manual/en/ini.core.php#ini.expose-phpexpose_php = Off</code></pre>]]></content>
+    
     <summary type="html">
-    <![CDATA[<h3 id="一、隐藏-Nginx-版本号"><a href="#一、隐藏-Nginx-版本号" class="headerlink" title="一、隐藏 Nginx 版本号"></a>一、隐藏 Nginx 版本号</h3><h4 id="编辑-nginx-conf-文件，]]>
+    
+      
+      
+        &lt;h3 id=&quot;一、隐藏-Nginx-版本号&quot;&gt;&lt;a href=&quot;#一、隐藏-Nginx-版本号&quot; class=&quot;headerlink&quot; title=&quot;一、隐藏 Nginx 版本号&quot;&gt;&lt;/a&gt;一、隐藏 Nginx 版本号&lt;/h3&gt;&lt;h4 id=&quot;编辑-nginx-conf-文件，
+      
+    
     </summary>
     
-      <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
+      <category term="Linux" scheme="//syc.im/categories/Linux/"/>
     
-      <category term="Linux" scheme="http://syc.im/tags/Linux/"/>
     
-      <category term="nginx" scheme="http://syc.im/tags/nginx/"/>
+      <category term="PHP" scheme="//syc.im/tags/PHP/"/>
     
-      <category term="Linux" scheme="http://syc.im/categories/Linux/"/>
+      <category term="Linux" scheme="//syc.im/tags/Linux/"/>
+    
+      <category term="nginx" scheme="//syc.im/tags/nginx/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[jQuery+PHP点击查看更多]]></title>
-    <link href="http://syc.im/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/"/>
-    <id>http://syc.im/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/</id>
+    <title>jQuery+PHP点击查看更多</title>
+    <link href="//syc.im/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/"/>
+    <id>//syc.im/2014/jQuery-PHP-dian-ji-cha-kan-geng-duo/</id>
     <published>2014-08-21T08:55:00.000Z</published>
     <updated>2016-09-06T07:05:46.000Z</updated>
-    <content type="html"><![CDATA[<p>今天做一个微信的文章显示列表，点击查看加载显示，是用PHP查询数据，然后通过AJAX向服务端发送请求，后台PHP程序得到请求参数，并作出相应，获取数据库相应的记录并以JSON的形式返回给前台页面，前台页面jQuery解析JSON数据，并将数据追加到列表页。</p>
-<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><pre><code>&lt;div id=&quot;more&quot; style=&quot;margin:10px;&quot;&gt;
-      &lt;div class=&quot;single_item&quot;&gt;
-        &lt;div class=&quot;link&quot;&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre><h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><pre><code>body{margin: 0px;background:#eee;}
-a:link,a:visited{text-decoration:none; color:#000000;}
-.link{background:#fff;border-radius:5px;margin-bottom:10px;padding:35px 10px;font:bold 30px &quot;SimSun&quot;;}
-.more{background:#fff;border-radius:5px;padding:10px;text-align:center;font-size:30px;}
-</code></pre><h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><pre><code>$(function(){
-    //var gid=$(&apos;#gid&apos;).val();
-    //$(&apos;#more&apos;).more({&apos;address&apos;: &quot;data.php?id=&quot;+gid+&quot;&quot;})
-    $(&apos;#more&apos;).more({&apos;address&apos;: &quot;data.php&quot;})
-});
-</code></pre><h3 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h3><pre><code>function arrayRecursive(&amp;$array, $function, $apply_to_keys_also = false){
-    static $recursive_counter = 0;
-    if (++$recursive_counter &gt; 1000) {
-        die(&apos;possible deep recursion attack&apos;);
-    }
-    foreach ($array as $key =&gt; $value) {
-        if (is_array($value)) {
-            arrayRecursive($array[$key], $function, $apply_to_keys_also);
-        } else {
-            $array[$key] = $function($value);
-        }
-
-        if ($apply_to_keys_also &amp;&amp; is_string($key)) {
-            $new_key = $function($key);
-            if ($new_key != $key) {
-                $array[$new_key] = $array[$key];
-                unset($array[$key]);
-            }
-        }
-    }
-    $recursive_counter--;
-}
-
-$last = $_POST[&apos;last&apos;];//开始记录数
-$amount = $_POST[&apos;amount&apos;];//单次显示记录数
-$id = isset($_GET[&apos;id&apos;]) ? $_GET[&apos;id&apos;] : 9;
-$query=mysql_query(&quot;select * from p8_spider_item where rid = $id order by id asc limit $last,$amount&quot;);
-while ($row=mysql_fetch_array($query)){
-    $array[] = array(
-        &apos;link&apos;=&gt;&quot;&lt;a href=&apos;content.php?rid=&quot;.$row[&apos;rid&apos;].&quot;&amp;id=&quot;.$row[&apos;id&apos;].&quot;&apos;&gt;&quot;.$row[&apos;title&apos;].&quot;&lt;/a&gt;&quot;,
-    );
-}
-
-function JSON($array) {
-    arrayRecursive($array, &apos;urlencode&apos;, true);
-    $json = json_encode($array);
-    return urldecode($json);
-}
-echo JSON($array);
-</code></pre><p>下载<a href="http://oss.syuchun.com/wisay/2014/08/jquery.more_.js" target="_blank" rel="external">jquery.more</a></p>
-]]></content>
+    
+    <content type="html"><![CDATA[<p>今天做一个微信的文章显示列表，点击查看加载显示，是用PHP查询数据，然后通过AJAX向服务端发送请求，后台PHP程序得到请求参数，并作出相应，获取数据库相应的记录并以JSON的形式返回给前台页面，前台页面jQuery解析JSON数据，并将数据追加到列表页。</p><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><pre><code>&lt;div id=&quot;more&quot; style=&quot;margin:10px;&quot;&gt;      &lt;div class=&quot;single_item&quot;&gt;        &lt;div class=&quot;link&quot;&gt;&lt;/div&gt;    &lt;/div&gt;&lt;/div&gt;</code></pre><h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><pre><code>body{margin: 0px;background:#eee;}a:link,a:visited{text-decoration:none; color:#000000;}.link{background:#fff;border-radius:5px;margin-bottom:10px;padding:35px 10px;font:bold 30px &quot;SimSun&quot;;}.more{background:#fff;border-radius:5px;padding:10px;text-align:center;font-size:30px;}</code></pre><h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><pre><code>$(function(){    //var gid=$(&apos;#gid&apos;).val();    //$(&apos;#more&apos;).more({&apos;address&apos;: &quot;data.php?id=&quot;+gid+&quot;&quot;})    $(&apos;#more&apos;).more({&apos;address&apos;: &quot;data.php&quot;})});</code></pre><h3 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h3><pre><code>function arrayRecursive(&amp;$array, $function, $apply_to_keys_also = false){    static $recursive_counter = 0;    if (++$recursive_counter &gt; 1000) {        die(&apos;possible deep recursion attack&apos;);    }    foreach ($array as $key =&gt; $value) {        if (is_array($value)) {            arrayRecursive($array[$key], $function, $apply_to_keys_also);        } else {            $array[$key] = $function($value);        }        if ($apply_to_keys_also &amp;&amp; is_string($key)) {            $new_key = $function($key);            if ($new_key != $key) {                $array[$new_key] = $array[$key];                unset($array[$key]);            }        }    }    $recursive_counter--;}$last = $_POST[&apos;last&apos;];//开始记录数$amount = $_POST[&apos;amount&apos;];//单次显示记录数$id = isset($_GET[&apos;id&apos;]) ? $_GET[&apos;id&apos;] : 9;$query=mysql_query(&quot;select * from p8_spider_item where rid = $id order by id asc limit $last,$amount&quot;);while ($row=mysql_fetch_array($query)){    $array[] = array(        &apos;link&apos;=&gt;&quot;&lt;a href=&apos;content.php?rid=&quot;.$row[&apos;rid&apos;].&quot;&amp;id=&quot;.$row[&apos;id&apos;].&quot;&apos;&gt;&quot;.$row[&apos;title&apos;].&quot;&lt;/a&gt;&quot;,    );}function JSON($array) {    arrayRecursive($array, &apos;urlencode&apos;, true);    $json = json_encode($array);    return urldecode($json);}echo JSON($array);</code></pre><p>下载<a href="http://oss.syuchun.com/wisay/2014/08/jquery.more_.js" target="_blank" rel="noopener">jquery.more</a></p>]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>今天做一个微信的文章显示列表，点击查看加载显示，是用PHP查询数据，然后通过AJAX向服务端发送请求，后台PHP程序得到请求参数，并作出相应，获取数据库相应的记录并以JSON的形式返回给前台页面，前台页面jQuery解析JSON数据，并将数据追加到列表页。</p>
-<h3 ]]>
+    
+      
+      
+        &lt;p&gt;今天做一个微信的文章显示列表，点击查看加载显示，是用PHP查询数据，然后通过AJAX向服务端发送请求，后台PHP程序得到请求参数，并作出相应，获取数据库相应的记录并以JSON的形式返回给前台页面，前台页面jQuery解析JSON数据，并将数据追加到列表页。&lt;/p&gt;
+&lt;h3 
+      
+    
     </summary>
     
-      <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
+      <category term="PHP" scheme="//syc.im/categories/PHP/"/>
     
-      <category term="jQuery" scheme="http://syc.im/tags/jQuery/"/>
+      <category term="JavaScript" scheme="//syc.im/categories/PHP/JavaScript/"/>
     
-      <category term="PHP" scheme="http://syc.im/categories/PHP/"/>
     
-      <category term="JavaScript" scheme="http://syc.im/categories/PHP/JavaScript/"/>
+      <category term="PHP" scheme="//syc.im/tags/PHP/"/>
+    
+      <category term="jQuery" scheme="//syc.im/tags/jQuery/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[jQuery实现的全选、反选和不选功能]]></title>
-    <link href="http://syc.im/2014/jQuery-shi-xian-de-quan-xuan-fan-xuan-he-bu-xuan-gong-neng/"/>
-    <id>http://syc.im/2014/jQuery-shi-xian-de-quan-xuan-fan-xuan-he-bu-xuan-gong-neng/</id>
+    <title>jQuery实现的全选、反选和不选功能</title>
+    <link href="//syc.im/2014/jQuery-shi-xian-de-quan-xuan-fan-xuan-he-bu-xuan-gong-neng/"/>
+    <id>//syc.im/2014/jQuery-shi-xian-de-quan-xuan-fan-xuan-he-bu-xuan-gong-neng/</id>
     <published>2014-08-05T06:54:00.000Z</published>
     <updated>2016-09-06T07:14:36.000Z</updated>
-    <content type="html"><![CDATA[<p>jQuery实现的全选、反选和不选功能 示例：</p>
-<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><pre><code>.top_title{text-align:center;}
-.demo{width:520px; margin:40px auto 0 auto; min-height:250px;}
-ul li{line-height:30px; padding:4px 0; font-size:14px}
-.btn{overflow: hidden;display:inline-block;*display:inline;padding:4px 20px 4px;font-size:14px;line-height:18px;*line-height:20px;color:#fff;text-align:center;vertical-align:middle;cursor:pointer;background-color:#5bb75b;border:1px solid #cccccc;border-color:#e6e6e6 #e6e6e6 #bfbfbf;border-bottom-color:#b3b3b3;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px; margin-left:2px}
-</code></pre><h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><pre><code>$(function () {
-    //全选或全不选
-    $(&quot;#all&quot;).click(function(){   
-        if(this.checked){   
-            $(&quot;#list :checkbox&quot;).attr(&quot;checked&quot;, true);  
-        }else{   
-            $(&quot;#list :checkbox&quot;).attr(&quot;checked&quot;, false);
-        }   
-     });
-    //全选  
-    $(&quot;#selectAll&quot;).click(function () {
-         $(&quot;#list :checkbox,#all&quot;).attr(&quot;checked&quot;, true);  
-    });  
-    //全不选
-    $(&quot;#unSelect&quot;).click(function () {  
-         $(&quot;#list :checkbox,#all&quot;).attr(&quot;checked&quot;, false);  
-    });  
-    //反选
-    $(&quot;#reverse&quot;).click(function () {
-         $(&quot;#list :checkbox&quot;).each(function () {  
-              $(this).attr(&quot;checked&quot;, !$(this).attr(&quot;checked&quot;));  
-         });
-         allchk();
-    });
-
-    //设置全选复选框
-    $(&quot;#list :checkbox&quot;).click(function(){
-        allchk();
-    });
-});
-function allchk(){
-    var chknum = $(&quot;#list :checkbox&quot;).size();//选项总个数
-    var chk = 0;
-    $(&quot;#list :checkbox&quot;).each(function () {  
-        if($(this).attr(&quot;checked&quot;)==true){
-            chk++;
-        }
-    });
-    if(chknum==chk){//全选
-        $(&quot;#all&quot;).attr(&quot;checked&quot;,true);
-    }else{//不全选
-        $(&quot;#all&quot;).attr(&quot;checked&quot;,false);
-    }
-}
-</code></pre><h3 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h3><pre><code>&lt;div class=&quot;demo&quot;&gt;
-    &lt;ul id=&quot;list&quot;&gt;
-        &lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;1&quot;&gt; iSun&apos;s Blog&lt;/label&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;1&quot;&gt; iSun&apos;s Blog&lt;/label&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;all&quot;&gt;
-    &lt;input type=&quot;button&quot; value=&quot;全选&quot; class=&quot;btn&quot; id=&quot;selectAll&quot;&gt;
-    &lt;input type=&quot;button&quot; value=&quot;全不选&quot; class=&quot;btn&quot; id=&quot;unSelect&quot;&gt;
-    &lt;input type=&quot;button&quot; value=&quot;反选&quot; class=&quot;btn&quot; id=&quot;reverse&quot;&gt;
-&lt;/div&gt;
-</code></pre>]]></content>
+    
+    <content type="html"><![CDATA[<p>jQuery实现的全选、反选和不选功能 示例：</p><h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><pre><code>.top_title{text-align:center;}.demo{width:520px; margin:40px auto 0 auto; min-height:250px;}ul li{line-height:30px; padding:4px 0; font-size:14px}.btn{overflow: hidden;display:inline-block;*display:inline;padding:4px 20px 4px;font-size:14px;line-height:18px;*line-height:20px;color:#fff;text-align:center;vertical-align:middle;cursor:pointer;background-color:#5bb75b;border:1px solid #cccccc;border-color:#e6e6e6 #e6e6e6 #bfbfbf;border-bottom-color:#b3b3b3;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px; margin-left:2px}</code></pre><h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><pre><code>$(function () {    //全选或全不选    $(&quot;#all&quot;).click(function(){           if(this.checked){               $(&quot;#list :checkbox&quot;).attr(&quot;checked&quot;, true);          }else{               $(&quot;#list :checkbox&quot;).attr(&quot;checked&quot;, false);        }        });    //全选      $(&quot;#selectAll&quot;).click(function () {         $(&quot;#list :checkbox,#all&quot;).attr(&quot;checked&quot;, true);      });      //全不选    $(&quot;#unSelect&quot;).click(function () {           $(&quot;#list :checkbox,#all&quot;).attr(&quot;checked&quot;, false);      });      //反选    $(&quot;#reverse&quot;).click(function () {         $(&quot;#list :checkbox&quot;).each(function () {                $(this).attr(&quot;checked&quot;, !$(this).attr(&quot;checked&quot;));           });         allchk();    });    //设置全选复选框    $(&quot;#list :checkbox&quot;).click(function(){        allchk();    });});function allchk(){    var chknum = $(&quot;#list :checkbox&quot;).size();//选项总个数    var chk = 0;    $(&quot;#list :checkbox&quot;).each(function () {          if($(this).attr(&quot;checked&quot;)==true){            chk++;        }    });    if(chknum==chk){//全选        $(&quot;#all&quot;).attr(&quot;checked&quot;,true);    }else{//不全选        $(&quot;#all&quot;).attr(&quot;checked&quot;,false);    }}</code></pre><h3 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h3><pre><code>&lt;div class=&quot;demo&quot;&gt;    &lt;ul id=&quot;list&quot;&gt;        &lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;1&quot;&gt; iSun&apos;s Blog&lt;/label&gt;&lt;/li&gt;        &lt;li&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;1&quot;&gt; iSun&apos;s Blog&lt;/label&gt;&lt;/li&gt;    &lt;/ul&gt;    &lt;input type=&quot;checkbox&quot; id=&quot;all&quot;&gt;    &lt;input type=&quot;button&quot; value=&quot;全选&quot; class=&quot;btn&quot; id=&quot;selectAll&quot;&gt;    &lt;input type=&quot;button&quot; value=&quot;全不选&quot; class=&quot;btn&quot; id=&quot;unSelect&quot;&gt;    &lt;input type=&quot;button&quot; value=&quot;反选&quot; class=&quot;btn&quot; id=&quot;reverse&quot;&gt;&lt;/div&gt;</code></pre>]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>jQuery实现的全选、反选和不选功能 示例：</p>
-<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><pre><code>.top_title{text-align:cente]]>
+    
+      
+      
+        &lt;p&gt;jQuery实现的全选、反选和不选功能 示例：&lt;/p&gt;
+&lt;h3 id=&quot;CSS&quot;&gt;&lt;a href=&quot;#CSS&quot; class=&quot;headerlink&quot; title=&quot;CSS&quot;&gt;&lt;/a&gt;CSS&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;.top_title{text-align:cente
+      
+    
     </summary>
     
-      <category term="jQuery" scheme="http://syc.im/tags/jQuery/"/>
+      <category term="JavaScript" scheme="//syc.im/categories/JavaScript/"/>
     
-      <category term="JavaScript" scheme="http://syc.im/tags/JavaScript/"/>
     
-      <category term="JavaScript" scheme="http://syc.im/categories/JavaScript/"/>
+      <category term="jQuery" scheme="//syc.im/tags/jQuery/"/>
+    
+      <category term="JavaScript" scheme="//syc.im/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[MYSQL 自增ID清零]]></title>
-    <link href="http://syc.im/2014/MYSQL-zi-zeng-ID-qing-ling/"/>
-    <id>http://syc.im/2014/MYSQL-zi-zeng-ID-qing-ling/</id>
+    <title>MYSQL 自增ID清零</title>
+    <link href="//syc.im/2014/MYSQL-zi-zeng-ID-qing-ling/"/>
+    <id>//syc.im/2014/MYSQL-zi-zeng-ID-qing-ling/</id>
     <published>2014-03-12T03:50:00.000Z</published>
     <updated>2016-09-06T07:18:30.000Z</updated>
-    <content type="html"><![CDATA[<pre><code>TRUNCATE TABLE jobs
-</code></pre><p>这个的缺点就是会把表里的数据都删除</p>
-]]></content>
+    
+    <content type="html"><![CDATA[<pre><code>TRUNCATE TABLE jobs</code></pre><p>这个的缺点就是会把表里的数据都删除</p>]]></content>
+    
     <summary type="html">
-    <![CDATA[<pre><code>TRUNCATE TABLE jobs
-</code></pre><p>这个的缺点就是会把表里的数据都删除</p>
-]]>
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;TRUNCATE TABLE jobs
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;这个的缺点就是会把表里的数据都删除&lt;/p&gt;
+
+      
+    
     </summary>
     
-      <category term="MYSQL" scheme="http://syc.im/tags/MYSQL/"/>
+      <category term="MYSQL" scheme="//syc.im/categories/MYSQL/"/>
     
-      <category term="MYSQL" scheme="http://syc.im/categories/MYSQL/"/>
+    
+      <category term="MYSQL" scheme="//syc.im/tags/MYSQL/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[ThinkPHP使用PHPMailer发送邮件]]></title>
-    <link href="http://syc.im/2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/"/>
-    <id>http://syc.im/2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/</id>
+    <title>ThinkPHP使用PHPMailer发送邮件</title>
+    <link href="//syc.im/2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/"/>
+    <id>//syc.im/2014/ThinkPHP-shi-yong-PHPMailer-fa-song-you-jian/</id>
     <published>2014-03-10T08:02:00.000Z</published>
     <updated>2016-09-06T07:22:02.000Z</updated>
-    <content type="html"><![CDATA[<p>这几天用tp作了个招聘的网站，想用到邮件找回密码和激活，所以想到了用PHPMailer<br>先去下载PHPMailer,然后放入THINKPHP/libary/ORG中.<br>在Common/Common/下新建一个function.php文件</p>
-<pre><code>function send_mail($to = &apos;&apos;, $subject = &apos;&apos;, $body = &apos;&apos;, $name = &apos;&apos;, $attachment = null)
-{
-    $from_email = C(&apos;MAIL_SMTP_USER&apos;);
-    $from_name = C(&apos;WEB_SITE&apos;);    
-    $reply_email = &apos;&apos;;    
-    $reply_name = &apos;&apos;;    
-    import(&apos;ORG.PHPMailer.phpmailer&apos;);//从PHPMailer目录导入phpmailer.class.php类文件
-    $mail = new phpmailer(); //实例化PHPMailer
-    $mail-&gt;CharSet    = &apos;UTF-8&apos;; //设定邮件编码，默认ISO-8859-1，如果发中文此项必须设置，否则乱码
-    $mail-&gt;IsSMTP();  // 设定使用SMTP服务
-    $mail-&gt;SMTPDebug  = 0;                     // 关闭SMTP调试功能
-                                           // 1 = errors and messages
-                                           // 2 = messages only
-    $mail-&gt;SMTPAuth = true;                  // 启用 SMTP 验证功能
-    $mail-&gt;Host       = C(&apos;MAIL_SMTP_HOST&apos;);  // SMTP 服务器
-    $mail-&gt;Port       = C(&apos;MAIL_SMTP_PORT&apos;);  // SMTP服务器的端口号
-    $mail-&gt;SMTPSecure = &apos;ssl&apos;;                // 使用安全协议
-    $mail-&gt;Username   = C(&apos;MAIL_SMTP_USER&apos;);  // SMTP服务器用户名
-    $mail-&gt;Password   = C(&apos;MAIL_SMTP_PASS&apos;);  // SMTP服务器密码               
-    $mail-&gt;SetFrom($from_email, $from_name);
-    $replyEmail       = $reply_email?$reply_email:$from_email;
-    $replyName        = $reply_name?$reply_name:$from_name;
-    if($to == &apos;&apos;){
-    $to = C(&apos;MAIL_SMTP_CE&apos;);//邮件地址为空时，默认使用后台默认邮件测试地址
-    }
-    if($name == &apos;&apos;){
-    $name = C(&apos;WEB_SITE&apos;);//发送者名称为空时，默认使用网站名称
-    }
-    if($subject == &apos;&apos;){
-    $subject = C(&apos;WEB_SITE_TITLE&apos;);//邮件主题为空时，默认使用网站标题
-    }
-    if($body == &apos;&apos;){
-    $body = C(&apos;WEB_SITE_DESCRIPTION&apos;);//邮件内容为空时，默认使用网站描述
-    }
-    $mail-&gt;AddReplyTo($replyEmail, $replyName);
-    $mail-&gt;Subject    = $subject;
-    $mail-&gt;MsgHTML($body);//解析
-    $mail-&gt;AddAddress($to, $name);
-    if(is_array($attachment)){ // 添加附件
-        foreach ($attachment as $file){
-            is_file($file) &amp;&amp; $mail-&gt;AddAttachment($file);
-        }
-    }
-    return $mail-&gt;Send() ? true : $mail-&gt;ErrorInfo;//返回错误信息
-}
-</code></pre><h3 id="在配置文件里加入"><a href="#在配置文件里加入" class="headerlink" title="在配置文件里加入"></a>在配置文件里加入</h3><pre><code>//邮件配置
-&apos;MAIL_SMTP_HOST&apos;   =&gt; &apos;smtp.126.com&apos;, //SMTP服务器
-&apos;MAIL_SMTP_PORT&apos;   =&gt; &apos;465&apos;, //SMTP服务器端口
-&apos;MAIL_SMTP_USER&apos;   =&gt; &apos;xxx@126.com&apos;, //SMTP服务器用户名
-&apos;MAIL_SMTP_PASS&apos;   =&gt; &apos;******&apos;, //SMTP服务器密码
-</code></pre><h3 id="使用的时候在控制器里"><a href="#使用的时候在控制器里" class="headerlink" title="使用的时候在控制器里"></a>使用的时候在控制器里</h3><pre><code>send_mail(&quot;xxx@126.com&quot;,$subject = &apos;这事一个测试邮件&apos;, $body = &apos;iSun&apos;s Blog&apos;);
-</code></pre><p>这样就大功告成了，测试可以发送邮件</p>
-]]></content>
+    
+    <content type="html"><![CDATA[<p>这几天用tp作了个招聘的网站，想用到邮件找回密码和激活，所以想到了用PHPMailer<br>先去下载PHPMailer,然后放入THINKPHP/libary/ORG中.<br>在Common/Common/下新建一个function.php文件</p><pre><code>function send_mail($to = &apos;&apos;, $subject = &apos;&apos;, $body = &apos;&apos;, $name = &apos;&apos;, $attachment = null){    $from_email = C(&apos;MAIL_SMTP_USER&apos;);    $from_name = C(&apos;WEB_SITE&apos;);        $reply_email = &apos;&apos;;        $reply_name = &apos;&apos;;        import(&apos;ORG.PHPMailer.phpmailer&apos;);//从PHPMailer目录导入phpmailer.class.php类文件    $mail = new phpmailer(); //实例化PHPMailer    $mail-&gt;CharSet    = &apos;UTF-8&apos;; //设定邮件编码，默认ISO-8859-1，如果发中文此项必须设置，否则乱码    $mail-&gt;IsSMTP();  // 设定使用SMTP服务    $mail-&gt;SMTPDebug  = 0;                     // 关闭SMTP调试功能                                           // 1 = errors and messages                                           // 2 = messages only    $mail-&gt;SMTPAuth = true;                  // 启用 SMTP 验证功能    $mail-&gt;Host       = C(&apos;MAIL_SMTP_HOST&apos;);  // SMTP 服务器    $mail-&gt;Port       = C(&apos;MAIL_SMTP_PORT&apos;);  // SMTP服务器的端口号    $mail-&gt;SMTPSecure = &apos;ssl&apos;;                // 使用安全协议    $mail-&gt;Username   = C(&apos;MAIL_SMTP_USER&apos;);  // SMTP服务器用户名    $mail-&gt;Password   = C(&apos;MAIL_SMTP_PASS&apos;);  // SMTP服务器密码                   $mail-&gt;SetFrom($from_email, $from_name);    $replyEmail       = $reply_email?$reply_email:$from_email;    $replyName        = $reply_name?$reply_name:$from_name;    if($to == &apos;&apos;){    $to = C(&apos;MAIL_SMTP_CE&apos;);//邮件地址为空时，默认使用后台默认邮件测试地址    }    if($name == &apos;&apos;){    $name = C(&apos;WEB_SITE&apos;);//发送者名称为空时，默认使用网站名称    }    if($subject == &apos;&apos;){    $subject = C(&apos;WEB_SITE_TITLE&apos;);//邮件主题为空时，默认使用网站标题    }    if($body == &apos;&apos;){    $body = C(&apos;WEB_SITE_DESCRIPTION&apos;);//邮件内容为空时，默认使用网站描述    }    $mail-&gt;AddReplyTo($replyEmail, $replyName);    $mail-&gt;Subject    = $subject;    $mail-&gt;MsgHTML($body);//解析    $mail-&gt;AddAddress($to, $name);    if(is_array($attachment)){ // 添加附件        foreach ($attachment as $file){            is_file($file) &amp;&amp; $mail-&gt;AddAttachment($file);        }    }    return $mail-&gt;Send() ? true : $mail-&gt;ErrorInfo;//返回错误信息}</code></pre><h3 id="在配置文件里加入"><a href="#在配置文件里加入" class="headerlink" title="在配置文件里加入"></a>在配置文件里加入</h3><pre><code>//邮件配置&apos;MAIL_SMTP_HOST&apos;   =&gt; &apos;smtp.126.com&apos;, //SMTP服务器&apos;MAIL_SMTP_PORT&apos;   =&gt; &apos;465&apos;, //SMTP服务器端口&apos;MAIL_SMTP_USER&apos;   =&gt; &apos;xxx@126.com&apos;, //SMTP服务器用户名&apos;MAIL_SMTP_PASS&apos;   =&gt; &apos;******&apos;, //SMTP服务器密码</code></pre><h3 id="使用的时候在控制器里"><a href="#使用的时候在控制器里" class="headerlink" title="使用的时候在控制器里"></a>使用的时候在控制器里</h3><pre><code>send_mail(&quot;xxx@126.com&quot;,$subject = &apos;这事一个测试邮件&apos;, $body = &apos;iSun&apos;s Blog&apos;);</code></pre><p>这样就大功告成了，测试可以发送邮件</p>]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>这几天用tp作了个招聘的网站，想用到邮件找回密码和激活，所以想到了用PHPMailer<br>先去下载PHPMailer,然后放入THINKPHP/libary/ORG中.<br>在Common/Common/下新建一个function.php文件</p>
-<pre><co]]>
+    
+      
+      
+        &lt;p&gt;这几天用tp作了个招聘的网站，想用到邮件找回密码和激活，所以想到了用PHPMailer&lt;br&gt;先去下载PHPMailer,然后放入THINKPHP/libary/ORG中.&lt;br&gt;在Common/Common/下新建一个function.php文件&lt;/p&gt;
+&lt;pre&gt;&lt;co
+      
+    
     </summary>
     
-      <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
+      <category term="PHP" scheme="//syc.im/categories/PHP/"/>
     
-      <category term="thinkphp" scheme="http://syc.im/tags/thinkphp/"/>
     
-      <category term="PHPMailer" scheme="http://syc.im/tags/PHPMailer/"/>
+      <category term="PHP" scheme="//syc.im/tags/PHP/"/>
     
-      <category term="PHP" scheme="http://syc.im/categories/PHP/"/>
+      <category term="thinkphp" scheme="//syc.im/tags/thinkphp/"/>
+    
+      <category term="PHPMailer" scheme="//syc.im/tags/PHPMailer/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[THINKPHP多表联合查询]]></title>
-    <link href="http://syc.im/2013/THINKPHP-duo-biao-lian-he-cha-xun/"/>
-    <id>http://syc.im/2013/THINKPHP-duo-biao-lian-he-cha-xun/</id>
+    <title>THINKPHP多表联合查询</title>
+    <link href="//syc.im/2013/THINKPHP-duo-biao-lian-he-cha-xun/"/>
+    <id>//syc.im/2013/THINKPHP-duo-biao-lian-he-cha-xun/</id>
     <published>2013-09-05T07:35:00.000Z</published>
     <updated>2016-09-06T07:19:44.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS sortId,vs_pro.catid,b.`name`,vs_pro.id,vs_pro.proname,vs_pro.price,vs_pro.protime&apos;)-&gt;join(&apos;inner join vs_sort b on vs_pro.catid=b.id&apos;)-&gt;where($where)-&gt;limit($p-&gt;firstRow . &apos;,&apos; . $p-&gt;listRows)-&gt;order(&apos;vs_pro.orderid asc&apos;)-&gt;select();
-</code></pre>]]></content>
+    
+    <content type="html"><![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS sortId,vs_pro.catid,b.`name`,vs_pro.id,vs_pro.proname,vs_pro.price,vs_pro.protime&apos;)-&gt;join(&apos;inner join vs_sort b on vs_pro.catid=b.id&apos;)-&gt;where($where)-&gt;limit($p-&gt;firstRow . &apos;,&apos; . $p-&gt;listRows)-&gt;order(&apos;vs_pro.orderid asc&apos;)-&gt;select();</code></pre>]]></content>
+    
     <summary type="html">
-    <![CDATA[<h3 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h3><pre><code>$list = $this-&gt;ProDB-&gt;field(&apos;b.id AS so]]>
+    
+      
+      
+        &lt;h3 id=&quot;join&quot;&gt;&lt;a href=&quot;#join&quot; class=&quot;headerlink&quot; title=&quot;join()&quot;&gt;&lt;/a&gt;join()&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;$list = $this-&amp;gt;ProDB-&amp;gt;field(&amp;apos;b.id AS so
+      
+    
     </summary>
     
-      <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
+      <category term="PHP" scheme="//syc.im/categories/PHP/"/>
     
-      <category term="thinkphp" scheme="http://syc.im/tags/thinkphp/"/>
     
-      <category term="多表查询" scheme="http://syc.im/tags/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/"/>
+      <category term="PHP" scheme="//syc.im/tags/PHP/"/>
     
-      <category term="PHP" scheme="http://syc.im/categories/PHP/"/>
+      <category term="thinkphp" scheme="//syc.im/tags/thinkphp/"/>
+    
+      <category term="多表查询" scheme="//syc.im/tags/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[解决Ueditor编辑器在thinkphp下单双引号转义问题]]></title>
-    <link href="http://syc.im/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/"/>
-    <id>http://syc.im/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/</id>
+    <title>解决Ueditor编辑器在thinkphp下单双引号转义问题</title>
+    <link href="//syc.im/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/"/>
+    <id>//syc.im/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/</id>
     <published>2013-09-05T07:35:00.000Z</published>
     <updated>2016-09-06T07:10:46.000Z</updated>
-    <content type="html"><![CDATA[<p>在ThinkPHP中提交表单插入数据的时候，单引号和双引号是会被自动转义的，就是会自动的加上反斜线，<br>但是我不想给单引号和双引号加上反斜线，<br>如：hds”gh”j’g’h<br>会被自动转义为：hds\”gh\”j\’g\’h<br>请注意需要的是取消这个转义的功能，而不是使用stripslashes() 函数删除这些反斜杠，即不需要官方的这个自动转义的功能。<br>所以在网上搜索到解决方法：<br>1，在thinkphp目录下，依次打开 ThinkPHP\Lib\Driver\Db 目录，并在dbmysql.class.php 这个文件中把escapeString 函数的函数修改成：</p>
-<pre><code>/**
-* SQL指令安全过滤
-* @access public
-* @param string $str  SQL字符串
-* @return string
-*/
-public function escapeString($str) {
-   //修改  周蛮子  放双引号双重转义
-   if (!get_magic_quotes_gpc()){
-       if($this-&amp;gt;_linkID) {
-           return mysql_real_escape_string($str,$this-&amp;gt;_linkID);
-       }else{
-           return mysql_escape_string($str);
-       }
-   } else {
-       return $str;
-   }
-}
-</code></pre>]]></content>
+    
+    <content type="html"><![CDATA[<p>在ThinkPHP中提交表单插入数据的时候，单引号和双引号是会被自动转义的，就是会自动的加上反斜线，<br>但是我不想给单引号和双引号加上反斜线，<br>如：hds”gh”j’g’h<br>会被自动转义为：hds\”gh\”j\’g\’h<br>请注意需要的是取消这个转义的功能，而不是使用stripslashes() 函数删除这些反斜杠，即不需要官方的这个自动转义的功能。<br>所以在网上搜索到解决方法：<br>1，在thinkphp目录下，依次打开 ThinkPHP\Lib\Driver\Db 目录，并在dbmysql.class.php 这个文件中把escapeString 函数的函数修改成：</p><pre><code>/*** SQL指令安全过滤* @access public* @param string $str  SQL字符串* @return string*/public function escapeString($str) {   //修改  周蛮子  放双引号双重转义   if (!get_magic_quotes_gpc()){       if($this-&amp;gt;_linkID) {           return mysql_real_escape_string($str,$this-&amp;gt;_linkID);       }else{           return mysql_escape_string($str);       }   } else {       return $str;   }}</code></pre>]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>在ThinkPHP中提交表单插入数据的时候，单引号和双引号是会被自动转义的，就是会自动的加上反斜线，<br>但是我不想给单引号和双引号加上反斜线，<br>如：hds”gh”j’g’h<br>会被自动转义为：hds\”gh\”j\’g\’h<br>请注意需要的是取消这个转义的]]>
+    
+      
+      
+        &lt;p&gt;在ThinkPHP中提交表单插入数据的时候，单引号和双引号是会被自动转义的，就是会自动的加上反斜线，&lt;br&gt;但是我不想给单引号和双引号加上反斜线，&lt;br&gt;如：hds”gh”j’g’h&lt;br&gt;会被自动转义为：hds\”gh\”j\’g\’h&lt;br&gt;请注意需要的是取消这个转义的
+      
+    
     </summary>
     
-      <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
+      <category term="PHP" scheme="//syc.im/categories/PHP/"/>
     
-      <category term="thinkphp" scheme="http://syc.im/tags/thinkphp/"/>
     
-      <category term="PHP" scheme="http://syc.im/categories/PHP/"/>
+      <category term="PHP" scheme="//syc.im/tags/PHP/"/>
+    
+      <category term="thinkphp" scheme="//syc.im/tags/thinkphp/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[php大小写字母转换]]></title>
-    <link href="http://syc.im/2013/php-da-xiao-xie-zi-mu-zhuan-huan/"/>
-    <id>http://syc.im/2013/php-da-xiao-xie-zi-mu-zhuan-huan/</id>
+    <title>php大小写字母转换</title>
+    <link href="//syc.im/2013/php-da-xiao-xie-zi-mu-zhuan-huan/"/>
+    <id>//syc.im/2013/php-da-xiao-xie-zi-mu-zhuan-huan/</id>
     <published>2013-01-15T17:06:00.000Z</published>
     <updated>2016-09-06T07:19:04.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="一、将字符串转换成小写"><a href="#一、将字符串转换成小写" class="headerlink" title="一、将字符串转换成小写"></a>一、将字符串转换成小写</h3><pre><code>strtolower()该函数将传入的字符串参数所有的字符都转换成小写,并以小写形式返回这个字符串
-</code></pre><h3 id="二、将字符转成大写"><a href="#二、将字符转成大写" class="headerlink" title="二、将字符转成大写"></a>二、将字符转成大写</h3><pre><code>strtoupper()该函数的作用同strtolower()函数相反,是将传入的字符参数的字符全部转换成大写,并以大写的形式返回这个字符串.用法同strtolowe()一 样.
-</code></pre><h3 id="三、将字符串首字符转换成大写"><a href="#三、将字符串首字符转换成大写" class="headerlink" title="三、将字符串首字符转换成大写"></a>三、将字符串首字符转换成大写</h3><pre><code>ucfirst()该函数的作用是将字符串的第一个字符改成大写,该函数返回首字符大写的字符串.用法同strtolowe()一样.
-</code></pre><h3 id="四、将字符串每个单词的首字符转换成大写"><a href="#四、将字符串每个单词的首字符转换成大写" class="headerlink" title="四、将字符串每个单词的首字符转换成大写"></a>四、将字符串每个单词的首字符转换成大写</h3><pre><code>ucwords()该函数将传入的字符串的每个单词的首字符变成大写.如&quot;hello world&quot;,经过该函数处理后,将返回&quot;Hello Word&quot;.用法同strtolowe()一样.
-</code></pre>]]></content>
+    
+    <content type="html"><![CDATA[<h3 id="一、将字符串转换成小写"><a href="#一、将字符串转换成小写" class="headerlink" title="一、将字符串转换成小写"></a>一、将字符串转换成小写</h3><pre><code>strtolower()该函数将传入的字符串参数所有的字符都转换成小写,并以小写形式返回这个字符串</code></pre><h3 id="二、将字符转成大写"><a href="#二、将字符转成大写" class="headerlink" title="二、将字符转成大写"></a>二、将字符转成大写</h3><pre><code>strtoupper()该函数的作用同strtolower()函数相反,是将传入的字符参数的字符全部转换成大写,并以大写的形式返回这个字符串.用法同strtolowe()一 样.</code></pre><h3 id="三、将字符串首字符转换成大写"><a href="#三、将字符串首字符转换成大写" class="headerlink" title="三、将字符串首字符转换成大写"></a>三、将字符串首字符转换成大写</h3><pre><code>ucfirst()该函数的作用是将字符串的第一个字符改成大写,该函数返回首字符大写的字符串.用法同strtolowe()一样.</code></pre><h3 id="四、将字符串每个单词的首字符转换成大写"><a href="#四、将字符串每个单词的首字符转换成大写" class="headerlink" title="四、将字符串每个单词的首字符转换成大写"></a>四、将字符串每个单词的首字符转换成大写</h3><pre><code>ucwords()该函数将传入的字符串的每个单词的首字符变成大写.如&quot;hello world&quot;,经过该函数处理后,将返回&quot;Hello Word&quot;.用法同strtolowe()一样.</code></pre>]]></content>
+    
     <summary type="html">
-    <![CDATA[<h3 id="一、将字符串转换成小写"><a href="#一、将字符串转换成小写" class="headerlink" title="一、将字符串转换成小写"></a>一、将字符串转换成小写</h3><pre><code>strtolower()该函数将传入的字符串参数所有]]>
+    
+      
+      
+        &lt;h3 id=&quot;一、将字符串转换成小写&quot;&gt;&lt;a href=&quot;#一、将字符串转换成小写&quot; class=&quot;headerlink&quot; title=&quot;一、将字符串转换成小写&quot;&gt;&lt;/a&gt;一、将字符串转换成小写&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;strtolower()该函数将传入的字符串参数所有
+      
+    
     </summary>
     
-      <category term="PHP" scheme="http://syc.im/tags/PHP/"/>
+      <category term="PHP" scheme="//syc.im/categories/PHP/"/>
     
-      <category term="PHP" scheme="http://syc.im/categories/PHP/"/>
+    
+      <category term="PHP" scheme="//syc.im/tags/PHP/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[lnmp nginx 502 Bad Gateway]]></title>
-    <link href="http://syc.im/2012/lnmp-nginx-502-Bad-Gateway/"/>
-    <id>http://syc.im/2012/lnmp-nginx-502-Bad-Gateway/</id>
+    <title>lnmp nginx 502 Bad Gateway</title>
+    <link href="//syc.im/2012/lnmp-nginx-502-Bad-Gateway/"/>
+    <id>//syc.im/2012/lnmp-nginx-502-Bad-Gateway/</id>
     <published>2012-09-25T12:42:00.000Z</published>
     <updated>2016-09-06T07:18:22.000Z</updated>
-    <content type="html"><![CDATA[<p>今天下午网站出现了502 Bad Gateway，我安装的是军哥的lnmp一键安装，去他的论坛的找了一下，也很好找，置顶的，但是按照上面的说法都试了一次，还是出现502错误，然后百度了很久，终于解决了问题，下面是我的问题：</p>
-<h3 id="一、打开-wp-content-local-nginx-conf-nginx-conf，找到一行"><a href="#一、打开-wp-content-local-nginx-conf-nginx-conf，找到一行" class="headerlink" title="一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行"></a>一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行</h3><pre><code>fastcgi_pass unix:/tmp/php-cgi.sock;
-</code></pre><h3 id="改为："><a href="#改为：" class="headerlink" title="改为："></a>改为：</h3><pre><code>fastcgi_pass 127.0.0.1:9000;
-</code></pre><h3 id="二、打开-wp-content-local-php-etc-php-fpm-conf，找到一行"><a href="#二、打开-wp-content-local-php-etc-php-fpm-conf，找到一行" class="headerlink" title="二、打开/wp-content/local/php/etc/php-fpm.conf，找到一行"></a>二、打开/wp-content/local/php/etc/php-fpm.conf，找到一行</h3><pre><code>&amp;lt;value name=&quot;listen_address&quot;&amp;gt;/tmp/php-cgi.sock&amp;lt;/value&amp;gt;
-</code></pre><h3 id="改为"><a href="#改为" class="headerlink" title="改为"></a>改为</h3><pre><code>&amp;lt;value name=&quot;listen_address&quot;&amp;gt;127.0.0.1:9000&amp;lt;/value&amp;gt;
-</code></pre><h3 id="三、打开-wp-content-local-nginx-conf-vhost-你的域名文件"><a href="#三、打开-wp-content-local-nginx-conf-vhost-你的域名文件" class="headerlink" title="三、打开/wp-content/local/nginx/conf/vhost/你的域名文件"></a>三、打开/wp-content/local/nginx/conf/vhost/你的域名文件</h3><pre><code>fastcgi_pass unix:/tmp/php-cgi.sock;
-</code></pre><h3 id="改为：-1"><a href="#改为：-1" class="headerlink" title="改为："></a>改为：</h3><pre><code>fastcgi_pass 127.0.0.1:9000;
-</code></pre><h3 id="nginx-重启："><a href="#nginx-重启：" class="headerlink" title="nginx 重启："></a>nginx 重启：</h3><pre><code>/wp-content/local/nginx/sbin/nginx -t
-</code></pre><h3 id="php-fpm重启："><a href="#php-fpm重启：" class="headerlink" title="php-fpm重启："></a>php-fpm重启：</h3><pre><code>/wp-content/local/php/sbin/php-fpm restart
-</code></pre><p>然后刷新了一下页面，502就消失了</p>
-]]></content>
+    
+    <content type="html"><![CDATA[<p>今天下午网站出现了502 Bad Gateway，我安装的是军哥的lnmp一键安装，去他的论坛的找了一下，也很好找，置顶的，但是按照上面的说法都试了一次，还是出现502错误，然后百度了很久，终于解决了问题，下面是我的问题：</p><h3 id="一、打开-wp-content-local-nginx-conf-nginx-conf，找到一行"><a href="#一、打开-wp-content-local-nginx-conf-nginx-conf，找到一行" class="headerlink" title="一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行"></a>一、打开/wp-content/local/nginx/conf/nginx.conf，找到一行</h3><pre><code>fastcgi_pass unix:/tmp/php-cgi.sock;</code></pre><h3 id="改为："><a href="#改为：" class="headerlink" title="改为："></a>改为：</h3><pre><code>fastcgi_pass 127.0.0.1:9000;</code></pre><h3 id="二、打开-wp-content-local-php-etc-php-fpm-conf，找到一行"><a href="#二、打开-wp-content-local-php-etc-php-fpm-conf，找到一行" class="headerlink" title="二、打开/wp-content/local/php/etc/php-fpm.conf，找到一行"></a>二、打开/wp-content/local/php/etc/php-fpm.conf，找到一行</h3><pre><code>&amp;lt;value name=&quot;listen_address&quot;&amp;gt;/tmp/php-cgi.sock&amp;lt;/value&amp;gt;</code></pre><h3 id="改为"><a href="#改为" class="headerlink" title="改为"></a>改为</h3><pre><code>&amp;lt;value name=&quot;listen_address&quot;&amp;gt;127.0.0.1:9000&amp;lt;/value&amp;gt;</code></pre><h3 id="三、打开-wp-content-local-nginx-conf-vhost-你的域名文件"><a href="#三、打开-wp-content-local-nginx-conf-vhost-你的域名文件" class="headerlink" title="三、打开/wp-content/local/nginx/conf/vhost/你的域名文件"></a>三、打开/wp-content/local/nginx/conf/vhost/你的域名文件</h3><pre><code>fastcgi_pass unix:/tmp/php-cgi.sock;</code></pre><h3 id="改为：-1"><a href="#改为：-1" class="headerlink" title="改为："></a>改为：</h3><pre><code>fastcgi_pass 127.0.0.1:9000;</code></pre><h3 id="nginx-重启："><a href="#nginx-重启：" class="headerlink" title="nginx 重启："></a>nginx 重启：</h3><pre><code>/wp-content/local/nginx/sbin/nginx -t</code></pre><h3 id="php-fpm重启："><a href="#php-fpm重启：" class="headerlink" title="php-fpm重启："></a>php-fpm重启：</h3><pre><code>/wp-content/local/php/sbin/php-fpm restart</code></pre><p>然后刷新了一下页面，502就消失了</p>]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>今天下午网站出现了502 Bad Gateway，我安装的是军哥的lnmp一键安装，去他的论坛的找了一下，也很好找，置顶的，但是按照上面的说法都试了一次，还是出现502错误，然后百度了很久，终于解决了问题，下面是我的问题：</p>
-<h3 id="一、打开-wp-conte]]>
+    
+      
+      
+        &lt;p&gt;今天下午网站出现了502 Bad Gateway，我安装的是军哥的lnmp一键安装，去他的论坛的找了一下，也很好找，置顶的，但是按照上面的说法都试了一次，还是出现502错误，然后百度了很久，终于解决了问题，下面是我的问题：&lt;/p&gt;
+&lt;h3 id=&quot;一、打开-wp-conte
+      
+    
     </summary>
     
-      <category term="nginx" scheme="http://syc.im/tags/nginx/"/>
+      <category term="Linux" scheme="//syc.im/categories/Linux/"/>
     
-      <category term="lnmp" scheme="http://syc.im/tags/lnmp/"/>
     
-      <category term="502" scheme="http://syc.im/tags/502/"/>
+      <category term="nginx" scheme="//syc.im/tags/nginx/"/>
     
-      <category term="Linux" scheme="http://syc.im/categories/Linux/"/>
+      <category term="lnmp" scheme="//syc.im/tags/lnmp/"/>
+    
+      <category term="502" scheme="//syc.im/tags/502/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[Linux VPS下SSH常用命令]]></title>
-    <link href="http://syc.im/2012/linux-vps-xia-ssh-chang-yong-ming-ling/"/>
-    <id>http://syc.im/2012/linux-vps-xia-ssh-chang-yong-ming-ling/</id>
+    <title>Linux VPS下SSH常用命令</title>
+    <link href="//syc.im/2012/linux-vps-xia-ssh-chang-yong-ming-ling/"/>
+    <id>//syc.im/2012/linux-vps-xia-ssh-chang-yong-ming-ling/</id>
     <published>2012-09-11T05:16:00.000Z</published>
     <updated>2016-09-06T07:27:10.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="记录一些平时要用到的Linux-VPS的命令："><a href="#记录一些平时要用到的Linux-VPS的命令：" class="headerlink" title="记录一些平时要用到的Linux VPS的命令："></a>记录一些平时要用到的Linux VPS的命令：</h3><pre><code>rm -rf list #######删除list目录#######
-zip –r list .zip ./* #######压缩zip文件#######
-unzip list .zip #######解压zip文件#######
-wget http://www.wisay.org/list.zip #######下载文件#######
-/etc/init.d/nginx restart      ####### 伪静态重启#######
-kill -QUIT 进程号 #######从容停止Nginx#######
-kill -TERM 进程号 #######快速停止Nginx#######
-pkill -9 nginx #######强制停止Nginx#######
-service nginx start #######启动Nginx#######
-service nginx stop #######停止Nginx#######
-service nginx restart  #######重启Nginx#######
-service mysql start #######启动mysql#######
-service mysql stop  #######停止mysql#######
-</code></pre>]]></content>
+    
+    <content type="html"><![CDATA[<h3 id="记录一些平时要用到的Linux-VPS的命令："><a href="#记录一些平时要用到的Linux-VPS的命令：" class="headerlink" title="记录一些平时要用到的Linux VPS的命令："></a>记录一些平时要用到的Linux VPS的命令：</h3><pre><code>rm -rf list #######删除list目录#######zip –r list .zip ./* #######压缩zip文件#######unzip list .zip #######解压zip文件#######wget http://www.wisay.org/list.zip #######下载文件#######/etc/init.d/nginx restart      ####### 伪静态重启#######kill -QUIT 进程号 #######从容停止Nginx#######kill -TERM 进程号 #######快速停止Nginx#######pkill -9 nginx #######强制停止Nginx#######service nginx start #######启动Nginx#######service nginx stop #######停止Nginx#######service nginx restart  #######重启Nginx#######service mysql start #######启动mysql#######service mysql stop  #######停止mysql#######</code></pre>]]></content>
+    
     <summary type="html">
-    <![CDATA[<h3 id="记录一些平时要用到的Linux-VPS的命令："><a href="#记录一些平时要用到的Linux-VPS的命令：" class="headerlink" title="记录一些平时要用到的Linux VPS的命令："></a>记录一些平时要用到的Linux V]]>
+    
+      
+      
+        &lt;h3 id=&quot;记录一些平时要用到的Linux-VPS的命令：&quot;&gt;&lt;a href=&quot;#记录一些平时要用到的Linux-VPS的命令：&quot; class=&quot;headerlink&quot; title=&quot;记录一些平时要用到的Linux VPS的命令：&quot;&gt;&lt;/a&gt;记录一些平时要用到的Linux V
+      
+    
     </summary>
     
-      <category term="Linux" scheme="http://syc.im/tags/Linux/"/>
+      <category term="Linux" scheme="//syc.im/categories/Linux/"/>
     
-      <category term="VPS" scheme="http://syc.im/tags/VPS/"/>
     
-      <category term="SSH" scheme="http://syc.im/tags/SSH/"/>
+      <category term="Linux" scheme="//syc.im/tags/Linux/"/>
     
-      <category term="Linux" scheme="http://syc.im/categories/Linux/"/>
+      <category term="VPS" scheme="//syc.im/tags/VPS/"/>
+    
+      <category term="SSH" scheme="//syc.im/tags/SSH/"/>
     
   </entry>
   
