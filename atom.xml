@@ -377,6 +377,33 @@ document.
   </entry>
   
   <entry>
+    <title>解决Ueditor编辑器在thinkphp下单双引号转义问题</title>
+    <link href="//syc.im/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/"/>
+    <id>//syc.im/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/</id>
+    <published>2013-09-05T07:35:00.000Z</published>
+    <updated>2016-09-06T07:10:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在ThinkPHP中提交表单插入数据的时候，单引号和双引号是会被自动转义的，就是会自动的加上反斜线，<br>但是我不想给单引号和双引号加上反斜线，<br>如：hds”gh”j’g’h<br>会被自动转义为：hds\”gh\”j\’g\’h<br>请注意需要的是取消这个转义的功能，而不是使用stripslashes() 函数删除这些反斜杠，即不需要官方的这个自动转义的功能。<br>所以在网上搜索到解决方法：<br>1，在thinkphp目录下，依次打开 ThinkPHP\Lib\Driver\Db 目录，并在dbmysql.class.php 这个文件中把escapeString 函数的函数修改成：</p><pre><code>/*** SQL指令安全过滤* @access public* @param string $str  SQL字符串* @return string*/public function escapeString($str) {   //修改  周蛮子  放双引号双重转义   if (!get_magic_quotes_gpc()){       if($this-&amp;gt;_linkID) {           return mysql_real_escape_string($str,$this-&amp;gt;_linkID);       }else{           return mysql_escape_string($str);       }   } else {       return $str;   }}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在ThinkPHP中提交表单插入数据的时候，单引号和双引号是会被自动转义的，就是会自动的加上反斜线，&lt;br&gt;但是我不想给单引号和双引号加上反斜线，&lt;br&gt;如：hds”gh”j’g’h&lt;br&gt;会被自动转义为：hds\”gh\”j\’g\’h&lt;br&gt;请注意需要的是取消这个转义的
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="//syc.im/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="//syc.im/tags/PHP/"/>
+    
+      <category term="thinkphp" scheme="//syc.im/tags/thinkphp/"/>
+    
+  </entry>
+  
+  <entry>
     <title>THINKPHP多表联合查询</title>
     <link href="//syc.im/2013/THINKPHP-duo-biao-lian-he-cha-xun/"/>
     <id>//syc.im/2013/THINKPHP-duo-biao-lian-he-cha-xun/</id>
@@ -402,33 +429,6 @@ document.
       <category term="thinkphp" scheme="//syc.im/tags/thinkphp/"/>
     
       <category term="多表查询" scheme="//syc.im/tags/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决Ueditor编辑器在thinkphp下单双引号转义问题</title>
-    <link href="//syc.im/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/"/>
-    <id>//syc.im/2013/jie-jue-Ueditor-bian-ji-qi-zai-thinkphp-xia-dan-shuang-yin-hao-zhuan-yi-wen-ti/</id>
-    <published>2013-09-05T07:35:00.000Z</published>
-    <updated>2016-09-06T07:10:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>在ThinkPHP中提交表单插入数据的时候，单引号和双引号是会被自动转义的，就是会自动的加上反斜线，<br>但是我不想给单引号和双引号加上反斜线，<br>如：hds”gh”j’g’h<br>会被自动转义为：hds\”gh\”j\’g\’h<br>请注意需要的是取消这个转义的功能，而不是使用stripslashes() 函数删除这些反斜杠，即不需要官方的这个自动转义的功能。<br>所以在网上搜索到解决方法：<br>1，在thinkphp目录下，依次打开 ThinkPHP\Lib\Driver\Db 目录，并在dbmysql.class.php 这个文件中把escapeString 函数的函数修改成：</p><pre><code>/*** SQL指令安全过滤* @access public* @param string $str  SQL字符串* @return string*/public function escapeString($str) {   //修改  周蛮子  放双引号双重转义   if (!get_magic_quotes_gpc()){       if($this-&amp;gt;_linkID) {           return mysql_real_escape_string($str,$this-&amp;gt;_linkID);       }else{           return mysql_escape_string($str);       }   } else {       return $str;   }}</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在ThinkPHP中提交表单插入数据的时候，单引号和双引号是会被自动转义的，就是会自动的加上反斜线，&lt;br&gt;但是我不想给单引号和双引号加上反斜线，&lt;br&gt;如：hds”gh”j’g’h&lt;br&gt;会被自动转义为：hds\”gh\”j\’g\’h&lt;br&gt;请注意需要的是取消这个转义的
-      
-    
-    </summary>
-    
-      <category term="PHP" scheme="//syc.im/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="//syc.im/tags/PHP/"/>
-    
-      <category term="thinkphp" scheme="//syc.im/tags/thinkphp/"/>
     
   </entry>
   
