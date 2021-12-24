@@ -1,9 +1,9 @@
 ---
-title: 隐藏 Nignx 、PHP 隐藏
+title: 隐藏 nignx php 隐藏
 date: 2015-07-22 20:40:14
 tags: 
-- Nignx 
-- PHP
+- nignx 
+- php
 ---
 
 ### 一、隐藏 Nginx 版本号

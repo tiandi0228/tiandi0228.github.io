@@ -7,7 +7,7 @@ title: SUN の Blog
 subtitle: 专注IT领域，分享网络乐趣。
 description:
 keywords: SUN,Blog
-author: sunyc
+author: hong cha
 language: zh-cn
 timezone:
 
@@ -49,7 +49,7 @@ highlight:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
 
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: oranges
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -81,4 +81,25 @@ deploy:
   type: git
   repo: <https://github.com/tiandi0228/tiandi0228.github.io.git> #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
   branch: [master]
-  message: [Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}]
+  message: [Site updated: { { now('YYYY-MM-DD HH:mm:ss') } }]
+
+# rss
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: " "
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
+
+# 搜索
+search:
+  path: search.xml
+  field: post
+  content: true

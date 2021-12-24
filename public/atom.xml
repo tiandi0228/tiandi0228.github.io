@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>SUN の Blog</title>
+  <icon>https://syc.im/icon.png</icon>
+  <subtitle>专注IT领域，分享网络乐趣。</subtitle>
+  <link href="https://syc.im/atom.xml" rel="self"/>
+  
+  <link href="https://syc.im/"/>
+  <updated>2021-12-24T08:14:08.262Z</updated>
+  <id>https://syc.im/</id>
+  
+  <author>
+    <name>hong cha</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>webpack打包后写入自定义信息</title>
+    <link href="https://syc.im/2020/03/06/webpack%E6%89%93%E5%8C%85%E5%90%8E%E5%86%99%E5%85%A5%E7%89%88%E6%9C%AC%E4%BF%A1%E6%81%AF/"/>
+    <id>https://syc.im/2020/03/06/webpack%E6%89%93%E5%8C%85%E5%90%8E%E5%86%99%E5%85%A5%E7%89%88%E6%9C%AC%E4%BF%A1%E6%81%AF/</id>
+    <published>2020-03-06T14:45:20.000Z</published>
+    <updated>2021-12-24T08:14:08.262Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天因项目需要做版本管理，在使用webpack打包后的需要从package.json获取到的信息写入到打包生成的js文件里，所以做了一下研究，以此来记录。&lt;/p&gt;
+&lt;p&gt;首先来创建一个config-webpack-plugin.js插件：&lt;br&gt;&lt;figure</summary>
+        
+      
+    
+    
+    
+    
+    <category term="webpack" scheme="https://syc.im/tags/webpack/"/>
+    
+    <category term="plugins" scheme="https://syc.im/tags/plugins/"/>
+    
+    <category term="fs" scheme="https://syc.im/tags/fs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么[2,0,6,20,25].map(parseInt)返回值是[2, NaN, NaN, 6, 2]?</title>
+    <link href="https://syc.im/2020/01/13/%E4%B8%BA%E4%BB%80%E4%B9%88-2-0-6-20-25-map-parseInt-%E8%BF%94%E5%9B%9E%E5%80%BC%E6%98%AF-2-NaN-NaN-6-2/"/>
+    <id>https://syc.im/2020/01/13/%E4%B8%BA%E4%BB%80%E4%B9%88-2-0-6-20-25-map-parseInt-%E8%BF%94%E5%9B%9E%E5%80%BC%E6%98%AF-2-NaN-NaN-6-2/</id>
+    <published>2020-01-13T06:50:26.000Z</published>
+    <updated>2021-12-24T08:14:08.262Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;解题：&quot;&gt;&lt;a href=&quot;#解题：&quot; class=&quot;headerlink&quot; title=&quot;解题：&quot;&gt;&lt;/a&gt;解题：&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+    <category term="javascript" scheme="https://syc.im/tags/javascript/"/>
+    
+    <category term="map" scheme="https://syc.im/tags/map/"/>
+    
+    <category term="parseInt" scheme="https://syc.im/tags/parseInt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx + SpringBoot 使用 Https</title>
+    <link href="https://syc.im/2018/07/31/Nginx%20+%20SpringBoot%20%E4%BD%BF%E7%94%A8%20Https/"/>
+    <id>https://syc.im/2018/07/31/Nginx%20+%20SpringBoot%20%E4%BD%BF%E7%94%A8%20Https/</id>
+    <published>2018-07-31T12:51:19.000Z</published>
+    <updated>2021-12-24T11:18:59.631Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="SpringBoot" scheme="https://syc.im/tags/SpringBoot/"/>
+    
+    <category term="nginx" scheme="https://syc.im/tags/nginx/"/>
+    
+    <category term="https" scheme="https://syc.im/tags/https/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue webpack less 全局设置</title>
+    <link href="https://syc.im/2018/05/09/vue%20webpack%20less%20%E5%85%A8%E5%B1%80%E8%AE%BE%E7%BD%AE/"/>
+    <id>https://syc.im/2018/05/09/vue%20webpack%20less%20%E5%85%A8%E5%B1%80%E8%AE%BE%E7%BD%AE/</id>
+    <published>2018-05-09T12:49:08.000Z</published>
+    <updated>2021-12-24T08:14:08.262Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天打算在一个新项目中使用less，但是在使用中发现定义在全局文件common.less中的变量，不能在单独的vue中使用。下面是解决的方法：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+    <category term="vue" scheme="https://syc.im/tags/vue/"/>
+    
+    <category term="webpack" scheme="https://syc.im/tags/webpack/"/>
+    
+    <category term="less" scheme="https://syc.im/tags/less/"/>
+    
+    <category term="main" scheme="https://syc.im/tags/main/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue-route刷新页面出现404</title>
+    <link href="https://syc.im/2016/12/20/vue-route%E5%88%B7%E6%96%B0%E9%A1%B5%E9%9D%A2%E5%87%BA%E7%8E%B0404/"/>
+    <id>https://syc.im/2016/12/20/vue-route%E5%88%B7%E6%96%B0%E9%A1%B5%E9%9D%A2%E5%87%BA%E7%8E%B0404/</id>
+    <published>2016-12-20T12:48:13.000Z</published>
+    <updated>2021-12-24T08:14:08.262Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;把做好的Vue一个小网站build到服务器上刷新了一下页面出现404错误，然后通过百度找了问题。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="vue" scheme="https://syc.im/tags/vue/"/>
+    
+    <category term="404" scheme="https://syc.im/tags/404/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开启https</title>
+    <link href="https://syc.im/2016/10/14/%E5%BC%80%E5%90%AFhttps/"/>
+    <id>https://syc.im/2016/10/14/%E5%BC%80%E5%90%AFhttps/</id>
+    <published>2016-10-14T12:47:28.000Z</published>
+    <updated>2021-12-24T08:14:08.262Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;前几天购买了一个新域名（syc.im），然后在阿里云做解析的时候看到一个“18元一年云解析DNS热销版送CA证书”活动，就顺手购买了，折腾了几天终于把https服务开启来了^ v ^。&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    
+    <category term="https" scheme="https://syc.im/tags/https/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nginx开启ssi</title>
+    <link href="https://syc.im/2016/09/06/nginx%E5%BC%80%E5%90%AFssi/"/>
+    <id>https://syc.im/2016/09/06/nginx%E5%BC%80%E5%90%AFssi/</id>
+    <published>2016-09-06T12:44:16.000Z</published>
+    <updated>2021-12-24T08:14:08.262Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;进入nginx安装文件的目录&quot;&gt;&lt;a href=&quot;#进入nginx安装文件的目录&quot; class=&quot;headerlink&quot; title=&quot;进入nginx安装文件的目录&quot;&gt;&lt;/a&gt;进入nginx安装文件的目录&lt;/h3&gt;&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    
+    <category term="nginx" scheme="https://syc.im/tags/nginx/"/>
+    
+    <category term="ssi" scheme="https://syc.im/tags/ssi/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>隐藏 nignx php 隐藏</title>
+    <link href="https://syc.im/2015/07/22/%E9%9A%90%E8%97%8F%20Nignx%20%E3%80%81PHP%E7%89%88%E6%9C%AC%E5%8F%B7/"/>
+    <id>https://syc.im/2015/07/22/%E9%9A%90%E8%97%8F%20Nignx%20%E3%80%81PHP%E7%89%88%E6%9C%AC%E5%8F%B7/</id>
+    <published>2015-07-22T12:40:14.000Z</published>
+    <updated>2021-12-24T11:17:55.793Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、隐藏-Nginx-版本号&quot;&gt;&lt;a href=&quot;#一、隐藏-Nginx-版本号&quot; class=&quot;headerlink&quot; title=&quot;一、隐藏 Nginx 版本号&quot;&gt;&lt;/a&gt;一、隐藏 Nginx 版本号&lt;/h3&gt;&lt;p&gt;编辑 NGINX.CONF 文件，增加一行</summary>
+        
+      
+    
+    
+    
+    
+    <category term="php" scheme="https://syc.im/tags/php/"/>
+    
+    <category term="nignx" scheme="https://syc.im/tags/nignx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jQuery实现的全选、反选和不选功能</title>
+    <link href="https://syc.im/2014/08/05/jQuery%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%85%A8%E9%80%89%E3%80%81%E5%8F%8D%E9%80%89%E5%92%8C%E4%B8%8D%E9%80%89%E5%8A%9F%E8%83%BD/"/>
+    <id>https://syc.im/2014/08/05/jQuery%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%85%A8%E9%80%89%E3%80%81%E5%8F%8D%E9%80%89%E5%92%8C%E4%B8%8D%E9%80%89%E5%8A%9F%E8%83%BD/</id>
+    <published>2014-08-05T12:38:13.000Z</published>
+    <updated>2021-12-24T08:14:08.261Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;jQuery实现的全选、反选和不选功能-示例：&quot;&gt;&lt;a href=&quot;#jQuery实现的全选、反选和不选功能-示例：&quot; class=&quot;headerlink&quot; title=&quot;jQuery实现的全选、反选和不选功能</summary>
+        
+      
+    
+    
+    
+    
+    <category term="jQuery" scheme="https://syc.im/tags/jQuery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自增ID清零</title>
+    <link href="https://syc.im/2014/03/12/%E8%87%AA%E5%A2%9EID%E6%B8%85%E9%9B%B6/"/>
+    <id>https://syc.im/2014/03/12/%E8%87%AA%E5%A2%9EID%E6%B8%85%E9%9B%B6/</id>
+    <published>2014-03-12T12:37:14.000Z</published>
+    <updated>2021-12-24T08:14:08.262Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="mysql" scheme="https://syc.im/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>php大小写字母转换</title>
+    <link href="https://syc.im/2013/01/16/php%E5%A4%A7%E5%B0%8F%E5%86%99%E5%AD%97%E6%AF%8D%E8%BD%AC%E6%8D%A2/"/>
+    <id>https://syc.im/2013/01/16/php%E5%A4%A7%E5%B0%8F%E5%86%99%E5%AD%97%E6%AF%8D%E8%BD%AC%E6%8D%A2/</id>
+    <published>2013-01-16T12:34:23.000Z</published>
+    <updated>2021-12-24T08:14:08.262Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、将字符串转换成小写&quot;&gt;&lt;a href=&quot;#一、将字符串转换成小写&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="php" scheme="https://syc.im/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux VPS下SSH常用命令</title>
+    <link href="https://syc.im/2012/09/11/LinuxVPS%E4%B8%8BSSH%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://syc.im/2012/09/11/LinuxVPS%E4%B8%8BSSH%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2012-09-11T11:46:55.000Z</published>
+    <updated>2021-12-24T08:14:08.261Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="SSH" scheme="https://syc.im/tags/SSH/"/>
+    
+    <category term="Linux" scheme="https://syc.im/tags/Linux/"/>
+    
+  </entry>
+  
+</feed>
