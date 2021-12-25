@@ -1,744 +1,534 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-<html class="theme-next mist use-motion" lang="zh-cn">
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="nginx,ssi,">
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="进入nginx安装文件的目录1cd /root/nginx-1.11.3/src/http/modules 编辑如下文件1vi ngx_http_ssi_filter_module.c 注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：1232065 // if (ngx_http_parse_unsafe_uri(r, uri,">
-<meta name="keywords" content="nginx,ssi">
-<meta property="og:type" content="article">
-<meta property="og:title" content="nginx开启ssi">
-<meta property="og:url" content="https://syc.im/2016/09/06/nginx开启ssi/index.html">
-<meta property="og:site_name" content="SUN の Blog">
-<meta property="og:description" content="进入nginx安装文件的目录1cd /root/nginx-1.11.3/src/http/modules 编辑如下文件1vi ngx_http_ssi_filter_module.c 注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：1232065 // if (ngx_http_parse_unsafe_uri(r, uri,">
-<meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2020-03-07T06:14:30.609Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="nginx开启ssi">
-<meta name="twitter:description" content="进入nginx安装文件的目录1cd /root/nginx-1.11.3/src/http/modules 编辑如下文件1vi ngx_http_ssi_filter_module.c 注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：1232065 // if (ngx_http_parse_unsafe_uri(r, uri,">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+<html lang="zh-cn" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="HongCha,Blog" />
+  <meta name="author" content="HongCha" />
+  <meta name="description" content="" />
+  
+  
+  <title>
+    
+      nginx开启ssi 
+      
+      
+      |
+    
+     HongCha の Blog
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="/css/color-scheme.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/github-markdown.css">
+<link rel="stylesheet" href="/css/highlight.css">
+<link rel="stylesheet" href="/css/comments.css">
+
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
     }
-  };
+  </script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">HongCha</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">首页</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">归档</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">标签</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
 </script>
 
 
 
-  <link rel="canonical" href="https://syc.im/2016/09/06/nginx开启ssi/">
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">nginx开启ssi</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="Update time"></i>
+          2016-09-06 20:44:16
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="Tags"></i>
+                
+                <span class="span--tag">
+                  <a href="/tags/nginx/" title="nginx">
+                    <b>#</b> nginx
+                  </a>
+                </span>
+                
+                <span class="span--tag">
+                  <a href="/tags/ssi/" title="ssi">
+                    <b>#</b> ssi
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h3 id="进入nginx安装文件的目录"><a href="#进入nginx安装文件的目录" class="headerlink" title="进入nginx安装文件的目录"></a>进入nginx安装文件的目录</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /root/nginx-1.11.3/src/http/modules</span><br></pre></td></tr></table></figure>
+
+<h3 id="编辑如下文件"><a href="#编辑如下文件" class="headerlink" title="编辑如下文件"></a>编辑如下文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ngx_http_ssi_filter_module.c</span><br></pre></td></tr></table></figure>
+
+<h3 id="注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码："><a href="#注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码：" class="headerlink" title="注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码："></a>注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2065 // if (ngx_http_parse_unsafe_uri(r, uri, &amp;args, &amp;flags) != NGX_OK) &#123;</span><br><span class="line">2066 //    return NGX_HTTP_SSI_ERROR;</span><br><span class="line">2067 // &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="保存以上文件"><a href="#保存以上文件" class="headerlink" title="保存以上文件"></a>保存以上文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /root/nginx-1.11.3</span><br><span class="line">执行./configure --prefix=/usr/local/nginx --with-poll_module --with-http_stub_status_module</span><br><span class="line">执行 make （注意，此处只需要执行make ，不需要 执行make install）</span><br></pre></td></tr></table></figure>
+
+<h3 id="备份nginx-安装目录下的nginx-文件，执行如下脚本"><a href="#备份nginx-安装目录下的nginx-文件，执行如下脚本" class="headerlink" title="备份nginx 安装目录下的nginx 文件，执行如下脚本"></a>备份nginx 安装目录下的nginx 文件，执行如下脚本</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">进入目录：cd /usr/local/nginx/sbin/</span><br><span class="line">停止nginx ：./nginx -s stop</span><br><span class="line">执行： mv nginx /home/nginxold</span><br></pre></td></tr></table></figure>
+
+<h3 id="将刚才第5步编译好的nginx文件从（-root-nginx-1-11-3-objs）拷贝到-usr-local-nginx-sbin-目录下"><a href="#将刚才第5步编译好的nginx文件从（-root-nginx-1-11-3-objs）拷贝到-usr-local-nginx-sbin-目录下" class="headerlink" title="将刚才第5步编译好的nginx文件从（/root/nginx-1.11.3/objs）拷贝到/usr/local/nginx/sbin/ 目录下"></a>将刚才第5步编译好的nginx文件从（/root/nginx-1.11.3/objs）拷贝到/usr/local/nginx/sbin/ 目录下</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">进入objs目录 cd /root/nginx-1.11.3/objs</span><br><span class="line">拷贝nginx文件：cp nginx /usr/local/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">进入cd /usr/local/nginx/sbin/ 目录</span><br><span class="line">启动：./nginx</span><br></pre></td></tr></table></figure>
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2015/07/22/%E9%9A%90%E8%97%8F%20Nignx%20%E3%80%81PHP%E7%89%88%E6%9C%AC%E5%8F%B7/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="Update time"></i>
+              2016-09-06 20:44:16
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="Tags"></i>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/nginx/" title="nginx">
+                        <b>#</b> nginx
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/ssi/" title="ssi">
+                        <b>#</b> ssi
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/2016/10/14/%E5%BC%80%E5%90%AFhttps/" target="_self">
+                <span>Next</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5nginx%E5%AE%89%E8%A3%85%E6%96%87%E4%BB%B6%E7%9A%84%E7%9B%AE%E5%BD%95"><span class="toc-text">进入nginx安装文件的目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E5%A6%82%E4%B8%8B%E6%96%87%E4%BB%B6"><span class="toc-text">编辑如下文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A%E4%BB%A5%E4%B8%8B%EF%BC%88%E5%A4%A7%E7%BA%A6-2065-%E5%88%B02067%EF%BC%89%E8%A1%8C%EF%BC%8C%E6%88%96%E8%80%85%E6%90%9C%E7%B4%A2-ngx-http-parse-unsafe-uri-%E6%89%BE%E5%88%B0%E5%A6%82%E4%B8%8B%E4%BB%A3%E7%A0%81%EF%BC%9A"><span class="toc-text">注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%9D%E5%AD%98%E4%BB%A5%E4%B8%8A%E6%96%87%E4%BB%B6"><span class="toc-text">保存以上文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%87%E4%BB%BDnginx-%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84nginx-%E6%96%87%E4%BB%B6%EF%BC%8C%E6%89%A7%E8%A1%8C%E5%A6%82%E4%B8%8B%E8%84%9A%E6%9C%AC"><span class="toc-text">备份nginx 安装目录下的nginx 文件，执行如下脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%86%E5%88%9A%E6%89%8D%E7%AC%AC5%E6%AD%A5%E7%BC%96%E8%AF%91%E5%A5%BD%E7%9A%84nginx%E6%96%87%E4%BB%B6%E4%BB%8E%EF%BC%88-root-nginx-1-11-3-objs%EF%BC%89%E6%8B%B7%E8%B4%9D%E5%88%B0-usr-local-nginx-sbin-%E7%9B%AE%E5%BD%95%E4%B8%8B"><span class="toc-text">将刚才第5步编译好的nginx文件从（&#x2F;root&#x2F;nginx-1.11.3&#x2F;objs）拷贝到&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F; 目录下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8nginx"><span class="toc-text">启动nginx</span></a></li></ol>
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
 
 
 
 
 
-  <title>nginx开启ssi | SUN の Blog</title>
+      </div>
+    
+  </div>
+
+
+        <div class="footer">
+    <div class="social">
+        <ul>
+            
+                <li>
+                    <a title="github" target="_blank" href="https://github.com/tiandi0228" rel="external nofollow noopener">
+                        <i class="iconfont icon-github"></i>
+                    </a>
+                </li>
+            
+                <li>
+                    <a title="rss" href="/atom.xml" rel="external nofollow">
+                        <i class="iconfont icon-rss"></i>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+    
+        <div class="footer-more">
+            
+                <a target="_blank" href="https://syc.im/" rel="external nofollow noopener">Copyright © HongCha 2021</a>
+            
+        </div>
+    
+        <div class="footer-more">
+            
+                <a target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index" rel="external nofollow noopener">浙ICP备14005775号-3</a>
+            
+        </div>
+    
+        <div class="footer-more">
+            
+                <a target="_blank" href="https://github.com/zchengsite/hexo-theme-oranges" rel="external nofollow noopener">Theme by Oranges | Powered by Hexo</a>
+            
+        </div>
+    
+    <div style="display: none;">
+        <script src="//s95.cnzz.com/z_stat.php?id=1260575672&web_id=1260575672" language="JavaScript"></script>
+    </div>
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
 
 
 
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
 
-
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="Search...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
 
   <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?ff64ecd8551b3e119946fd62d3181afb";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
   </script>
 
 
 
 
-</head>
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-cn">
-
-
-
-
-
-
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  
+<script src="/js/colorscheme.js"></script>
 
 
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">SUN の Blog</span>
-        <span class="logo-line-after"><i></i></span>
+
+
+
+        
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
       </a>
-    </div>
-
-        <p class="site-subtitle">专注IT领域，分享网络乐趣。</p>
-
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-
-
-
-    <ul id="menu" class="menu">
-
-
-        <li class="menu-item menu-item-首页">
-          <a href="/" rel="section">
-
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-
-            首页
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + nginx%E5%BC%80%E5%90%AFssi + '&url=' + http%3A%2F%2Fexample.com%2F2016%2F09%2F06%2Fnginx%25E5%25BC%2580%25E5%2590%25AFssi%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
           </a>
-        </li>
-
-
-        <li class="menu-item menu-item-标签">
-          <a href="/tags/" rel="section">
-
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-
-            标签
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2016/09/06/nginx%E5%BC%80%E5%90%AFssi/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
           </a>
-        </li>
-
-
-        <li class="menu-item menu-item-归档">
-          <a href="/archives/" rel="section">
-
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-
-            归档
-          </a>
-        </li>
-
-
-
-    </ul>
-
-
-
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-
-
-  <div id="posts" class="posts-expand">
-
-
-
-
-
-
-
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-
-
-
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://syc.im/2016/09/06/nginx开启ssi/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="sunyc">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SUN の Blog">
-    </span>
-
-
-      <header class="post-header">
-
-
-
-          <h1 class="post-title" itemprop="name headline">nginx开启ssi</h1>
-
-
-        <div class="post-meta">
-          <span class="post-time">
-
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-
-                <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-06T20:44:16+00:00">
-                2016-09-06
-              </time>
-
-
-
-
-
-          </span>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
-      </header>
-
-
-
-
-
-    <div class="post-body" itemprop="articleBody">
-
-
-
-
-        <h3 id="进入nginx安装文件的目录"><a href="#进入nginx安装文件的目录" class="headerlink" title="进入nginx安装文件的目录"></a>进入nginx安装文件的目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /root/nginx-1.11.3/src/http/modules</span><br></pre></td></tr></table></figure>
-<h3 id="编辑如下文件"><a href="#编辑如下文件" class="headerlink" title="编辑如下文件"></a>编辑如下文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ngx_http_ssi_filter_module.c</span><br></pre></td></tr></table></figure>
-<h3 id="注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码："><a href="#注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码：" class="headerlink" title="注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码："></a>注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2065 // if (ngx_http_parse_unsafe_uri(r, uri, &amp;args, &amp;flags) != NGX_OK) &#123;</span><br><span class="line">2066 //    return NGX_HTTP_SSI_ERROR;</span><br><span class="line">2067 // &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="保存以上文件"><a href="#保存以上文件" class="headerlink" title="保存以上文件"></a>保存以上文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /root/nginx-1.11.3</span><br><span class="line">执行./configure --prefix=/usr/local/nginx --with-poll_module --with-http_stub_status_module</span><br><span class="line">执行 make （注意，此处只需要执行make ，不需要 执行make install）</span><br></pre></td></tr></table></figure>
-<h3 id="备份nginx-安装目录下的nginx-文件，执行如下脚本"><a href="#备份nginx-安装目录下的nginx-文件，执行如下脚本" class="headerlink" title="备份nginx 安装目录下的nginx 文件，执行如下脚本"></a>备份nginx 安装目录下的nginx 文件，执行如下脚本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">进入目录：cd /usr/local/nginx/sbin/</span><br><span class="line">停止nginx ：./nginx -s stop</span><br><span class="line">执行： mv nginx /home/nginxold</span><br></pre></td></tr></table></figure>
-<h3 id="将刚才第5步编译好的nginx文件从（-root-nginx-1-11-3-objs）拷贝到-usr-local-nginx-sbin-目录下"><a href="#将刚才第5步编译好的nginx文件从（-root-nginx-1-11-3-objs）拷贝到-usr-local-nginx-sbin-目录下" class="headerlink" title="将刚才第5步编译好的nginx文件从（/root/nginx-1.11.3/objs）拷贝到/usr/local/nginx/sbin/ 目录下"></a>将刚才第5步编译好的nginx文件从（/root/nginx-1.11.3/objs）拷贝到/usr/local/nginx/sbin/ 目录下</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">进入objs目录 cd /root/nginx-1.11.3/objs</span><br><span class="line">拷贝nginx文件：cp nginx /usr/local/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
-<h3 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">进入cd /usr/local/nginx/sbin/ 目录</span><br><span class="line">启动：./nginx</span><br></pre></td></tr></table></figure>
-
+        
+      </div>
     </div>
-
-
-
-    <div>
-
-        <div>
-
-    <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
-
-</div>
-
-    </div>
-
-
-
-
-
-
-    <footer class="post-footer">
-
-        <div class="post-tags">
-
-            <a href="/tags/nginx/" rel="tag"><i class="fa fa-tag"></i> nginx</a>
-
-            <a href="/tags/ssi/" rel="tag"><i class="fa fa-tag"></i> ssi</a>
-
-        </div>
-
-
-
-
-
-
-
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-
-              <a href="/2015/07/22/隐藏 Nignx 、PHP版本号/" rel="next" title="隐藏 Nignx 、PHP 隐藏">
-                <i class="fa fa-chevron-left"></i> 隐藏 Nignx 、PHP 隐藏
-              </a>
-
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-
-              <a href="/2016/10/14/开启https/" rel="prev" title="开启https">
-                开启https <i class="fa fa-chevron-right"></i>
-              </a>
-
-          </div>
-        </div>
-
-
-
-
-    </footer>
-  </div>
-
-
-
-  </article>
-
-
-
-    <div class="post-spread">
-
-    </div>
-  </div>
-
-
-          </div>
-
-
-
-
-
-
-
-
-
-        </div>
-
-
-
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-
-    <div class="sidebar-inner">
-
-
-
-
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-
-              <p class="site-author-name" itemprop="name">sunyc</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-
-              <div class="site-state-item site-state-posts">
-
-                <a href="/archives">
-
-                  <span class="site-state-item-count">12</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-
-
-
-
-
-
-
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
-                  <span class="site-state-item-name">tags</span>
-                </a>
-              </div>
-
-
-          </nav>
-
-
-
-
-            <div class="links-of-author motion-element">
-
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/tiandi0228" target="_blank" title="GitHub">
-
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-
-            </div>
-
-
-
-
-
-
-
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                Links
-              </div>
-              <ul class="links-of-blogroll-list">
-
-                  <li class="links-of-blogroll-item">
-                    <a href="https://syc.im" title="SUN の Blog" target="_blank">SUN の Blog</a>
-                  </li>
-
-                  <li class="links-of-blogroll-item">
-                    <a href="https://www.vultr.com/?ref=7808045-4F" title="vultr" target="_blank">vultr</a>
-                  </li>
-
-              </ul>
-            </div>
-
-
-
-
-        </div>
-      </section>
-
-
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-
-
-
-
-
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#进入nginx安装文件的目录"><span class="nav-number">1.</span> <span class="nav-text">进入nginx安装文件的目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑如下文件"><span class="nav-number">2.</span> <span class="nav-text">编辑如下文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注释以下（大约-2065-到2067）行，或者搜索-ngx-http-parse-unsafe-uri-找到如下代码："><span class="nav-number">3.</span> <span class="nav-text">注释以下（大约 2065 到2067）行，或者搜索 ngx_http_parse_unsafe_uri 找到如下代码：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保存以上文件"><span class="nav-number">4.</span> <span class="nav-text">保存以上文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#备份nginx-安装目录下的nginx-文件，执行如下脚本"><span class="nav-number">5.</span> <span class="nav-text">备份nginx 安装目录下的nginx 文件，执行如下脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将刚才第5步编译好的nginx文件从（-root-nginx-1-11-3-objs）拷贝到-usr-local-nginx-sbin-目录下"><span class="nav-number">6.</span> <span class="nav-text">将刚才第5步编译好的nginx文件从（/root/nginx-1.11.3/objs）拷贝到/usr/local/nginx/sbin/ 目录下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动nginx"><span class="nav-number">7.</span> <span class="nav-text">启动nginx</span></a></li></ol></div>
-
-
-          </div>
-        </section>
-      <!--/noindex-->
-
-
-
-
-    </div>
-  </aside>
+  
+  
+<script src="/js/shares.js"></script>
 
 
 
       </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">sunyc</span>
-
-
-  <a href="https://beian.miit.gov.cn/" rel="external nofollow" target="_blank">浙ICP备14005775号-3</a>
-</div>
-
-
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
-
-
-
-
-
-
-
-
-
-
-
-
-  <div style="display: none;">
-    <script src="//s95.cnzz.com/z_stat.php?id=1260575672&web_id=1260575672" language="JavaScript"></script>
-  </div>
-
-
-
-
-      </div>
-    </footer>
-
-
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-
-      </div>
-
-
-
-
-  </div>
-
-
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-
-
-
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-
-
-
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-
-
-
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-
-
-
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-
-
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-
-
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-
-
-
-
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
+    </div>
+  </body>
 </html>
