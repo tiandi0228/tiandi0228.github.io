@@ -85,6 +85,10 @@ navbar:
     enable: true
     path: /tags/
     key: tags
+  - name: 关于
+    enable: true
+    path: /about/
+    key: about
 
 # 文章目录
 catalog:
