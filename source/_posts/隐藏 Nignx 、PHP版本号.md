@@ -1,8 +1,8 @@
 ---
-title: 隐藏 nignx php 隐藏
+title: 隐藏 nginx php 隐藏
 date: 2015-07-22 20:40:14
 tags: 
-- nignx 
+- nginx 
 - php
 ---
 
