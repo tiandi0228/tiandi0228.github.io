@@ -92,11 +92,11 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  首页: / || home
+  home: / || home
   #about: /about/ || user
-  标签: /tags/ || tags
+  #tags: /tags/ || tags
   #categories: /categories/ || th
-  归档: /archives/ || archive
+  archives: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -111,10 +111,10 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-# scheme: Muse
-scheme: Mist
+scheme: Muse
+#scheme: Mist
 #scheme: Pisces
-# scheme: Gemini
+#scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -126,8 +126,8 @@ scheme: Mist
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-social:
-  GitHub: https://github.com/tiandi0228 || github
+#social:
+  #GitHub: https://github.com/yourname || github
   #E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -148,10 +148,8 @@ links_icon: link
 links_title: Links
 links_layout: block
 #links_layout: inline
-links:
-  SUN の Blog: https://syc.im
-  #vultr: https://www.vultr.com/?ref=7327557
-  vultr: https://www.vultr.com/?ref=7808045-4F
+#links:
+  #Title: http://example.com/
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
@@ -355,7 +353,7 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID
-baidu_analytics: ff64ecd8551b3e119946fd62d3181afb
+#baidu_analytics:
 
 # Duoshuo ShortName
 #duoshuo_shortname:
@@ -478,7 +476,7 @@ needmoreshare2:
 #yandex_site_verification:
 
 # CNZZ count
-cnzz_siteid: 1260575672
+#cnzz_siteid:
 
 # Application Insights
 # See https://azure.microsoft.com/en-us/services/application-insights/
@@ -813,6 +811,3 @@ images: images
 
 # Theme version
 version: 5.1.4
-
-passage_end_tag:
-enabled: true
