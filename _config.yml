@@ -102,4 +102,6 @@ theme: oranges
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ""
+  type: "git"
+  repo: git@github.com:tiandi0228/tiandi0228.github.io.git
+  branch: master
