@@ -8,31 +8,33 @@ on:
 jobs:
   pages:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js 14.x
+      - name: Checkout source
+        uses: actions/checkout@v2
+        with:
+          ref: hexo
+
+      - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-      - name: env prepare
+
+      - name: Setup Hexo
         env:
           HEXO_DEPLOY_PRI: ${{ secrets.HEXO_DEPLOY_PRI }}
         run: |
           mkdir -p ~/.ssh/
           echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
+          chmod 700 ~/.ssh
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-          ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
-          ssh-keyscan e.coding.net >> ~/.ssh/known_hosts
-          ssh-keyscan gitee.com >> ~/.ssh/known_hosts
           git config --global user.name 'tiandi0228'
           git config --global user.email 'tiandi0228@live.com'
           npm i
           npm i hexo@5.4.0 -g
-      - name: gen
+
+      - name: Deploy
         run: |
           hexo clean
           hexo generate
