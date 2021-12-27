@@ -3,7 +3,7 @@ name: Hexo CI
 on:
   push:
     branches:
-      - hexo
+      - main
 
 jobs:
   pages:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v2
         with:
-          ref: hexo
+          ref: main
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
