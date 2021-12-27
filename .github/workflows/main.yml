@@ -3,7 +3,7 @@ name: Hexo CI
 on:
   push:
     branches:
-      - butterfly
+      - hexo
 
 jobs:
   butterfly-build:
