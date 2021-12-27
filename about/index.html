@@ -11,8 +11,8 @@
   
   <title>
     
-      Tag 
-       : webpack
+      About 
+      
       
       |
     
@@ -101,39 +101,43 @@
 
 
       <div class="flex-container">
-        <!-- 标签详情页，展示某个标签下的文章列表，url形式：https://yoursite/tags/某个标签/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<div class="container tag-details">
-  <div class="content-title">
-    <h2>
-      <span>webpack</span>
-    </h2>
-  </div>
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+
+
+
   
-    <div class="post-list">
-      <div class="post-item" title="webpack打包后写入自定义信息">
-        <span class="time-m-d">2020-03-06</span>
-        <a href="/2020/03/06/webpack%E6%89%93%E5%8C%85%E5%90%8E%E5%86%99%E5%85%A5%E7%89%88%E6%9C%AC%E4%BF%A1%E6%81%AF/">
-          <span>webpack打包后写入自定义信息</span>
-        </a>
+
+  
+
+  
+  <!-- 关于页 url形式：https://yoursite/about/ -->
+    <div class="container about-index">
+      <div class="markdown-body">
+        <ul>
+<li>👋 Hi, I’m @hongcha</li>
+<li>👀 I’m interested in watching movies and fishing</li>
+<li>📫 How to reach me - sunyuchun#foxmail.com</li>
+</ul>
+
       </div>
     </div>
   
-    <div class="post-list">
-      <div class="post-item" title="vue webpack less 全局设置">
-        <span class="time-m-d">2018-05-09</span>
-        <a href="/2018/05/09/vue%20webpack%20less%20%E5%85%A8%E5%B1%80%E8%AE%BE%E7%BD%AE/">
-          <span>vue webpack less 全局设置</span>
-        </a>
-      </div>
-    </div>
+
   
-  <nav class="post-navigation">
-    
-    <span class="page-num">1 / 1</span>
-    
-  </nav>
-</div>
 
         <div class="footer">
     <div class="social">
@@ -399,6 +403,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + about + '&url=' + http%3A%2F%2Fexample.com%2Fabout%2Findex.html + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/about/index.html" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
