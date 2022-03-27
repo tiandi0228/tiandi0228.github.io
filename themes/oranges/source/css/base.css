@@ -668,3 +668,9 @@ a:hover {
 .share-content .share-item {
   padding: 0 10px;
 }
+
+#syc-poetry {
+  text-align: center;
+  padding-top: 20px;
+  cursor: pointer;
+}
