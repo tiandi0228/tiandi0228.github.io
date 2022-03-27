@@ -1,0 +1,87 @@
+<div id="poetry"></div>
+
+<style>
+    .s-title {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .s-about {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .s-content {
+        font-size: 14px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .s-content p {
+        padding: 0;
+        margin: 0;
+    }
+
+    .s-subtitle {
+        font-size: 14px;
+        font-weight: bold;
+        border-top: 1px rgba(0, 0, 0, 0.1) solid;
+        padding-top: 20px;
+    }
+
+    .s-translate {
+        font-size: 14px;
+    }
+
+    .s-translate p {
+        padding: 0;
+        margin: 0;
+    }
+</style>
+
+<script>
+    window.onload = () => {
+        const id = getQueryVariable("id");
+        if (!id) return;
+        fetch("https://poetry.syc.im/api/v1/poetry/detail?id=" + id)
+            .then(response => response.json())
+            .then(data => {
+                if (data.code === 200) {
+                    const res = data.data;
+                    let html = '';
+                    html += `<div class="s-title">《${res.title}》</div>`;
+                    html += `<div class="s-about">${res.dynasty}·${res.author}</div>`;
+                    if (res.content.length) {
+                        html += `<div class="s-content">`;
+                        res.content.forEach(item => {
+                            html += `<p>${item}</p>`;
+                        });
+                        html += `</div>`;
+                    }
+                    if (res.translate.length) {
+                        html += `<div class="s-subtitle">译文</div>`;
+                        html += `<div class="s-translate">`;
+                        res.translate.forEach(item => {
+                            html += `<p>${item}</p>`;
+                        });
+                        html += `</div>`;
+                    }
+                    document.querySelector("#poetry").innerHTML = html;
+                }
+            });
+    }
+
+    // 获取url参数
+    function getQueryVariable(variable) {
+        const query = window.location.search.substring(1);
+        const vars = query.split("&");
+        for (let i = 0; i < vars.length; i++) {
+            const pair = vars[i].split("=");
+            if (pair[0] === variable) {
+                return pair[1];
+            }
+        }
+        return false;
+    }
+</script>
