@@ -44,7 +44,7 @@
     window.onload = () => {
         const id = getQueryVariable("id");
         if (!id) return;
-        fetch("https://poetry.syc.im/api/v1/poetry/detail?id=" + id)
+        fetch("https://api.syc.im/api/v1/poetry/detail?id=" + id)
             .then(response => response.json())
             .then(data => {
                 if (data.code === 200) {
