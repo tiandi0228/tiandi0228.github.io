@@ -3,27 +3,36 @@ name: GitHub Actions 构造和部署
 on:
   push:
     branches:
-      - main
+      - main  # default branch
+
 jobs:
-  build-and-deploy:
+  pages:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      # 第一步，获取源码，使用的是actions/checkout
-      - name: Checkout
-        uses: actions/checkout@main
+      - uses: actions/checkout@v3
         with:
-          persist-credentials: false
-      # 第二步，安装依赖和构建
-      - name: Install and Build
-        run: |
-          npm install
-          npm run-script build
-      # 第四步，部署 需要四个环境变量，分别为 GitHub 密钥、发布分支、构建成果所在目录、构建脚本
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # If your repository depends on submodule, please see: https://github.com/actions/checkout
+          submodules: recursive
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Cache NPM dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-npm-cache
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: public
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
