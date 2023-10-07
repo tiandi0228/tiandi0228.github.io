@@ -104,4 +104,4 @@ theme: oranges
 deploy:
   type: git
   repository: git@github.com:tiandi0228/tiandi0228.github.io.git
-  branch: master
+  branch: main
