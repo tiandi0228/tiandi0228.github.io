@@ -129,7 +129,7 @@ MathJax = {
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime" title="Update time"></i>
-          2022-05-11 00:53:05
+          2023-10-07 14:23:10
         </span>
         
       </div>
@@ -183,7 +183,7 @@ MathJax = {
         fetch("https://api.syc.im/api/v1/poetry/detail?id=" + id)
             .then(response => response.json())
             .then(data => {
-                if (data.code === 200) {
+                if (data.code === 100001) {
                     const res = data.data;
                     let html = '';
                     if (res.title) {
@@ -225,6 +225,7 @@ MathJax = {
         return false;
     }
 </script>
+
       </div>
       
         <div class="prev-or-next">
@@ -234,7 +235,7 @@ MathJax = {
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime" title="Update time"></i>
-              2022-05-11 00:53:05
+              2023-10-07 14:23:10
             </span>
             
           </div>
